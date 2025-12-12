@@ -7,16 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="animated-background">
-        <div class="gradient-sphere sphere-1"></div>
-        <div class="gradient-sphere sphere-2"></div>
-        <div class="gradient-sphere sphere-3"></div>
-        <div class="grid-overlay"></div>
-        <canvas id="particle-canvas"></canvas>
+    <!-- Fondo animado de señales -->
+    <div class="signal-background">
+        <div class="signal-wave"></div>
+        <div class="signal-wave"></div>
+        <div class="signal-wave"></div>
     </div>
 
     <!-- Navegación -->
@@ -27,13 +25,17 @@
                 <span>TU NOMBRE</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#education" class="nav-link">Estudios</a></li>
-                <li><a href="#experience" class="nav-link">Trabajo</a></li>
-                <li><a href="#projects" class="nav-link">Proyectos</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contacto</a></li>
+                <li><a href="#about" class="nav-link" data-lang="nav-about">About</a></li>
+                <li><a href="#education" class="nav-link" data-lang="nav-education">Estudios</a></li>
+                <li><a href="#experience" class="nav-link" data-lang="nav-experience">Trabajo</a></li>
+                <li><a href="#projects" class="nav-link" data-lang="nav-projects">Proyectos</a></li>
+                <li><a href="#skills" class="nav-link" data-lang="nav-skills">Skills</a></li>
+                <li><a href="#contact" class="nav-link" data-lang="nav-contact">Contacto</a></li>
             </ul>
+            <button class="lang-toggle" id="langToggle">
+                <span class="lang-icon">🌐</span>
+                <span class="lang-text">EN</span>
+            </button>
             <div class="nav-toggle">
                 <span></span>
                 <span></span>
@@ -47,22 +49,22 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
-                    <span class="glitch-text" data-text="Ingeniero de">Ingeniero de</span>
-                    <span class="glitch-text highlight" data-text="Telecomunicaciones">Telecomunicaciones</span>
+                    <span class="glitch-text" data-text="Ingeniero de" data-lang="hero-title-1">Ingeniero de</span>
+                    <span class="glitch-text highlight" data-text="Telecomunicaciones" data-lang="hero-title-2">Telecomunicaciones</span>
                 </h1>
-                <p class="hero-subtitle">Conectando el futuro, una señal a la vez</p>
+                <p class="hero-subtitle" data-lang="hero-subtitle">Conectando el futuro, una señal a la vez</p>
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">5+</span>
-                        <span class="stat-label">Años de experiencia</span>
+                        <span class="stat-label" data-lang="stat-years">Años de experiencia</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">20+</span>
-                        <span class="stat-label">Proyectos completados</span>
+                        <span class="stat-label" data-lang="stat-projects">Proyectos completados</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">100%</span>
-                        <span class="stat-label">Dedicación</span>
+                        <span class="stat-label" data-lang="stat-dedication">Dedicación</span>
                     </div>
                 </div>
             </div>
@@ -78,27 +80,27 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">01</span>
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title" data-lang="about-title">About Me</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="lead-text">
+                    <p class="lead-text" data-lang="about-lead">
                         Soy un ingeniero de telecomunicaciones apasionado por las tecnologías de comunicación 
                         y el desarrollo de sistemas que conectan a las personas.
                     </p>
-                    <p>
+                    <p data-lang="about-p1">
                         Mi experiencia abarca desde el diseño de redes de alta velocidad hasta el desarrollo 
                         de aplicaciones IoT y sistemas de telecomunicaciones. Me especializo en optimizar 
                         la transmisión de datos y crear infraestructuras robustas que soporten las demandas 
                         del mundo digital moderno.
                     </p>
-                    <p>
+                    <p data-lang="about-p2">
                         Cuando no estoy trabajando en proyectos técnicos, me gusta mantenerme actualizado 
                         con las últimas tendencias en 5G, fibra óptica y tecnologías emergentes de comunicación.
                     </p>
                     <div class="about-cta">
-                        <a href="#contact" class="btn btn-primary">Hablemos</a>
-                        <a href="#" class="btn btn-secondary">Descargar CV</a>
+                        <a href="#contact" class="btn btn-primary" data-lang="about-cta1">Hablemos</a>
+                        <a href="#" class="btn btn-secondary" data-lang="about-cta2">Descargar CV</a>
                     </div>
                 </div>
                 <div class="about-visual">
@@ -122,7 +124,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">02</span>
-                <h2 class="section-title">Estudios</h2>
+                <h2 class="section-title" data-lang="education-title">Estudios</h2>
             </div>
             <div class="timeline">
                 <div class="timeline-item" data-expanded="false">
@@ -130,18 +132,18 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div class="timeline-date">2015 - 2019</div>
-                            <h3 class="timeline-title">Grado en Ingeniería de Telecomunicaciones</h3>
+                            <h3 class="timeline-title" data-lang="edu1-title">Grado en Ingeniería de Telecomunicaciones</h3>
                             <p class="timeline-institution">Universidad Politécnica de Madrid</p>
                             <button class="expand-btn">
                                 <span class="expand-icon">+</span>
                             </button>
                         </div>
                         <div class="timeline-details">
-                            <p>Especialización en Sistemas de Telecomunicación</p>
+                            <p data-lang="edu1-specialization">Especialización en Sistemas de Telecomunicación</p>
                             <ul class="timeline-highlights">
-                                <li>Proyecto fin de grado sobre optimización de redes 5G - Calificación: 9.5/10</li>
-                                <li>Prácticas en Ericsson desarrollando soluciones de red</li>
-                                <li>Beca de excelencia académica durante 3 años</li>
+                                <li data-lang="edu1-item1">Proyecto fin de grado sobre optimización de redes 5G - Calificación: 9.5/10</li>
+                                <li data-lang="edu1-item2">Prácticas en Ericsson desarrollando soluciones de red</li>
+                                <li data-lang="edu1-item3">Beca de excelencia académica durante 3 años</li>
                             </ul>
                         </div>
                     </div>
@@ -152,18 +154,18 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div class="timeline-date">2019 - 2021</div>
-                            <h3 class="timeline-title">Máster en Redes y Servicios de Telecomunicación</h3>
+                            <h3 class="timeline-title" data-lang="edu2-title">Máster en Redes y Servicios de Telecomunicación</h3>
                             <p class="timeline-institution">Universidad Politécnica de Madrid</p>
                             <button class="expand-btn">
                                 <span class="expand-icon">+</span>
                             </button>
                         </div>
                         <div class="timeline-details">
-                            <p>Enfoque en arquitecturas de red avanzadas y servicios cloud</p>
+                            <p data-lang="edu2-focus">Enfoque en arquitecturas de red avanzadas y servicios cloud</p>
                             <ul class="timeline-highlights">
-                                <li>Tesis sobre SDN (Software Defined Networking) y virtualización de funciones de red</li>
-                                <li>Colaboración en proyecto de investigación europeo sobre IoT</li>
-                                <li>Certificación en tecnologías Cisco CCNP</li>
+                                <li data-lang="edu2-item1">Tesis sobre SDN (Software Defined Networking) y virtualización de funciones de red</li>
+                                <li data-lang="edu2-item2">Colaboración en proyecto de investigación europeo sobre IoT</li>
+                                <li data-lang="edu2-item3">Certificación en tecnologías Cisco CCNP</li>
                             </ul>
                         </div>
                     </div>
@@ -174,8 +176,8 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div class="timeline-date">2022</div>
-                            <h3 class="timeline-title">Certificaciones Profesionales</h3>
-                            <p class="timeline-institution">Varias instituciones</p>
+                            <h3 class="timeline-title" data-lang="edu3-title">Certificaciones Profesionales</h3>
+                            <p class="timeline-institution" data-lang="edu3-institution">Varias instituciones</p>
                             <button class="expand-btn">
                                 <span class="expand-icon">+</span>
                             </button>
@@ -198,14 +200,14 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">03</span>
-                <h2 class="section-title">Experiencia Laboral</h2>
+                <h2 class="section-title" data-lang="experience-title">Experiencia Laboral</h2>
             </div>
             <div class="timeline">
                 <div class="timeline-item" data-expanded="false">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <div class="timeline-date">2023 - Presente</div>
+                            <div class="timeline-date" data-lang="exp1-date">2023 - Presente</div>
                             <h3 class="timeline-title">Senior Network Engineer</h3>
                             <p class="timeline-institution">Telefónica Tech</p>
                             <button class="expand-btn">
@@ -213,12 +215,12 @@
                             </button>
                         </div>
                         <div class="timeline-details">
-                            <p>Liderando el diseño e implementación de soluciones de red empresariales</p>
+                            <p data-lang="exp1-description">Liderando el diseño e implementación de soluciones de red empresariales</p>
                             <ul class="timeline-highlights">
-                                <li>Diseño y despliegue de redes SD-WAN para clientes corporativos</li>
-                                <li>Optimización de infraestructura 5G para aplicaciones industriales</li>
-                                <li>Reducción de latencia en un 40% mediante implementación de edge computing</li>
-                                <li>Gestión de equipo de 5 ingenieros junior</li>
+                                <li data-lang="exp1-item1">Diseño y despliegue de redes SD-WAN para clientes corporativos</li>
+                                <li data-lang="exp1-item2">Optimización de infraestructura 5G para aplicaciones industriales</li>
+                                <li data-lang="exp1-item3">Reducción de latencia en un 40% mediante implementación de edge computing</li>
+                                <li data-lang="exp1-item4">Gestión de equipo de 5 ingenieros junior</li>
                             </ul>
                         </div>
                     </div>
@@ -236,12 +238,12 @@
                             </button>
                         </div>
                         <div class="timeline-details">
-                            <p>Desarrollo de soluciones de red móvil y fija</p>
+                            <p data-lang="exp2-description">Desarrollo de soluciones de red móvil y fija</p>
                             <ul class="timeline-highlights">
-                                <li>Participación en proyectos de despliegue de 5G NSA/SA</li>
-                                <li>Optimización de redes LTE mediante análisis de KPIs</li>
-                                <li>Implementación de soluciones de backhaul de fibra óptica</li>
-                                <li>Formación técnica a equipos de operadores</li>
+                                <li data-lang="exp2-item1">Participación en proyectos de despliegue de 5G NSA/SA</li>
+                                <li data-lang="exp2-item2">Optimización de redes LTE mediante análisis de KPIs</li>
+                                <li data-lang="exp2-item3">Implementación de soluciones de backhaul de fibra óptica</li>
+                                <li data-lang="exp2-item4">Formación técnica a equipos de operadores</li>
                             </ul>
                         </div>
                     </div>
@@ -259,12 +261,12 @@
                             </button>
                         </div>
                         <div class="timeline-details">
-                            <p>Soporte técnico y mantenimiento de infraestructura de red</p>
+                            <p data-lang="exp3-description">Soporte técnico y mantenimiento de infraestructura de red</p>
                             <ul class="timeline-highlights">
-                                <li>Monitorización y troubleshooting de redes móviles 3G/4G</li>
-                                <li>Configuración de equipos de core network</li>
-                                <li>Análisis de tráfico y optimización de capacidad</li>
-                                <li>Documentación técnica de procedimientos</li>
+                                <li data-lang="exp3-item1">Monitorización y troubleshooting de redes móviles 3G/4G</li>
+                                <li data-lang="exp3-item2">Configuración de equipos de core network</li>
+                                <li data-lang="exp3-item3">Análisis de tráfico y optimización de capacidad</li>
+                                <li data-lang="exp3-item4">Documentación técnica de procedimientos</li>
                             </ul>
                         </div>
                     </div>
@@ -278,7 +280,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">04</span>
-                <h2 class="section-title">Proyectos Destacados</h2>
+                <h2 class="section-title" data-lang="projects-title">Proyectos Destacados</h2>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
@@ -292,8 +294,8 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Red 5G Industrial</h3>
-                        <p class="project-description">
+                        <h3 class="project-title" data-lang="proj1-title">Red 5G Industrial</h3>
+                        <p class="project-description" data-lang="proj1-description">
                             Implementación de red 5G privada para una fábrica inteligente, 
                             habilitando comunicación ultra-confiable de baja latencia (URLLC) 
                             para aplicaciones críticas.
@@ -304,7 +306,7 @@
                             <span class="tag">Edge Computing</span>
                             <span class="tag">Network Slicing</span>
                         </div>
-                        <button class="project-expand">Ver más detalles</button>
+                        <button class="project-expand" data-lang="proj-button">Ver más detalles</button>
                     </div>
                 </div>
 
@@ -318,8 +320,8 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Sistema de Monitorización de Redes</h3>
-                        <p class="project-description">
+                        <h3 class="project-title" data-lang="proj2-title">Sistema de Monitorización de Redes</h3>
+                        <p class="project-description" data-lang="proj2-description">
                             Desarrollo de plataforma de análisis en tiempo real para monitorización 
                             de KPIs de red con machine learning para detección predictiva de fallos.
                         </p>
@@ -329,7 +331,7 @@
                             <span class="tag">React</span>
                             <span class="tag">Time Series</span>
                         </div>
-                        <button class="project-expand">Ver más detalles</button>
+                        <button class="project-expand" data-lang="proj-button">Ver más detalles</button>
                     </div>
                 </div>
 
@@ -344,17 +346,17 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Optimización de Backhaul 5G</h3>
-                        <p class="project-description">
+                        <h3 class="project-title" data-lang="proj3-title">Optimización de Backhaul 5G</h3>
+                        <p class="project-description" data-lang="proj3-description">
                             Diseño e implementación de solución de backhaul híbrido (fibra/microondas) 
                             para despliegue 5G en zonas rurales, optimizando costes y rendimiento.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">Fibra Óptica</span>
-                            <span class="tag">Microondas</span>
+                            <span class="tag" data-lang="tag-fiber">Fibra Óptica</span>
+                            <span class="tag" data-lang="tag-microwave">Microondas</span>
                             <span class="tag">5G Transport</span>
                         </div>
-                        <button class="project-expand">Ver más detalles</button>
+                        <button class="project-expand" data-lang="proj-button">Ver más detalles</button>
                     </div>
                 </div>
 
@@ -372,7 +374,7 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">SD-WAN Empresarial</h3>
-                        <p class="project-description">
+                        <p class="project-description" data-lang="proj4-description">
                             Migración de red WAN tradicional a arquitectura SD-WAN para multinacional, 
                             mejorando flexibilidad y reduciendo costes operativos en un 35%.
                         </p>
@@ -380,9 +382,9 @@
                             <span class="tag">SD-WAN</span>
                             <span class="tag">NFV</span>
                             <span class="tag">Cloud</span>
-                            <span class="tag">Security</span>
+                            <span class="tag" data-lang="tag-security">Security</span>
                         </div>
-                        <button class="project-expand">Ver más detalles</button>
+                        <button class="project-expand" data-lang="proj-button">Ver más detalles</button>
                     </div>
                 </div>
             </div>
@@ -394,11 +396,11 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">05</span>
-                <h2 class="section-title">Habilidades Técnicas</h2>
+                <h2 class="section-title" data-lang="skills-title">Habilidades Técnicas</h2>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3 class="skill-category-title">Tecnologías de Red</h3>
+                    <h3 class="skill-category-title" data-lang="skills-cat1">Tecnologías de Red</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <span class="skill-name">5G/LTE/3G</span>
@@ -407,7 +409,7 @@
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Fibra Óptica</span>
+                            <span class="skill-name" data-lang="skill-fiber">Fibra Óptica</span>
                             <div class="skill-bar">
                                 <div class="skill-fill" style="--skill-width: 90%"></div>
                             </div>
@@ -428,7 +430,7 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3 class="skill-category-title">Protocolos y Estándares</h3>
+                    <h3 class="skill-category-title" data-lang="skills-cat2">Protocolos y Estándares</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <span class="skill-name">TCP/IP</span>
@@ -458,7 +460,7 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3 class="skill-category-title">Herramientas y Software</h3>
+                    <h3 class="skill-category-title" data-lang="skills-cat3">Herramientas y Software</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <span class="skill-name">Wireshark/tcpdump</span>
@@ -473,7 +475,7 @@
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Python/Automation</span>
+                            <span class="skill-name" data-lang="skill-automation">Python/Automation</span>
                             <div class="skill-bar">
                                 <div class="skill-fill" style="--skill-width: 85%"></div>
                             </div>
@@ -488,7 +490,7 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3 class="skill-category-title">Cloud y Virtualización</h3>
+                    <h3 class="skill-category-title" data-lang="skills-cat4">Cloud y Virtualización</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <span class="skill-name">AWS/Azure</span>
@@ -525,43 +527,41 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">06</span>
-                <h2 class="section-title">Contacto</h2>
+                <h2 class="section-title" data-lang="contact-title">Contacto</h2>
             </div>
             <div class="contact-content">
-                <div class="contact-info">
-                    <p class="contact-lead">¿Tienes un proyecto en mente o quieres colaborar?</p>
-                    <p class="contact-text">Estoy siempre abierto a discutir nuevos proyectos, ideas creativas o oportunidades para formar parte de tu visión.</p>
-                    
-                    <div class="contact-methods">
-                        <a href="mailto:tu.email@example.com" class="contact-method">
-                            <div class="contact-icon">📧</div>
-                            <div class="contact-details">
-                                <span class="contact-label">Email</span>
-                                <span class="contact-value">tu.email@example.com</span>
-                            </div>
-                        </a>
-                        <a href="tel:+34123456789" class="contact-method">
-                            <div class="contact-icon">📱</div>
-                            <div class="contact-details">
-                                <span class="contact-label">Teléfono</span>
-                                <span class="contact-value">+34 123 456 789</span>
-                            </div>
-                        </a>
-                        <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="contact-method">
-                            <div class="contact-icon">💼</div>
-                            <div class="contact-details">
-                                <span class="contact-label">LinkedIn</span>
-                                <span class="contact-value">linkedin.com/in/tu-perfil</span>
-                            </div>
-                        </a>
-                        <a href="https://github.com/tu-usuario" target="_blank" class="contact-method">
-                            <div class="contact-icon">💻</div>
-                            <div class="contact-details">
-                                <span class="contact-label">GitHub</span>
-                                <span class="contact-value">github.com/tu-usuario</span>
-                            </div>
-                        </a>
-                    </div>
+                <p class="contact-lead" data-lang="contact-lead">¿Tienes un proyecto en mente o quieres colaborar?</p>
+                <p class="contact-text" data-lang="contact-text">Estoy siempre abierto a discutir nuevos proyectos, ideas creativas o oportunidades para formar parte de tu visión.</p>
+                
+                <div class="contact-methods">
+                    <a href="mailto:tu.email@example.com" class="contact-method">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">tu.email@example.com</span>
+                        </div>
+                    </a>
+                    <a href="tel:+34123456789" class="contact-method">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <span class="contact-label" data-lang="contact-phone">Teléfono</span>
+                            <span class="contact-value">+34 123 456 789</span>
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="contact-method">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-details">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">linkedin.com/in/tu-perfil</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/tu-usuario" target="_blank" class="contact-method">
+                        <div class="contact-icon">💻</div>
+                        <div class="contact-details">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">github.com/tu-usuario</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -571,8 +571,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
-                <p class="footer-tagline">Diseñado y desarrollado con dedicación</p>
+                <p data-lang="footer-copyright">&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
+                <p class="footer-tagline" data-lang="footer-tagline">Diseñado y desarrollado con dedicación</p>
             </div>
         </div>
     </footer>

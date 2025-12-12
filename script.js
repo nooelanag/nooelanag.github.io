@@ -1,118 +1,270 @@
-// Particle System
-class ParticleSystem {
-    constructor(canvas) {
-        this.canvas = canvas;
-        this.ctx = canvas.getContext('2d');
-        this.particles = [];
-        this.particleCount = 80;
-        this.connectionDistance = 150;
+// Traducciones
+const translations = {
+    es: {
+        // Navigation
+        'nav-about': 'About',
+        'nav-education': 'Estudios',
+        'nav-experience': 'Trabajo',
+        'nav-projects': 'Proyectos',
+        'nav-skills': 'Skills',
+        'nav-contact': 'Contacto',
         
-        this.resize();
-        this.init();
-        window.addEventListener('resize', () => this.resize());
-    }
-    
-    resize() {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
-    }
-    
-    init() {
-        for (let i = 0; i < this.particleCount; i++) {
-            this.particles.push({
-                x: Math.random() * this.canvas.width,
-                y: Math.random() * this.canvas.height,
-                vx: (Math.random() - 0.5) * 0.5,
-                vy: (Math.random() - 0.5) * 0.5,
-                radius: Math.random() * 2 + 1
-            });
-        }
-    }
-    
-    update() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        // Hero
+        'hero-title-1': 'Ingeniero de',
+        'hero-title-2': 'Telecomunicaciones',
+        'hero-subtitle': 'Conectando el futuro, una señal a la vez',
+        'stat-years': 'Años de experiencia',
+        'stat-projects': 'Proyectos completados',
+        'stat-dedication': 'Dedicación',
         
-        this.particles.forEach(particle => {
-            particle.x += particle.vx;
-            particle.y += particle.vy;
-            
-            if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
-            if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
-            
-            this.ctx.beginPath();
-            this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-            this.ctx.fillStyle = 'rgba(0, 240, 255, 0.5)';
-            this.ctx.fill();
-        });
+        // About
+        'about-title': 'About Me',
+        'about-lead': 'Soy un ingeniero de telecomunicaciones apasionado por las tecnologías de comunicación y el desarrollo de sistemas que conectan a las personas.',
+        'about-p1': 'Mi experiencia abarca desde el diseño de redes de alta velocidad hasta el desarrollo de aplicaciones IoT y sistemas de telecomunicaciones. Me especializo en optimizar la transmisión de datos y crear infraestructuras robustas que soporten las demandas del mundo digital moderno.',
+        'about-p2': 'Cuando no estoy trabajando en proyectos técnicos, me gusta mantenerme actualizado con las últimas tendencias en 5G, fibra óptica y tecnologías emergentes de comunicación.',
+        'about-cta1': 'Hablemos',
+        'about-cta2': 'Descargar CV',
         
-        for (let i = 0; i < this.particles.length; i++) {
-            for (let j = i + 1; j < this.particles.length; j++) {
-                const dx = this.particles[i].x - this.particles[j].x;
-                const dy = this.particles[i].y - this.particles[j].y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance < this.connectionDistance) {
-                    const opacity = 1 - distance / this.connectionDistance;
-                    this.ctx.beginPath();
-                    this.ctx.strokeStyle = `rgba(0, 240, 255, ${opacity * 0.2})`;
-                    this.ctx.lineWidth = 1;
-                    this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
-                    this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
-                    this.ctx.stroke();
-                }
+        // Education
+        'education-title': 'Estudios',
+        'edu1-title': 'Grado en Ingeniería de Telecomunicaciones',
+        'edu1-specialization': 'Especialización en Sistemas de Telecomunicación',
+        'edu1-item1': 'Proyecto fin de grado sobre optimización de redes 5G - Calificación: 9.5/10',
+        'edu1-item2': 'Prácticas en Ericsson desarrollando soluciones de red',
+        'edu1-item3': 'Beca de excelencia académica durante 3 años',
+        'edu2-title': 'Máster en Redes y Servicios de Telecomunicación',
+        'edu2-focus': 'Enfoque en arquitecturas de red avanzadas y servicios cloud',
+        'edu2-item1': 'Tesis sobre SDN (Software Defined Networking) y virtualización de funciones de red',
+        'edu2-item2': 'Colaboración en proyecto de investigación europeo sobre IoT',
+        'edu2-item3': 'Certificación en tecnologías Cisco CCNP',
+        'edu3-title': 'Certificaciones Profesionales',
+        'edu3-institution': 'Varias instituciones',
+        
+        // Experience
+        'experience-title': 'Experiencia Laboral',
+        'exp1-date': '2023 - Presente',
+        'exp1-description': 'Liderando el diseño e implementación de soluciones de red empresariales',
+        'exp1-item1': 'Diseño y despliegue de redes SD-WAN para clientes corporativos',
+        'exp1-item2': 'Optimización de infraestructura 5G para aplicaciones industriales',
+        'exp1-item3': 'Reducción de latencia en un 40% mediante implementación de edge computing',
+        'exp1-item4': 'Gestión de equipo de 5 ingenieros junior',
+        'exp2-description': 'Desarrollo de soluciones de red móvil y fija',
+        'exp2-item1': 'Participación en proyectos de despliegue de 5G NSA/SA',
+        'exp2-item2': 'Optimización de redes LTE mediante análisis de KPIs',
+        'exp2-item3': 'Implementación de soluciones de backhaul de fibra óptica',
+        'exp2-item4': 'Formación técnica a equipos de operadores',
+        'exp3-description': 'Soporte técnico y mantenimiento de infraestructura de red',
+        'exp3-item1': 'Monitorización y troubleshooting de redes móviles 3G/4G',
+        'exp3-item2': 'Configuración de equipos de core network',
+        'exp3-item3': 'Análisis de tráfico y optimización de capacidad',
+        'exp3-item4': 'Documentación técnica de procedimientos',
+        
+        // Projects
+        'projects-title': 'Proyectos Destacados',
+        'proj1-title': 'Red 5G Industrial',
+        'proj1-description': 'Implementación de red 5G privada para una fábrica inteligente, habilitando comunicación ultra-confiable de baja latencia (URLLC) para aplicaciones críticas.',
+        'proj2-title': 'Sistema de Monitorización de Redes',
+        'proj2-description': 'Desarrollo de plataforma de análisis en tiempo real para monitorización de KPIs de red con machine learning para detección predictiva de fallos.',
+        'proj3-title': 'Optimización de Backhaul 5G',
+        'proj3-description': 'Diseño e implementación de solución de backhaul híbrido (fibra/microondas) para despliegue 5G en zonas rurales, optimizando costes y rendimiento.',
+        'proj4-description': 'Migración de red WAN tradicional a arquitectura SD-WAN para multinacional, mejorando flexibilidad y reduciendo costes operativos en un 35%.',
+        'proj-button': 'Ver más detalles',
+        'tag-fiber': 'Fibra Óptica',
+        'tag-microwave': 'Microondas',
+        'tag-security': 'Security',
+        
+        // Skills
+        'skills-title': 'Habilidades Técnicas',
+        'skills-cat1': 'Tecnologías de Red',
+        'skills-cat2': 'Protocolos y Estándares',
+        'skills-cat3': 'Herramientas y Software',
+        'skills-cat4': 'Cloud y Virtualización',
+        'skill-fiber': 'Fibra Óptica',
+        'skill-automation': 'Python/Automation',
+        
+        // Contact
+        'contact-title': 'Contacto',
+        'contact-lead': '¿Tienes un proyecto en mente o quieres colaborar?',
+        'contact-text': 'Estoy siempre abierto a discutir nuevos proyectos, ideas creativas o oportunidades para formar parte de tu visión.',
+        'contact-phone': 'Teléfono',
+        
+        // Footer
+        'footer-copyright': '© 2024 Tu Nombre. Todos los derechos reservados.',
+        'footer-tagline': 'Diseñado y desarrollado con dedicación'
+    },
+    en: {
+        // Navigation
+        'nav-about': 'About',
+        'nav-education': 'Education',
+        'nav-experience': 'Experience',
+        'nav-projects': 'Projects',
+        'nav-skills': 'Skills',
+        'nav-contact': 'Contact',
+        
+        // Hero
+        'hero-title-1': 'Telecommunications',
+        'hero-title-2': 'Engineer',
+        'hero-subtitle': 'Connecting the future, one signal at a time',
+        'stat-years': 'Years of experience',
+        'stat-projects': 'Completed projects',
+        'stat-dedication': 'Dedication',
+        
+        // About
+        'about-title': 'About Me',
+        'about-lead': 'I am a telecommunications engineer passionate about communication technologies and developing systems that connect people.',
+        'about-p1': 'My experience ranges from designing high-speed networks to developing IoT applications and telecommunications systems. I specialize in optimizing data transmission and creating robust infrastructures that support the demands of the modern digital world.',
+        'about-p2': 'When I\'m not working on technical projects, I enjoy staying updated with the latest trends in 5G, fiber optics, and emerging communication technologies.',
+        'about-cta1': 'Let\'s Talk',
+        'about-cta2': 'Download Resume',
+        
+        // Education
+        'education-title': 'Education',
+        'edu1-title': 'Bachelor\'s Degree in Telecommunications Engineering',
+        'edu1-specialization': 'Specialization in Telecommunication Systems',
+        'edu1-item1': 'Final project on 5G network optimization - Grade: 9.5/10',
+        'edu1-item2': 'Internship at Ericsson developing network solutions',
+        'edu1-item3': 'Academic excellence scholarship for 3 years',
+        'edu2-title': 'Master\'s in Telecommunications Networks and Services',
+        'edu2-focus': 'Focus on advanced network architectures and cloud services',
+        'edu2-item1': 'Thesis on SDN (Software Defined Networking) and network function virtualization',
+        'edu2-item2': 'Collaboration on European IoT research project',
+        'edu2-item3': 'Cisco CCNP certification',
+        'edu3-title': 'Professional Certifications',
+        'edu3-institution': 'Various institutions',
+        
+        // Experience
+        'experience-title': 'Work Experience',
+        'exp1-date': '2023 - Present',
+        'exp1-description': 'Leading the design and implementation of enterprise network solutions',
+        'exp1-item1': 'Design and deployment of SD-WAN networks for corporate clients',
+        'exp1-item2': 'Optimization of 5G infrastructure for industrial applications',
+        'exp1-item3': '40% latency reduction through edge computing implementation',
+        'exp1-item4': 'Management of team of 5 junior engineers',
+        'exp2-description': 'Development of mobile and fixed network solutions',
+        'exp2-item1': 'Participation in 5G NSA/SA deployment projects',
+        'exp2-item2': 'LTE network optimization through KPI analysis',
+        'exp2-item3': 'Implementation of fiber optic backhaul solutions',
+        'exp2-item4': 'Technical training for operator teams',
+        'exp3-description': 'Technical support and network infrastructure maintenance',
+        'exp3-item1': 'Monitoring and troubleshooting of 3G/4G mobile networks',
+        'exp3-item2': 'Core network equipment configuration',
+        'exp3-item3': 'Traffic analysis and capacity optimization',
+        'exp3-item4': 'Technical documentation of procedures',
+        
+        // Projects
+        'projects-title': 'Featured Projects',
+        'proj1-title': 'Industrial 5G Network',
+        'proj1-description': 'Implementation of private 5G network for a smart factory, enabling ultra-reliable low-latency communication (URLLC) for critical applications.',
+        'proj2-title': 'Network Monitoring System',
+        'proj2-description': 'Development of real-time analysis platform for network KPI monitoring with machine learning for predictive failure detection.',
+        'proj3-title': '5G Backhaul Optimization',
+        'proj3-description': 'Design and implementation of hybrid backhaul solution (fiber/microwave) for 5G deployment in rural areas, optimizing costs and performance.',
+        'proj4-description': 'Migration from traditional WAN to SD-WAN architecture for multinational company, improving flexibility and reducing operating costs by 35%.',
+        'proj-button': 'View more details',
+        'tag-fiber': 'Fiber Optic',
+        'tag-microwave': 'Microwave',
+        'tag-security': 'Security',
+        
+        // Skills
+        'skills-title': 'Technical Skills',
+        'skills-cat1': 'Network Technologies',
+        'skills-cat2': 'Protocols and Standards',
+        'skills-cat3': 'Tools and Software',
+        'skills-cat4': 'Cloud and Virtualization',
+        'skill-fiber': 'Fiber Optic',
+        'skill-automation': 'Python/Automation',
+        
+        // Contact
+        'contact-title': 'Contact',
+        'contact-lead': 'Do you have a project in mind or want to collaborate?',
+        'contact-text': 'I\'m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.',
+        'contact-phone': 'Phone',
+        
+        // Footer
+        'footer-copyright': '© 2024 Your Name. All rights reserved.',
+        'footer-tagline': 'Designed and developed with dedication'
+    }
+};
+
+// Estado actual del idioma
+let currentLanguage = localStorage.getItem('language') || 'es';
+
+// Función para cambiar idioma
+function changeLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    
+    // Actualizar todos los elementos con data-lang
+    document.querySelectorAll('[data-lang]').forEach(element => {
+        const key = element.getAttribute('data-lang');
+        if (translations[lang][key]) {
+            // Para elementos con data-text (glitch effect)
+            if (element.hasAttribute('data-text')) {
+                element.setAttribute('data-text', translations[lang][key]);
             }
+            element.textContent = translations[lang][key];
         }
-        
-        requestAnimationFrame(() => this.update());
-    }
+    });
+    
+    // Actualizar el texto del botón de idioma
+    const langButton = document.querySelector('.lang-text');
+    langButton.textContent = lang === 'es' ? 'EN' : 'ES';
+    
+    // Actualizar el atributo lang del html
+    document.documentElement.lang = lang;
 }
 
-// Initialize particle system
-const canvas = document.getElementById('particle-canvas');
-if (canvas) {
-    const particleSystem = new ParticleSystem(canvas);
-    particleSystem.update();
-}
+// Inicializar idioma al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    changeLanguage(currentLanguage);
+    
+    // Event listener para el botón de cambio de idioma
+    const langToggle = document.getElementById('langToggle');
+    langToggle.addEventListener('click', () => {
+        const newLang = currentLanguage === 'es' ? 'en' : 'es';
+        changeLanguage(newLang);
+    });
+});
 
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        
-        const spans = navToggle.querySelectorAll('span');
-        if (navMenu.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
-    });
-}
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    
+    // Animate toggle icon
+    const spans = navToggle.querySelectorAll('span');
+    if (navMenu.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+    } else {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+    }
+});
 
 // Close mobile menu when clicking a link
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         const spans = navToggle.querySelectorAll('span');
-        spans.forEach(span => span.style.transform = 'none');
+        spans[0].style.transform = 'none';
         spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
     });
 });
 
-// Smooth scrolling
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offset = 100;
+            const offset = 80; // Height of fixed navbar
             const targetPosition = target.offsetTop - offset;
             window.scrollTo({
                 top: targetPosition,
@@ -132,7 +284,7 @@ window.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (window.scrollY >= (sectionTop - 300)) {
+        if (window.scrollY >= (sectionTop - 200)) {
             current = section.getAttribute('id');
         }
     });
@@ -145,31 +297,31 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Timeline expand/collapse
+// Timeline expand/collapse functionality
 const timelineItems = document.querySelectorAll('.timeline-item');
 
 timelineItems.forEach(item => {
     const expandBtn = item.querySelector('.expand-btn');
     
-    if (expandBtn) {
-        expandBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const isExpanded = item.getAttribute('data-expanded') === 'true';
-            
-            timelineItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.setAttribute('data-expanded', 'false');
-                }
-            });
-            
-            item.setAttribute('data-expanded', !isExpanded);
+    expandBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isExpanded = item.getAttribute('data-expanded') === 'true';
+        
+        // Close all other items
+        timelineItems.forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.setAttribute('data-expanded', 'false');
+            }
         });
-    }
+        
+        // Toggle current item
+        item.setAttribute('data-expanded', !isExpanded);
+    });
 });
 
-// Intersection Observer for scroll animations
+// Scroll animations
 const observerOptions = {
-    threshold: 0.1,
+    threshold: 0.15,
     rootMargin: '0px 0px -100px 0px'
 };
 
@@ -178,6 +330,7 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             
+            // Trigger skill bar animations when skills section is visible
             if (entry.target.classList.contains('skills-section')) {
                 animateSkillBars();
             }
@@ -185,7 +338,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements
+// Observe all sections and timeline items
 document.querySelectorAll('.section, .timeline-item, .project-card').forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
@@ -196,13 +349,12 @@ function animateSkillBars() {
     const skillBars = document.querySelectorAll('.skill-fill');
     skillBars.forEach((bar, index) => {
         setTimeout(() => {
-            const targetWidth = bar.getAttribute('data-width') || bar.style.getPropertyValue('--skill-width') || '0%';
-            bar.style.width = targetWidth;
+            bar.style.width = bar.style.getPropertyValue('--skill-width') || '0%';
         }, index * 100);
     });
 }
 
-// Initialize skill bars
+// Initialize skill bars at 0 width
 document.querySelectorAll('.skill-fill').forEach(bar => {
     const targetWidth = bar.style.getPropertyValue('--skill-width');
     bar.setAttribute('data-width', targetWidth);
@@ -215,39 +367,32 @@ const projectCards = document.querySelectorAll('.project-card');
 projectCards.forEach(card => {
     const expandBtn = card.querySelector('.project-expand');
     
-    if (expandBtn) {
-        expandBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            alert('Aquí podrías añadir un modal con más detalles del proyecto o enlazar a una página dedicada');
-        });
-    }
+    expandBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const message = currentLanguage === 'es' 
+            ? 'Aquí podrías añadir más detalles del proyecto en un modal o página separada'
+            : 'Here you could add more project details in a modal or separate page';
+        alert(message);
+    });
 });
 
-// Parallax effect for hero
-let ticking = false;
-
+// Parallax effect for hero section
 window.addEventListener('scroll', () => {
-    if (!ticking) {
-        window.requestAnimationFrame(() => {
-            const scrolled = window.scrollY;
-            const heroContent = document.querySelector('.hero-content');
-            if (heroContent && scrolled < window.innerHeight) {
-                heroContent.style.transform = `translateY(${scrolled * 0.2}px)`;
-                heroContent.style.opacity = 1 - (scrolled / 1000);
-            }
-            ticking = false;
-        });
-        ticking = true;
+    const scrolled = window.scrollY;
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+        heroContent.style.opacity = 1 - (scrolled / 800);
     }
 });
 
-// Glitch effect on hover
+// Add glitch effect on hover for hero title
 const glitchTexts = document.querySelectorAll('.glitch-text');
 
 glitchTexts.forEach(text => {
     text.addEventListener('mouseenter', () => {
         const originalText = text.getAttribute('data-text') || text.textContent;
-        const glitchChars = '!<>-_\\/[]{}—=+*^?#________';
+        const glitchChars = '!@#$%^&*()_+-=[]{}|;:,.<>?';
         let iterations = 0;
         
         const interval = setInterval(() => {
@@ -261,13 +406,13 @@ glitchTexts.forEach(text => {
                 })
                 .join('');
             
-            iterations += 1/2;
+            iterations += 1/3;
             
             if (iterations >= originalText.length) {
                 clearInterval(interval);
                 text.textContent = originalText;
             }
-        }, 40);
+        }, 30);
     });
 });
 
@@ -275,145 +420,56 @@ glitchTexts.forEach(text => {
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(20, 20, 40, 0.8)';
+        navbar.style.background = 'rgba(10, 14, 26, 0.98)';
+        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
     } else {
-        navbar.style.background = 'rgba(20, 20, 40, 0.6)';
+        navbar.style.background = 'rgba(10, 14, 26, 0.95)';
+        navbar.style.boxShadow = 'none';
     }
 });
 
-// Animate hero stats on load
+// Add stagger animation to hero stats
 const statsItems = document.querySelectorAll('.stat-item');
 statsItems.forEach((stat, index) => {
-    stat.style.opacity = '0';
-    stat.style.transform = 'translateY(30px)';
-    setTimeout(() => {
-        stat.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-        stat.style.opacity = '1';
-        stat.style.transform = 'translateY(0)';
-    }, 100 + index * 150);
+    stat.style.animationDelay = `${index * 0.2}s`;
+    stat.style.animation = 'fadeInUp 0.8s ease forwards';
 });
 
-// Animate frequency bars
-const frequencyBars = document.querySelectorAll('.bar');
-function animateFrequencyBars() {
-    frequencyBars.forEach(bar => {
-        const randomHeight = Math.random() * 40 + 50;
-        bar.style.setProperty('--height', `${randomHeight}%`);
-    });
-}
-
-if (frequencyBars.length > 0) {
-    setInterval(animateFrequencyBars, 2500);
-}
-
-// Mouse trail effect (subtle)
-let mouseX = 0;
-let mouseY = 0;
-let trailX = 0;
-let trailY = 0;
-
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-});
-
-function animateTrail() {
-    const dx = mouseX - trailX;
-    const dy = mouseY - trailY;
-    
-    trailX += dx * 0.1;
-    trailY += dy * 0.1;
-    
-    requestAnimationFrame(animateTrail);
-}
-
-animateTrail();
-
-// Add smooth animations to buttons
-const buttons = document.querySelectorAll('.btn');
-buttons.forEach(button => {
-    button.addEventListener('mouseenter', function(e) {
-        const x = e.offsetX;
-        const y = e.offsetY;
-        
-        const ripple = document.createElement('span');
-        ripple.style.cssText = `
-            position: absolute;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            width: 0;
-            height: 0;
-            left: ${x}px;
-            top: ${y}px;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            animation: ripple 0.6s ease-out;
-        `;
-        
-        this.appendChild(ripple);
-        setTimeout(() => ripple.remove(), 600);
-    });
-});
-
-// Add ripple animation
+// Add CSS animation for stats
 const style = document.createElement('style');
 style.textContent = `
-    @keyframes ripple {
-        to {
-            width: 200px;
-            height: 200px;
+    @keyframes fadeInUp {
+        from {
             opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
     
-    .btn {
-        position: relative;
-        overflow: hidden;
+    .stat-item {
+        opacity: 0;
     }
 `;
 document.head.appendChild(style);
 
+// Animate frequency bars continuously
+const frequencyBars = document.querySelectorAll('.bar');
+setInterval(() => {
+    frequencyBars.forEach(bar => {
+        const randomHeight = Math.random() * 50 + 40; // Between 40% and 90%
+        bar.style.setProperty('--height', `${randomHeight}%`);
+    });
+}, 2000);
+
 // Console easter egg
-console.log('%c👋 ¡Hola, developer!', 'color: #00f0ff; font-size: 24px; font-weight: bold; text-shadow: 0 0 10px #00f0ff;');
-console.log('%c🎨 Portfolio creado con HTML, CSS y JavaScript vanilla', 'color: #b4b4d4; font-size: 14px;');
-console.log('%c💼 ¿Interesado en colaborar? ¡Hablemos!', 'color: #00f0ff; font-size: 16px; font-weight: bold;');
-console.log('%c✨ Diseño con partículas animadas, glassmorphism y efectos premium', 'color: #7b2ff7; font-size: 12px;');
+const consoleMessage = currentLanguage === 'es' 
+    ? ['¡Hola, developer! 👋', '¿Interesado en cómo funciona este portfolio?', 'Este sitio fue creado con HTML, CSS y JavaScript vanilla.', '¡Hablemos! 💼']
+    : ['Hello, developer! 👋', 'Interested in how this portfolio works?', 'This site was created with vanilla HTML, CSS and JavaScript.', 'Let\'s talk! 💼'];
 
-// Add scroll progress indicator
-const scrollProgress = document.createElement('div');
-scrollProgress.style.cssText = `
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #00f0ff, #7b2ff7);
-    width: 0%;
-    z-index: 9999;
-    transition: width 0.1s ease;
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
-`;
-document.body.appendChild(scrollProgress);
-
-window.addEventListener('scroll', () => {
-    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (window.scrollY / windowHeight) * 100;
-    scrollProgress.style.width = scrolled + '%';
-});
-
-// Add typing effect to hero subtitle (optional)
-const heroSubtitle = document.querySelector('.hero-subtitle');
-if (heroSubtitle) {
-    const originalText = heroSubtitle.textContent;
-    heroSubtitle.textContent = '';
-    let charIndex = 0;
-    
-    function typeWriter() {
-        if (charIndex < originalText.length) {
-            heroSubtitle.textContent += originalText.charAt(charIndex);
-            charIndex++;
-            setTimeout(typeWriter, 50);
-        }
-    }
-    
-    setTimeout(typeWriter, 500);
-}
+console.log(`%c${consoleMessage[0]}`, 'color: #00d9ff; font-size: 20px; font-weight: bold;');
+console.log(`%c${consoleMessage[1]}`, 'color: #8f9bb3; font-size: 14px;');
+console.log(`%c${consoleMessage[2]}`, 'color: #8f9bb3; font-size: 12px;');
+console.log(`%c${consoleMessage[3]}`, 'color: #00d9ff; font-size: 16px; font-weight: bold;');
