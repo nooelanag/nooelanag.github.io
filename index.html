@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ingeniero de Telecomunicaciones</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+        <div class="grid-overlay"></div>
+        <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="signal-dot"></span>
+                <span>TU NOMBRE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Estudios</a></li>
+                <li><a href="#experience" class="nav-link">Trabajo</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="glitch-text" data-text="Ingeniero de">Ingeniero de</span>
+                    <span class="glitch-text highlight" data-text="Telecomunicaciones">Telecomunicaciones</span>
+                </h1>
+                <p class="hero-subtitle">Conectando el futuro, una señal a la vez</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Años de experiencia</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Proyectos completados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Dedicación</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead-text">
+                        Soy un ingeniero de telecomunicaciones apasionado por las tecnologías de comunicación 
+                        y el desarrollo de sistemas que conectan a las personas.
+                    </p>
+                    <p>
+                        Mi experiencia abarca desde el diseño de redes de alta velocidad hasta el desarrollo 
+                        de aplicaciones IoT y sistemas de telecomunicaciones. Me especializo en optimizar 
+                        la transmisión de datos y crear infraestructuras robustas que soporten las demandas 
+                        del mundo digital moderno.
+                    </p>
+                    <p>
+                        Cuando no estoy trabajando en proyectos técnicos, me gusta mantenerme actualizado 
+                        con las últimas tendencias en 5G, fibra óptica y tecnologías emergentes de comunicación.
+                    </p>
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-primary">Hablemos</a>
+                        <a href="#" class="btn btn-secondary">Descargar CV</a>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="frequency-bars">
+                        <div class="bar" style="--height: 60%; --delay: 0s;"></div>
+                        <div class="bar" style="--height: 85%; --delay: 0.1s;"></div>
+                        <div class="bar" style="--height: 45%; --delay: 0.2s;"></div>
+                        <div class="bar" style="--height: 70%; --delay: 0.3s;"></div>
+                        <div class="bar" style="--height: 90%; --delay: 0.4s;"></div>
+                        <div class="bar" style="--height: 55%; --delay: 0.5s;"></div>
+                        <div class="bar" style="--height: 75%; --delay: 0.6s;"></div>
+                        <div class="bar" style="--height: 40%; --delay: 0.7s;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Estudios</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-expanded="false">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date">2015 - 2019</div>
+                            <h3 class="timeline-title">Grado en Ingeniería de Telecomunicaciones</h3>
+                            <p class="timeline-institution">Universidad Politécnica de Madrid</p>
+                            <button class="expand-btn">
+                                <span class="expand-icon">+</span>
+                            </button>
+                        </div>
+                        <div class="timeline-details">
+                            <p>Especialización en Sistemas de Telecomunicación</p>
+                            <ul class="timeline-highlights">
+                                <li>Proyecto fin de grado sobre optimización de redes 5G - Calificación: 9.5/10</li>
+                                <li>Prácticas en Ericsson desarrollando soluciones de red</li>
+                                <li>Beca de excelencia académica durante 3 años</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-expanded="false">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date">2019 - 2021</div>
+                            <h3 class="timeline-title">Máster en Redes y Servicios de Telecomunicación</h3>
+                            <p class="timeline-institution">Universidad Politécnica de Madrid</p>
+                            <button class="expand-btn">
+                                <span class="expand-icon">+</span>
+                            </button>
+                        </div>
+                        <div class="timeline-details">
+                            <p>Enfoque en arquitecturas de red avanzadas y servicios cloud</p>
+                            <ul class="timeline-highlights">
+                                <li>Tesis sobre SDN (Software Defined Networking) y virtualización de funciones de red</li>
+                                <li>Colaboración en proyecto de investigación europeo sobre IoT</li>
+                                <li>Certificación en tecnologías Cisco CCNP</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-expanded="false">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date">2022</div>
+                            <h3 class="timeline-title">Certificaciones Profesionales</h3>
+                            <p class="timeline-institution">Varias instituciones</p>
+                            <button class="expand-btn">
+                                <span class="expand-icon">+</span>
+                            </button>
+                        </div>
+                        <div class="timeline-details">
+                            <ul class="timeline-highlights">
+                                <li>AWS Certified Solutions Architect</li>
+                                <li>Certified Wireless Network Professional (CWNP)</li>
+                                <li>Huawei HCIE-Datacom</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Experiencia Laboral</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-expanded="false">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date">2023 - Presente</div>
+                            <h3 class="timeline-title">Senior Network Engineer</h3>
+                            <p class="timeline-institution">Telefónica Tech</p>
+                            <button class="expand-btn">
+                                <span class="expand-icon">+</span>
+                            </button>
+                        </div>
+                        <div class="timeline-details">
+                            <p>Liderando el diseño e implementación de soluciones de red empresariales</p>
+                            <ul class="timeline-highlights">
+                                <li>Diseño y despliegue de redes SD-WAN para clientes corporativos</li>
+                                <li>Optimización de infraestructura 5G para aplicaciones industriales</li>
+                                <li>Reducción de latencia en un 40% mediante implementación de edge computing</li>
+                                <li>Gestión de equipo de 5 ingenieros junior</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-expanded="false">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date">2021 - 2023</div>
+                            <h3 class="timeline-title">Telecommunications Engineer</h3>
+                            <p class="timeline-institution">Nokia Solutions and Networks</p>
+                            <button class="expand-btn">
+                                <span class="expand-icon">+</span>
+                            </button>
+                        </div>
+                        <div class="timeline-details">
+                            <p>Desarrollo de soluciones de red móvil y fija</p>
+                            <ul class="timeline-highlights">
+                                <li>Participación en proyectos de despliegue de 5G NSA/SA</li>
+                                <li>Optimización de redes LTE mediante análisis de KPIs</li>
+                                <li>Implementación de soluciones de backhaul de fibra óptica</li>
+                                <li>Formación técnica a equipos de operadores</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-expanded="false">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date">2019 - 2021</div>
+                            <h3 class="timeline-title">Junior Network Engineer</h3>
+                            <p class="timeline-institution">Ericsson España</p>
+                            <button class="expand-btn">
+                                <span class="expand-icon">+</span>
+                            </button>
+                        </div>
+                        <div class="timeline-details">
+                            <p>Soporte técnico y mantenimiento de infraestructura de red</p>
+                            <ul class="timeline-highlights">
+                                <li>Monitorización y troubleshooting de redes móviles 3G/4G</li>
+                                <li>Configuración de equipos de core network</li>
+                                <li>Análisis de tráfico y optimización de capacidad</li>
+                                <li>Documentación técnica de procedimientos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Proyectos Destacados</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Red 5G Industrial</h3>
+                        <p class="project-description">
+                            Implementación de red 5G privada para una fábrica inteligente, 
+                            habilitando comunicación ultra-confiable de baja latencia (URLLC) 
+                            para aplicaciones críticas.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">5G</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">Edge Computing</span>
+                            <span class="tag">Network Slicing</span>
+                        </div>
+                        <button class="project-expand">Ver más detalles</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <path d="M20,50 L40,30 L60,50 L80,20" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M20,70 L40,60 L60,75 L80,55" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sistema de Monitorización de Redes</h3>
+                        <p class="project-description">
+                            Desarrollo de plataforma de análisis en tiempo real para monitorización 
+                            de KPIs de red con machine learning para detección predictiva de fallos.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Time Series</span>
+                        </div>
+                        <button class="project-expand">Ver más detalles</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <rect x="30" y="30" width="15" height="40" fill="currentColor"/>
+                                <rect x="55" y="20" width="15" height="50" fill="currentColor"/>
+                                <line x1="37.5" y1="30" x2="62.5" y2="20" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Optimización de Backhaul 5G</h3>
+                        <p class="project-description">
+                            Diseño e implementación de solución de backhaul híbrido (fibra/microondas) 
+                            para despliegue 5G en zonas rurales, optimizando costes y rendimiento.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Fibra Óptica</span>
+                            <span class="tag">Microondas</span>
+                            <span class="tag">5G Transport</span>
+                        </div>
+                        <button class="project-expand">Ver más detalles</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <circle cx="50" cy="30" r="8" fill="currentColor"/>
+                                <circle cx="30" cy="60" r="8" fill="currentColor"/>
+                                <circle cx="70" cy="60" r="8" fill="currentColor"/>
+                                <line x1="50" y1="38" x2="35" y2="55" stroke="currentColor" stroke-width="2"/>
+                                <line x1="50" y1="38" x2="65" y2="55" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SD-WAN Empresarial</h3>
+                        <p class="project-description">
+                            Migración de red WAN tradicional a arquitectura SD-WAN para multinacional, 
+                            mejorando flexibilidad y reduciendo costes operativos en un 35%.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">SD-WAN</span>
+                            <span class="tag">NFV</span>
+                            <span class="tag">Cloud</span>
+                            <span class="tag">Security</span>
+                        </div>
+                        <button class="project-expand">Ver más detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Habilidades Técnicas</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Tecnologías de Red</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">5G/LTE/3G</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Fibra Óptica</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SD-WAN/NFV</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">IoT/M2M</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Protocolos y Estándares</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">TCP/IP</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MPLS/BGP</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SIP/VoIP</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MQTT/CoAP</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Herramientas y Software</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Wireshark/tcpdump</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Cisco/Huawei CLI</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python/Automation</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MATLAB/Simulink</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Cloud y Virtualización</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">AWS/Azure</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker/Kubernetes</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">VMware/Hyper-V</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">OpenStack</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Contacto</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-lead">¿Tienes un proyecto en mente o quieres colaborar?</p>
+                    <p class="contact-text">Estoy siempre abierto a discutir nuevos proyectos, ideas creativas o oportunidades para formar parte de tu visión.</p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:tu.email@example.com" class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">tu.email@example.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+34123456789" class="contact-method">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <span class="contact-label">Teléfono</span>
+                                <span class="contact-value">+34 123 456 789</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="contact-method">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-details">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">linkedin.com/in/tu-perfil</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/tu-usuario" target="_blank" class="contact-method">
+                            <div class="contact-icon">💻</div>
+                            <div class="contact-details">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">github.com/tu-usuario</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
+                <p class="footer-tagline">Diseñado y desarrollado con dedicación</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
