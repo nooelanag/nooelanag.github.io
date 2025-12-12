@@ -191,13 +191,14 @@ let currentLanguage = localStorage.getItem('language') || 'es';
 
 // Función para cambiar idioma
 function changeLanguage(lang) {
+    console.log('🔄 Cambiando idioma a:', lang.toUpperCase());
     currentLanguage = lang;
     localStorage.setItem('language', lang);
     
     // Actualizar todos los elementos con data-lang
     document.querySelectorAll('[data-lang]').forEach(element => {
         const key = element.getAttribute('data-lang');
-        if (translations[lang][key]) {
+        if (translations[lang] && translations[lang][key]) {
             // Para elementos con data-text (glitch effect)
             if (element.hasAttribute('data-text')) {
                 element.setAttribute('data-text', translations[lang][key]);
@@ -206,25 +207,60 @@ function changeLanguage(lang) {
         }
     });
     
-    // Actualizar el texto del botón de idioma
-    const langButton = document.querySelector('.lang-text');
-    langButton.textContent = lang === 'es' ? 'EN' : 'ES';
+    // Actualizar el botón de idioma
+    const langText = document.getElementById('langText');
+    const langCurrent = document.querySelector('.lang-current');
+    
+    if (langText) {
+        langText.textContent = lang === 'es' ? 'EN' : 'ES';
+    }
+    
+    if (langCurrent) {
+        langCurrent.textContent = lang.toUpperCase();
+    }
     
     // Actualizar el atributo lang del html
     document.documentElement.lang = lang;
+    
+    console.log('✅ Idioma actualizado a:', lang.toUpperCase());
 }
 
-// Inicializar idioma al cargar la página
-document.addEventListener('DOMContentLoaded', () => {
-    changeLanguage(currentLanguage);
-    
-    // Event listener para el botón de cambio de idioma
+// Event listener para el botón de cambio de idioma
+function setupLanguageToggle() {
     const langToggle = document.getElementById('langToggle');
-    langToggle.addEventListener('click', () => {
-        const newLang = currentLanguage === 'es' ? 'en' : 'es';
-        changeLanguage(newLang);
+    console.log('🔍 Buscando botón de idioma...', langToggle ? '✓ ENCONTRADO' : '✗ NO ENCONTRADO');
+    
+    if (langToggle) {
+        langToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            const newLang = currentLanguage === 'es' ? 'en' : 'es';
+            console.log('🌐 CLICK! Cambiando de', currentLanguage, 'a', newLang);
+            changeLanguage(newLang);
+            
+            // Alerta temporal para verificar que funciona (puedes quitarla después)
+            // Descomenta la siguiente línea para ver una confirmación visual:
+            // alert('✓ Idioma cambiado a: ' + (newLang === 'es' ? 'Español' : 'English'));
+        });
+        console.log('✅ Event listener de idioma añadido correctamente');
+        console.log('💡 Haz clic en el botón 🌐 para cambiar el idioma');
+    } else {
+        console.error('❌ ERROR: No se encontró el botón de idioma con ID "langToggle"');
+    }
+}
+
+// Inicializar todo cuando el DOM esté listo
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('DOM cargado - Inicializando idioma:', currentLanguage);
+        changeLanguage(currentLanguage);
+        setupLanguageToggle();
     });
-});
+} else {
+    // El DOM ya está cargado
+    console.log('DOM ya cargado - Inicializando idioma:', currentLanguage);
+    changeLanguage(currentLanguage);
+    setupLanguageToggle();
+}
 
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');

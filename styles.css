@@ -162,7 +162,7 @@ body {
     gap: 0.5rem;
     padding: 0.6rem 1.2rem;
     background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
+    border: 2px solid var(--color-border);
     border-radius: 8px;
     color: var(--color-text);
     cursor: pointer;
@@ -177,15 +177,49 @@ body {
     color: var(--color-bg);
     border-color: var(--color-primary);
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 217, 255, 0.4);
+}
+
+.lang-toggle:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 217, 255, 0.3);
 }
 
 .lang-icon {
     font-size: 1.2rem;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    0%, 90% { transform: rotate(0deg); }
+    95% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.lang-current {
+    font-family: var(--font-display);
+    letter-spacing: 1px;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.lang-separator {
+    opacity: 0.3;
 }
 
 .lang-text {
     font-family: var(--font-display);
     letter-spacing: 1px;
+    min-width: 25px;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.lang-toggle:hover .lang-current,
+.lang-toggle:hover .lang-separator,
+.lang-toggle:hover .lang-text {
+    color: inherit;
+    opacity: 1;
 }
 
 .nav-toggle {
@@ -872,6 +906,7 @@ body {
     }
     
     .lang-toggle {
+        margin-left: auto;
         margin-right: 1rem;
     }
     
