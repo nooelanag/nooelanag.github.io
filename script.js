@@ -509,3 +509,14 @@ console.log(`%c${consoleMessage[0]}`, 'color: #00d9ff; font-size: 20px; font-wei
 console.log(`%c${consoleMessage[1]}`, 'color: #8f9bb3; font-size: 14px;');
 console.log(`%c${consoleMessage[2]}`, 'color: #8f9bb3; font-size: 12px;');
 console.log(`%c${consoleMessage[3]}`, 'color: #00d9ff; font-size: 16px; font-weight: bold;');
+
+//Automatic year
+document.addEventListener('DOMContentLoaded', function() {
+    // ID search
+    const yearElement = document.getElementById("current-year");
+    
+    // If exists, replace with current year
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
