@@ -105,7 +105,7 @@ const translations = {
         'hero-title-1': 'Telecommunications',
         'hero-title-2': 'Engineer',
         'hero-subtitle': 'Connecting the future, one signal at a time',
-        'stat-years': 'Years of experience',
+        'stat-years': 'Year of experience',
         'stat-projects': 'Completed projects',
         'stat-dedication': 'Dedication',
         
