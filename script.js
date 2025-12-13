@@ -89,8 +89,7 @@ const translations = {
         'contact-phone': 'Teléfono',
         
         // Footer
-        'footer-copyright': '© 2024 Tu Nombre. Todos los derechos reservados.',
-        'footer-tagline': 'Diseñado y desarrollado con dedicación'
+        'footer-copyright': '© 2025 Noel Andolz Aguado. Todos los derechos reservados.',
     },
     en: {
         // Navigation
@@ -181,8 +180,7 @@ const translations = {
         'contact-phone': 'Phone',
         
         // Footer
-        'footer-copyright': '© 2024 Your Name. All rights reserved.',
-        'footer-tagline': 'Designed and developed with dedication'
+        'footer-copyright': '© 2025 Noel Andolz Aguado. All rights reserved.',
     }
 };
 
