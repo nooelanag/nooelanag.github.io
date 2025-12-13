@@ -87,6 +87,8 @@ const translations = {
         'contact-lead': '¿Tienes un proyecto en mente o quieres colaborar?',
         'contact-text': 'Estoy siempre abierto a discutir nuevos proyectos, ideas creativas o oportunidades para formar parte de tu visión.',
         'contact-phone': 'Teléfono',
+        'contact-email-cta': 'Enviar correo',
+
         
         // Footer
         'footer-copyright': '© 2025 Noel Andolz Aguado. Todos los derechos reservados.',
@@ -178,6 +180,7 @@ const translations = {
         'contact-lead': 'Do you have a project in mind or want to collaborate?',
         'contact-text': 'I\'m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.',
         'contact-phone': 'Phone',
+        'contact-email-cta': 'Send email',
         
         // Footer
         'footer-copyright': '© 2025 Noel Andolz Aguado. All rights reserved.',
