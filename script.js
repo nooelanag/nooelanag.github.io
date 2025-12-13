@@ -77,10 +77,10 @@ const translations = {
         'skills-title': 'Habilidades Técnicas',
         'skills-cat1': 'Tecnologías de Red',
         'skills-cat2': 'Protocolos y Estándares',
-        'skills-cat3': 'Herramientas y Software',
+        'skills-cat3': 'Herramientas y Programación',
         'skills-cat4': 'Cloud y Virtualización',
         'skill-fiber': 'Fibra Óptica',
-        'skill-automation': 'Python/Automation',
+        'skill-automation': 'Python/Automatización',
         
         // Contact
         'contact-title': 'Contacto',
@@ -170,7 +170,7 @@ const translations = {
         'skills-title': 'Technical Skills',
         'skills-cat1': 'Network Technologies',
         'skills-cat2': 'Protocols and Standards',
-        'skills-cat3': 'Tools and Software',
+        'skills-cat3': 'Tools and Programming',
         'skills-cat4': 'Cloud and Virtualization',
         'skill-fiber': 'Fiber Optic',
         'skill-automation': 'Python/Automation',
