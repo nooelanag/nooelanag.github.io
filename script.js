@@ -15,7 +15,7 @@ const translations = {
         'hero-subtitle': 'Conectando el futuro, una señal a la vez',
         'stat-years': 'Años de experiencia',
         'stat-projects': 'Proyectos completados',
-        'stat-dedication': 'Dedicación',
+        'stat-dedication': 'Dedicación y esfuerzo',
         
         // About
         'about-title': 'About Me',
@@ -108,7 +108,7 @@ const translations = {
         'hero-subtitle': 'Connecting the future, one signal at a time',
         'stat-years': 'Year of experience',
         'stat-projects': 'Completed projects',
-        'stat-dedication': 'Dedication',
+        'stat-dedication': 'Dedication and hard work',
         
         // About
         'about-title': 'About Me',
