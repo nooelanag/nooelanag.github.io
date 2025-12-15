@@ -19,9 +19,9 @@ const translations = {
         
         // About
         'about-title': 'About Me',
-        'about-lead': 'Soy un ingeniero de telecomunicaciones apasionado por las tecnologías de comunicación y el desarrollo de sistemas que conectan a las personas.',
-        'about-p1': 'Mi experiencia abarca desde el diseño de redes de alta velocidad hasta el desarrollo de aplicaciones IoT y sistemas de telecomunicaciones. Me especializo en optimizar la transmisión de datos y crear infraestructuras robustas que soporten las demandas del mundo digital moderno.',
-        'about-p2': 'Cuando no estoy trabajando en proyectos técnicos, me gusta mantenerme actualizado con las últimas tendencias en 5G, fibra óptica y tecnologías emergentes de comunicación.',
+        'about-lead': 'Soy un ingeniero de telecomunicaciones apasionado por las antenas y el diseño y gestión de redes.',
+        'about-p1': 'Como persona proactiva que soy, creo firmemente en el poder de la acción y en la iniciativa, entendiendo que la respuesta por defecto siempre es "no" si no se intenta. Para mí, el fracaso no es algo a temer, sino una oportunidad de aprendizaje que permite descubrir enfoques alternativos para alcanzar los objetivos. Poseo una pasión innata por la creación y el aprendizaje; busco activamente conocimiento e inspiración en diversas fuentes, como Internet, profesionales con experiencia y mis propias vivencias. Afronto los desafíos con una actitud positiva y abierta, y estoy comprometido a dedicar el esfuerzo necesario para lograr mis metas.',
+        'about-p2': 'A lo largo de mis estudios, he desarrollado un gran interés por diversas áreas, siendo las Antenas y las Redes, su diseño e implementación, unas de mis favoritas. Mis intereses personales abarcan desde viajar, el automovilismo, la lectura, mantenerme al día sobre tecnologías emergentes, la fotografía, el cine hasta hacer deporte.',
         'about-cta1': 'Hablemos',
         'about-cta2': 'Descargar CV',
         
@@ -113,8 +113,8 @@ const translations = {
         // About
         'about-title': 'About Me',
         'about-lead': 'I am a telecommunications engineer passionate about communication technologies and developing systems that connect people.',
-        'about-p1': 'My experience ranges from designing high-speed networks to developing IoT applications and telecommunications systems. I specialize in optimizing data transmission and creating robust infrastructures that support the demands of the modern digital world.',
-        'about-p2': 'When I\'m not working on technical projects, I enjoy staying updated with the latest trends in 5G, fiber optics, and emerging communication technologies.',
+        'about-p1': 'As a proactive individual I believe in the power of trying; “no” is always the answer by default. Failure, to me, is not something to be feared as it provides an opportunity to learn and discover alternative approaches to achieve one´s goal. I possess an innate passion for creation and learning. I actively seek knowledge and inspiration from various sources such as the Internet, experienced individuals, and my own experiences. I approach challenges with a positive and open-minded attitude, and I am committed to putting in the necessary effort to achieve my goals.',
+        'about-p2': 'Throughout my studies, I have developed an interest in various subjects, with Networks, their design, and implementation being one of my favorites, as well as Antennas. My interests include traveling, motorsport, reading, staying up-to-date on emerging technologies, photography, cinema, and practicing sports.',
         'about-cta1': 'Let\'s Talk',
         'about-cta2': 'Download Resume',
         
