@@ -27,7 +27,7 @@ const translations = {
         
         // Education
         'education-title': 'Estudios',
-        'edu1-title': 'Grado en Ingeniería de Telecomunicaciones',
+        'edu1-title': 'Doble Master en Ingeniería de Telecomunicaciones y Ciberseguridad',
         'edu1-specialization': 'Especialización en Sistemas de Telecomunicación',
         'edu1-item1': 'Proyecto fin de grado sobre optimización de redes 5G - Calificación: 9.5/10',
         'edu1-item2': 'Prácticas en Ericsson desarrollando soluciones de red',
@@ -120,7 +120,7 @@ const translations = {
         
         // Education
         'education-title': 'Education',
-        'edu1-title': 'Bachelor\'s Degree in Telecommunications Engineering',
+        'edu1-title': 'Telecommunications engineering and cybersecurity dual master',
         'edu1-specialization': 'Specialization in Telecommunication Systems',
         'edu1-item1': 'Final project on 5G network optimization - Grade: 9.5/10',
         'edu1-item2': 'Internship at Ericsson developing network solutions',
