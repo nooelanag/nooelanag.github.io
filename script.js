@@ -12,7 +12,7 @@ const translations = {
         // Hero
         'hero-title-1': 'Ingeniero de',
         'hero-title-2': 'Telecomunicaciones',
-        'hero-subtitle': 'Conectando el futuro, una señal a la vez',
+        'hero-subtitle': 'Conectando el futuro',
         'stat-years': 'Años de experiencia',
         'stat-projects': 'Proyectos completados',
         'stat-dedication': 'Dedicación y esfuerzo',
@@ -105,7 +105,7 @@ const translations = {
         // Hero
         'hero-title-1': 'Telecommunications',
         'hero-title-2': 'Engineer',
-        'hero-subtitle': 'Connecting the future, one signal at a time',
+        'hero-subtitle': 'Connecting the future',
         'stat-years': 'Year of experience',
         'stat-projects': 'Completed projects',
         'stat-dedication': 'Dedication and hard work',
