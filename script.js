@@ -30,7 +30,7 @@ const translations = {
         'edu1-title': 'Doble Master en Ingeniería de Telecomunicaciones y Ciberseguridad',
         'edu1-specialization': 'Especialización en Ciberseguridad',
         'edu1-item1': 'Proyecto fin de master no realizado todavia',
-        'edu1-item2': 'Realizado mientras trabajo por la mañana',
+        'edu1-item2': 'Estudios realizados mientras trabajo',
         'edu2-title': 'Año de intercambio en San Francisco',
         'edu2-focus': 'Año de estudios en el extranjero con el programa "Movilidad No Europea"',
         'edu2-item1': 'Prácticas en gestión de proyectos',
