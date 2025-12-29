@@ -52,8 +52,6 @@ const translations = {
         'exp1-description': 'Contribuyendo actualmente al equipo de testing de las soluciones 5G Cloud Native de Ericsson, con enfoque en mejorar la eficiencia de la fase de pruebas del sistema mediante modelado de datos y técnicas de inteligencia artificial',
         'exp1-item1': 'Desarrollo de una plataforma cloud-native que centraliza y visualiza resultados de tests de Jenkins mediante una arquitectura de microservicios en Kubernetes, con backend REST, frontend web y dashboards en Grafana',
         'exp1-item2': 'Desarrollo de un framework modular para automatizar pruebas de penetración con Robot Framework y Python, incluyendo carga dinámica de módulos y un menú CLI interactivo para ejecutar workflows de seguridad',
-        'exp1-item3': 'Reducción de latencia en un 40% mediante implementación de edge computing',
-        'exp1-item4': 'Gestión de equipo de 5 ingenieros junior',
         'exp2-title': 'Becario en equipo de testing de tecnología avanzada',
         'exp2-description': 'Creación y desarrollo de estrategias de testing',
         'exp2-item1': 'Definición e integración de las herramientas de test necesarias',
