@@ -58,11 +58,9 @@ const translations = {
         'exp2-item2': 'Planificación y organización de los enfoques de test para las distintas etapas',
         'exp2-item3': 'Supervisión de la gestión de defectos y monitoreo de las ejecuciones',
         'exp2-item4': 'Algunas de las herramientas utilizadas incluyen SAP Focused Build, Tricentis Tosca y Tricentis Live Compare',
-        'exp3-description': 'Soporte técnico y mantenimiento de infraestructura de red',
-        'exp3-item1': 'Monitorización y troubleshooting de redes móviles 3G/4G',
-        'exp3-item2': 'Configuración de equipos de core network',
-        'exp3-item3': 'Análisis de tráfico y optimización de capacidad',
-        'exp3-item4': 'Documentación técnica de procedimientos',
+        'exp3-title': 'Azafato Zona VIP Real Madrid Club de Fútbol',
+        'exp3-description': 'Azafato de la zona VIP del estadio Santiago Bernabeu en partidos y conciertos',
+        'exp3-item1': 'Este puesto me ha ayudado a mejorar mis habilidades sociales y de comunicación, requiriendo a menudo interactuar con clientes de diversos perfiles en varios idiomas.',
         
         // Projects
         'projects-title': 'Proyectos Destacados',
@@ -158,11 +156,9 @@ const translations = {
         'exp2-item2': 'Planification of test approaches for the different phases',
         'exp2-item3': 'Overseeing defect management and follow-up on functional test execution',
         'exp2-item4': 'Some of the tools used include SAP Focused Build, Tricentis Tosca and Tricentis Live Compare',
-        'exp3-description': 'Technical support and network infrastructure maintenance',
-        'exp3-item1': 'Monitoring and troubleshooting of 3G/4G mobile networks',
-        'exp3-item2': 'Core network equipment configuration',
-        'exp3-item3': 'Traffic analysis and capacity optimization',
-        'exp3-item4': 'Technical documentation of procedures',
+        'exp3-title': 'Real Madrid VIP Area Attendant',
+        'exp3-description': 'VIP Area Attendant at Santiago Bernabéu Stadium on gamedays and concerts',
+        'exp3-item1': 'This role has significantly improved my social and communication skills, often requiring me to engage with guests of different profiles in multiple languages',
         
         // Projects
         'projects-title': 'Featured Projects',
