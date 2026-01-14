@@ -717,6 +717,36 @@ body {
     color: var(--color-bg);
 }
 
+/* Nota de proyecto empresarial */
+.project-note {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: rgba(0, 217, 255, 0.05);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 4px;
+}
+
+.project-note small {
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+}
+
+/* Botón deshabilitado */
+.project-expand-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: transparent;
+    color: var(--color-text-dim);
+    border-color: var(--color-border);
+}
+
+.project-expand-disabled:hover {
+    background: transparent;
+    color: var(--color-text-dim);
+    transform: none;
+    box-shadow: none;
+}
+
 /* Skills Section */
 .skills-grid {
     display: grid;
