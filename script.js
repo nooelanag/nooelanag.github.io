@@ -139,8 +139,6 @@ const translations = {
         'edu2-title': 'Study abroad year in San Francisco',
         'edu2-focus': 'Study abroad year thanks to the "Non European Movility Program"',
         'edu2-item1': 'Project Mangement internship',
-
-
         'edu3-title': 'Bachelor\'s Degree in Telecommunication Technologies Engineering',
         'edu3-focus': 'Average grade: 7.56/10',
         'edu3-tfg-title': 'Final Thesis',
