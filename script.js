@@ -68,6 +68,17 @@ const translations = {
         'proj-ericsson-description': 'Desarrollo de plataforma cloud-native para centralizar y visualizar resultados de tests de Jenkins usando arquitectura de microservicios en Kubernetes, con backend REST, frontend web y dashboards de Grafana.',
         'proj-ericsson-note': 'Proyecto desarrollado en Ericsson',
         'proj-ericsson-button': 'Proyecto confidencial',
+
+
+
+        'proj-pentesting-title': 'Framework de Automatización de Pentesting Modular',
+        'proj-pentesting-description': 'Framework modular de pentesting desarrollado en Python y Robot Framework, con CLI interactivo para escaneo y análisis de servicios SSL/TLS y SSH, generando reportes detallados con clasificación de seguridad y recomendaciones automatizadas.',
+
+
+
+
+
+
         'proj1-title': 'Red 5G Industrial',
         'proj1-description': 'Implementación de red 5G privada para una fábrica inteligente, habilitando comunicación ultra-confiable de baja latencia (URLLC) para aplicaciones críticas.',
         'proj2-title': 'Sistema de Monitorización de Redes',
@@ -170,6 +181,17 @@ const translations = {
         'proj-ericsson-description': 'Development of a cloud-native platform that centralizes and visualizes Jenkins test results using a microservices architecture on Kubernetes, featuring a REST backend, web frontend, and Grafana dashboards.',
         'proj-ericsson-note': 'Project developed at Ericsson',
         'proj-ericsson-button': 'Confidential project',
+
+
+        'proj-pentesting-title': 'Modular Pentesting Automation Framework',
+        'proj-pentesting-description': 'Modular pentesting framework developed in Python and Robot Framework, with an interactive CLI for scanning and analyzing SSL/TLS and SSH services, generating detailed reports with security classification and automated recommendations.',
+
+
+
+
+
+
+
         'proj1-title': 'Industrial 5G Network',
         'proj1-description': 'Implementation of private 5G network for a smart factory, enabling ultra-reliable low-latency communication (URLLC) for critical applications.',
         'proj2-title': 'Network Monitoring System',
