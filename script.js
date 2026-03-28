@@ -238,7 +238,6 @@ const translations = {
     }
 };
 
-// (El resto del código sigue igual...)
 // Estado actual del idioma
 let currentLanguage = localStorage.getItem('language') || 'es';
 
