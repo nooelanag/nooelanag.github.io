@@ -77,9 +77,6 @@ const translations = {
         'proj1-description': 'Implementación de red 5G privada para una fábrica inteligente, habilitando comunicación ultra-confiable de baja latencia (URLLC) para aplicaciones críticas.',
         'proj2-title': 'Sistema de Monitorización de Redes',
         'proj2-description': 'Desarrollo de plataforma de análisis en tiempo real para monitorización de KPIs de red con machine learning para detección predictiva de fallos.',
-        'proj3-title': 'Optimización de Backhaul 5G',
-        'proj3-description': 'Diseño e implementación de solución de backhaul híbrido (fibra/microondas) para despliegue 5G en zonas rurales, optimizando costes y rendimiento.',
-        'proj4-description': 'Migración de red WAN tradicional a arquitectura SD-WAN para multinacional, mejorando flexibilidad y reduciendo costes operativos en un 35%.',
         'proj-button': 'Ver más detalles',
         'tag-fiber': 'Fibra Óptica',
         'tag-microwave': 'Microondas',
@@ -184,13 +181,65 @@ const translations = {
         'proj1-description': 'Implementation of private 5G network for a smart factory, enabling ultra-reliable low-latency communication (URLLC) for critical applications.',
         'proj2-title': 'Network Monitoring System',
         'proj2-description': 'Development of real-time analysis platform for network KPI monitoring with machine learning for predictive failure detection.',
-        'proj3-title': '5G Backhaul Optimization',
-        'proj3-description': 'Design and implementation of hybrid backhaul solution (fiber/microwave) for 5G deployment in rural areas, optimizing costs and performance.',
-        'proj4-description': 'Migration from traditional WAN to SD-WAN architecture for multinational company, improving flexibility and reducing operating costs by 35%.',
         'proj-button': 'View more details',
         'tag-fiber': 'Fiber Optic',
         'tag-microwave': 'Microwave',
         'tag-security': 'Security',
+
+
+
+
+
+
+
+
+        // Botón común
+'proj-github-button': 'Ver en GitHub →',
+ 
+// 1. STM32 Reaction Games
+'proj-stm32-title': 'Juegos de Reacción STM32 Bare-Metal',
+'proj-stm32-description': 'Proyecto de sistemas embebidos bare-metal que implementa dos juegos de tiempo de reacción para dos jugadores en placa STM32L152RE, utilizando programación de bajo nivel con timers, interrupciones EXTI, ADC, PWM y USART para comunicación serie.',
+ 
+// 2. Process Scheduler Emulator
+'proj-scheduler-title': 'Emulador de Planificador de Procesos',
+'proj-scheduler-description': 'Aplicación en C que emula el comportamiento de un planificador de procesos con gestión interactiva de tabla de planificación, operaciones de E/S con archivos binarios, ejecución con fork/exec, Round Robin y manejo de señales SIGINT/SIGALRM.',
+ 
+// 3. Fake News Detection (td_project)
+'proj-fakenews-title': 'Detección de Fake News con ML y Transformers',
+'proj-fakenews-description': 'Proyecto de clasificación de noticias desinformativas comparando múltiples enfoques: TF-IDF + Random Forest, Word2Vec + MLP, embeddings BERT y fine-tuning de modelo Transformer, alcanzando 96-97% de accuracy con PyTorch y HuggingFace.',
+ 
+// 4. Meereen
+'proj-meereen-title': 'Meereen - Simulación de Concurrencia en Java',
+'proj-meereen-description': 'Simulación de problema de sincronización de recursos compartidos en Java con 300 alquimistas y 3 dragones. Implementa monitores synchronized, wait/notifyAll, gestión multi-zona y capacidad dinámica para prevención de deadlocks inspirado en Game of Thrones.',
+ 
+// 5. Compressed Trie Route Lookup
+'proj-trie-title': 'Búsqueda de Rutas IP con Trie Comprimido',
+'proj-trie-description': 'Sistema de búsqueda de rutas IP usando Patricia Trie (trie comprimido) para longest prefix match con complejidad O(W). Implementado en C con métricas de rendimiento, gestión de memoria y comparación con búsqueda lineal en tablas de enrutamiento.',
+ 
+// 6. Proyecto SIP
+'proj-sip-title': 'Implementación de Protocolo SIP',
+'proj-sip-description': 'Desarrollo de aplicación de comunicación VoIP utilizando el protocolo SIP (Session Initiation Protocol) para establecimiento y gestión de sesiones multimedia en redes de telecomunicaciones.',
+ 
+// 7. SDN Development LAB
+'proj-sdn-title': 'Laboratorio de Desarrollo SDN',
+'proj-sdn-description': 'Laboratorio de redes definidas por software implementando reglas ICMP, dispatchers (CONFIG y MAIN), manejadores de eventos, respuestas ICMP echo reply y ARP reply para gestión programática de infraestructura de red.',
+ 
+// 8. Mininet and Ryu LAB
+'proj-mininet-title': 'Laboratorio Mininet y Ryu',
+'proj-mininet-description': 'Prácticas de emulación de redes con Mininet, instalación y activación de OpenFlow 1.3, programación de Mininet con Python y desarrollo de controladores SDN con framework Ryu para gestión de topologías virtuales.',
+ 
+// 9. Dijkstra Algorithm
+'proj-dijkstra-title': 'Implementación del Algoritmo de Dijkstra',
+'proj-dijkstra-description': 'Recreación del comportamiento del algoritmo de Dijkstra para encontrar caminos más cortos en grafos ponderados. Recibe matriz de costos desde archivo, donde nodos no conectados tienen costo 500 en lugar de infinito.',
+
+
+
+
+
+
+
+
+
         
         // Skills
         'skills-title': 'Technical Skills',
