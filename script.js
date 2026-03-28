@@ -13,7 +13,7 @@ const translations = {
         'hero-title-1': 'Ingeniero de',
         'hero-title-2': 'Telecomunicaciones',
         'hero-subtitle': 'Conectando el futuro',
-        'stat-years': 'Años de experiencia',
+        'stat-years': 'Año de experiencia',
         'stat-projects': 'Proyectos completados',
         'stat-dedication': 'Dedicación y esfuerzo',
         
@@ -30,13 +30,13 @@ const translations = {
         'edu1-title': 'Doble Master en Ingeniería de Telecomunicaciones y Ciberseguridad',
         'edu1-specialization': 'Especialización en Ciberseguridad',
         'edu1-item1': 'Proyecto fin de master no realizado todavia',
-        'edu1-item2': 'Estudios realizados mientras trabajo',
+        'edu1-item2': 'Realizado mientras trabajo por la mañana',
         'edu2-title': 'Año de intercambio en San Francisco',
         'edu2-focus': 'Año de estudios en el extranjero con el programa "Movilidad No Europea"',
         'edu2-item1': 'Prácticas en gestión de proyectos',
         'edu3-title': 'Grado en Ingeniería en Tecnologías de Telecomunicación',
         'edu3-focus': 'Nota media de 7,56',
-        'edu3-tfg-title': 'Trabajo Fin de Grado',
+        'edu3-tfg-title': '📡 Trabajo Fin de Grado',
         'edu3-tfg-name': '"Measurement and Characterization of Radio Signals in Amplitude and Phase"',
         'edu3-tfg-description': 'Mi trabajo de fin de grado involucró extenso trabajo de laboratorio práctico con equipos de prueba RF y análisis de señales. Esta experiencia consolidó mi enfoque técnico, combinando técnicas de resolución de problemas prácticos basadas en laboratorio con teoría rigurosa para lograr resultados medibles en entornos controlados.',
         'edu3-item1': 'Calificación del TFG: 8,5/10',
@@ -45,14 +45,14 @@ const translations = {
         'edu3-item4': 'Año de intercambio en San Francisco',
         'edu4-title': 'Bachillerato',
         'edu4-focus': 'Estudios bilingües',
-        'edu4-item1': 'Nota media de 8,41',
+        'edu4-item1': 'Nota media de ¿?',
         'edu4-item2': 'Participación en el grupo de teatro en inglés',
         
         // Experience
         'experience-title': 'Experiencia Laboral',
         'exp1-date': '2025 - Presente',
         'exp1-title': 'Becario en Tecnología 5G Cloud Native',
-        'exp1-description': 'Contribuyendo actualmente al equipo de testing de las soluciones 5G Cloud Native de Ericsson, con enfoque en mejorar la eficiencia de la fase de pruebas del sistema mediante modelado de datos y técnicas de inteligencia artificial',
+        'exp1-description': 'Contribuyendo actualmente al equipo de testing de las soluciones 5G Cloud Native de Ericsson, con enfoque en mejorar la eficiencia de la fase de pruebas del sistema mediante modelado de datos y técnicas de inteligencia artificial.',
         'exp1-item1': 'Desarrollo de una plataforma cloud-native que centraliza y visualiza resultados de tests de Jenkins mediante una arquitectura de microservicios en Kubernetes, con backend REST, frontend web y dashboards en Grafana',
         'exp1-item2': 'Desarrollo de un framework modular para automatizar pruebas de penetración con Robot Framework y Python, incluyendo carga dinámica de módulos y un menú CLI interactivo para ejecutar workflows de seguridad',
         'exp2-title': 'Becario en equipo de testing de tecnología avanzada',
@@ -70,7 +70,6 @@ const translations = {
         'proj-ericsson-title': 'Plataforma de Visualización de Testing Cloud-Native',
         'proj-ericsson-description': 'Desarrollo de plataforma cloud-native para centralizar y visualizar resultados de tests de Jenkins usando arquitectura de microservicios en Kubernetes, con backend REST, frontend web y dashboards de Grafana.',
         'proj-ericsson-note': 'Proyecto desarrollado en Ericsson',
-        'proj-ericsson-button': 'Proyecto confidencial',
         'proj-pentesting-title': 'Framework de Automatización de Pentesting Modular',
         'proj-pentesting-description': 'Framework modular de pentesting desarrollado en Python y Robot Framework, con CLI interactivo para escaneo y análisis de servicios SSL/TLS y SSH, generando reportes detallados con clasificación de seguridad y recomendaciones automatizadas.',
         'proj1-title': 'Red 5G Industrial',
@@ -78,9 +77,28 @@ const translations = {
         'proj2-title': 'Sistema de Monitorización de Redes',
         'proj2-description': 'Desarrollo de plataforma de análisis en tiempo real para monitorización de KPIs de red con machine learning para detección predictiva de fallos.',
         'proj-button': 'Ver más detalles',
-        'tag-fiber': 'Fibra Óptica',
-        'tag-microwave': 'Microondas',
-        'tag-security': 'Security',
+        'tag-security': 'Seguridad',
+        
+        // Proyectos GitHub
+        'proj-github-button': 'Ver en GitHub →',
+        'proj-stm32-title': 'Juegos de Reacción STM32 Bare-Metal',
+        'proj-stm32-description': 'Proyecto de sistemas embebidos bare-metal que implementa dos juegos de tiempo de reacción para dos jugadores en placa STM32L152RE, utilizando programación de bajo nivel con timers, interrupciones EXTI, ADC, PWM y USART para comunicación serie.',
+        'proj-scheduler-title': 'Emulador de Planificador de Procesos',
+        'proj-scheduler-description': 'Aplicación en C que emula el comportamiento de un planificador de procesos con gestión interactiva de tabla de planificación, operaciones de E/S con archivos binarios, ejecución con fork/exec, Round Robin y manejo de señales SIGINT/SIGALRM.',
+        'proj-fakenews-title': 'Detección de Fake News con ML y Transformers',
+        'proj-fakenews-description': 'Proyecto de clasificación de noticias desinformativas comparando múltiples enfoques: TF-IDF + Random Forest, Word2Vec + MLP, embeddings BERT y fine-tuning de modelo Transformer, alcanzando 96-97% de accuracy con PyTorch y HuggingFace.',
+        'proj-meereen-title': 'Meereen - Simulación de Concurrencia en Java',
+        'proj-meereen-description': 'Simulación de problema de sincronización de recursos compartidos en Java con 300 alquimistas y 3 dragones. Implementa monitores synchronized, wait/notifyAll, gestión multi-zona y capacidad dinámica para prevención de deadlocks inspirado en Game of Thrones.',
+        'proj-trie-title': 'Búsqueda de Rutas IP con Trie Comprimido',
+        'proj-trie-description': 'Sistema de búsqueda de rutas IP usando Patricia Trie (trie comprimido) para longest prefix match con complejidad O(W). Implementado en C con métricas de rendimiento, gestión de memoria y comparación con búsqueda lineal en tablas de enrutamiento.',
+        'proj-sip-title': 'Implementación de Protocolo SIP',
+        'proj-sip-description': 'Desarrollo de aplicación de comunicación VoIP utilizando el protocolo SIP (Session Initiation Protocol) para establecimiento y gestión de sesiones multimedia en redes de telecomunicaciones.',
+        'proj-sdn-title': 'Laboratorio de Desarrollo SDN',
+        'proj-sdn-description': 'Laboratorio de redes definidas por software implementando reglas ICMP, dispatchers (CONFIG y MAIN), manejadores de eventos, respuestas ICMP echo reply y ARP reply para gestión programática de infraestructura de red.',
+        'proj-mininet-title': 'Laboratorio Mininet y Ryu',
+        'proj-mininet-description': 'Prácticas de emulación de redes con Mininet, instalación y activación de OpenFlow 1.3, programación de Mininet con Python y desarrollo de controladores SDN con framework Ryu para gestión de topologías virtuales.',
+        'proj-dijkstra-title': 'Implementación del Algoritmo de Dijkstra',
+        'proj-dijkstra-description': 'Recreación del comportamiento del algoritmo de Dijkstra para encontrar caminos más cortos en grafos ponderados. Recibe matriz de costos desde archivo, donde nodos no conectados tienen costo 500 en lugar de infinito.',
         
         // Skills
         'skills-title': 'Habilidades Técnicas',
@@ -95,9 +113,7 @@ const translations = {
         'contact-title': 'Contacto',
         'contact-lead': '¿Tienes un proyecto en mente o quieres colaborar?',
         'contact-text': 'Estoy siempre abierto a discutir nuevos proyectos, ideas creativas o oportunidades para formar parte de tu visión.',
-        'contact-phone': 'Teléfono',
         'contact-email-cta': 'Enviar correo',
-
         
         // Footer
         'footer-copyright': '© 2025 Noel Andolz Aguado. Todos los derechos reservados.',
@@ -121,48 +137,46 @@ const translations = {
         
         // About
         'about-title': 'About Me',
-        'about-lead': 'I am a telecommunications engineer passionate about communication technologies and developing systems that connect people.',
-        'about-p1': 'As a proactive individual I believe in the power of trying; “no” is always the answer by default. Failure, to me, is not something to be feared as it provides an opportunity to learn and discover alternative approaches to achieve one´s goal. I possess an innate passion for creation and learning. I actively seek knowledge and inspiration from various sources such as the Internet, experienced individuals, and my own experiences. I approach challenges with a positive and open-minded attitude, and I am committed to putting in the necessary effort to achieve my goals.',
+        'about-lead': 'I am a telecommunications engineer passionate about antennas and network design and management.',
+        'about-p1': 'As a proactive individual I believe in the power of trying; "no" is always the answer by default. Failure, to me, is not something to be feared as it provides an opportunity to learn and discover alternative approaches to achieve one´s goal. I possess an innate passion for creation and learning. I actively seek knowledge and inspiration from various sources such as the Internet, experienced individuals, and my own experiences. I approach challenges with a positive and open-minded attitude, and I am committed to putting in the necessary effort to achieve my goals.',
         'about-p2': 'Throughout my studies, I have developed an interest in various subjects, with Networks, their design, and implementation being one of my favorites, as well as Antennas. My interests include traveling, motorsport, reading, staying up-to-date on emerging technologies, photography, cinema, and practicing sports.',
         'about-cta1': 'Let\'s Talk',
         'about-cta2': 'Download Resume',
         
         // Education
         'education-title': 'Education',
-        'edu1-title': 'Telecommunications engineering and cybersecurity dual master',
+        'edu1-title': 'Telecommunications Engineering and Cybersecurity Dual Master',
         'edu1-specialization': 'Specialization in Cybersecurity',
         'edu1-item1': 'Final project not done yet',
         'edu1-item2': 'Master done while working',
-        'edu2-title': 'Study abroad year in San Francisco',
-        'edu2-focus': 'Study abroad year thanks to the "Non European Movility Program"',
-        'edu2-item1': 'Project Mangement internship',
+        'edu2-title': 'Study Abroad Year in San Francisco',
+        'edu2-focus': 'Study abroad year thanks to the "Non European Mobility Program"',
+        'edu2-item1': 'Project Management internship',
         'edu3-title': 'Bachelor\'s Degree in Telecommunication Technologies Engineering',
         'edu3-focus': 'Average grade: 7.56/10',
-        'edu3-tfg-title': 'Final Thesis',
+        'edu3-tfg-title': '📡 Final Thesis',
         'edu3-tfg-name': '"Measurement and Characterization of Radio Signals in Amplitude and Phase"',
         'edu3-tfg-description': 'My final thesis involved extensive hands-on laboratory work with RF test equipment and signal analysis. This experience solidified my technical approach, combining lab-based practical problem-solving techniques with rigorous theory to achieve measurable results in controlled environments.',
         'edu3-item1': 'Final thesis grade: 8.5/10',
         'edu3-item2': 'Bilingual degree program',
         'edu3-item3': 'Participation in "Vodafone Challenge 2023"',
         'edu3-item4': 'Exchange year in San Francisco',
-        'edu4-title': 'Bachillerato',
+        'edu4-title': 'High School',
         'edu4-focus': 'Bilingual studies',
-        'edu4-item1': 'Average grade of 8,41',
-        'edu4-item2': 'Member of the english theater group',
+        'edu4-item1': 'Average grade of ¿?',
+        'edu4-item2': 'Member of the English theater group',
         
         // Experience
         'experience-title': 'Work Experience',
         'exp1-date': '2025 - Present',
         'exp1-title': 'Cloud Native 5G Technology Intern',
-        'exp1-description': 'Currently contributing to the testing team for Ericsson\'s Cloud Native 5G solutions, with a focus on enhancing the efficiency of the system testing phase through data modeling and artificial intelligence techniques',
+        'exp1-description': 'Currently contributing to the testing team for Ericsson\'s Cloud Native 5G solutions, with a focus on enhancing the efficiency of the system testing phase through data modeling and artificial intelligence techniques.',
         'exp1-item1': 'Developing a cloud-native platform that centralizes and visualizes Jenkins test results using a microservices architecture on Kubernetes, featuring a REST backend, web frontend, and Grafana dashboards',
         'exp1-item2': 'Developing a modular penetration testing automation framework using Robot Framework and Python, featuring dynamic module loading and an interactive CLI for executing security testing workflows',
-        'exp1-item3': '40% latency reduction through edge computing implementation',
-        'exp1-item4': 'Management of team of 5 junior engineers',
         'exp2-title': 'Tech Advance Testing Team Intern',
         'exp2-description': 'Creation and implementation of comprehensive testing strategies',
         'exp2-item1': 'Definition and integration of testing tools',
-        'exp2-item2': 'Planification of test approaches for the different phases',
+        'exp2-item2': 'Planning of test approaches for the different phases',
         'exp2-item3': 'Overseeing defect management and follow-up on functional test execution',
         'exp2-item4': 'Some of the tools used include SAP Focused Build, Tricentis Tosca and Tricentis Live Compare',
         'exp3-title': 'Real Madrid VIP Area Attendant',
@@ -174,7 +188,6 @@ const translations = {
         'proj-ericsson-title': 'Cloud-Native Testing Visualization Platform',
         'proj-ericsson-description': 'Development of a cloud-native platform that centralizes and visualizes Jenkins test results using a microservices architecture on Kubernetes, featuring a REST backend, web frontend, and Grafana dashboards.',
         'proj-ericsson-note': 'Project developed at Ericsson',
-        'proj-ericsson-button': 'Confidential project',
         'proj-pentesting-title': 'Modular Pentesting Automation Framework',
         'proj-pentesting-description': 'Modular pentesting framework developed in Python and Robot Framework, with an interactive CLI for scanning and analyzing SSL/TLS and SSH services, generating detailed reports with security classification and automated recommendations.',
         'proj1-title': 'Industrial 5G Network',
@@ -182,64 +195,28 @@ const translations = {
         'proj2-title': 'Network Monitoring System',
         'proj2-description': 'Development of real-time analysis platform for network KPI monitoring with machine learning for predictive failure detection.',
         'proj-button': 'View more details',
-        'tag-fiber': 'Fiber Optic',
-        'tag-microwave': 'Microwave',
         'tag-security': 'Security',
-
-
-
-
-
-
-
-
-        // Botón común
-'proj-github-button': 'Ver en GitHub →',
- 
-// 1. STM32 Reaction Games
-'proj-stm32-title': 'Juegos de Reacción STM32 Bare-Metal',
-'proj-stm32-description': 'Proyecto de sistemas embebidos bare-metal que implementa dos juegos de tiempo de reacción para dos jugadores en placa STM32L152RE, utilizando programación de bajo nivel con timers, interrupciones EXTI, ADC, PWM y USART para comunicación serie.',
- 
-// 2. Process Scheduler Emulator
-'proj-scheduler-title': 'Emulador de Planificador de Procesos',
-'proj-scheduler-description': 'Aplicación en C que emula el comportamiento de un planificador de procesos con gestión interactiva de tabla de planificación, operaciones de E/S con archivos binarios, ejecución con fork/exec, Round Robin y manejo de señales SIGINT/SIGALRM.',
- 
-// 3. Fake News Detection (td_project)
-'proj-fakenews-title': 'Detección de Fake News con ML y Transformers',
-'proj-fakenews-description': 'Proyecto de clasificación de noticias desinformativas comparando múltiples enfoques: TF-IDF + Random Forest, Word2Vec + MLP, embeddings BERT y fine-tuning de modelo Transformer, alcanzando 96-97% de accuracy con PyTorch y HuggingFace.',
- 
-// 4. Meereen
-'proj-meereen-title': 'Meereen - Simulación de Concurrencia en Java',
-'proj-meereen-description': 'Simulación de problema de sincronización de recursos compartidos en Java con 300 alquimistas y 3 dragones. Implementa monitores synchronized, wait/notifyAll, gestión multi-zona y capacidad dinámica para prevención de deadlocks inspirado en Game of Thrones.',
- 
-// 5. Compressed Trie Route Lookup
-'proj-trie-title': 'Búsqueda de Rutas IP con Trie Comprimido',
-'proj-trie-description': 'Sistema de búsqueda de rutas IP usando Patricia Trie (trie comprimido) para longest prefix match con complejidad O(W). Implementado en C con métricas de rendimiento, gestión de memoria y comparación con búsqueda lineal en tablas de enrutamiento.',
- 
-// 6. Proyecto SIP
-'proj-sip-title': 'Implementación de Protocolo SIP',
-'proj-sip-description': 'Desarrollo de aplicación de comunicación VoIP utilizando el protocolo SIP (Session Initiation Protocol) para establecimiento y gestión de sesiones multimedia en redes de telecomunicaciones.',
- 
-// 7. SDN Development LAB
-'proj-sdn-title': 'Laboratorio de Desarrollo SDN',
-'proj-sdn-description': 'Laboratorio de redes definidas por software implementando reglas ICMP, dispatchers (CONFIG y MAIN), manejadores de eventos, respuestas ICMP echo reply y ARP reply para gestión programática de infraestructura de red.',
- 
-// 8. Mininet and Ryu LAB
-'proj-mininet-title': 'Laboratorio Mininet y Ryu',
-'proj-mininet-description': 'Prácticas de emulación de redes con Mininet, instalación y activación de OpenFlow 1.3, programación de Mininet con Python y desarrollo de controladores SDN con framework Ryu para gestión de topologías virtuales.',
- 
-// 9. Dijkstra Algorithm
-'proj-dijkstra-title': 'Implementación del Algoritmo de Dijkstra',
-'proj-dijkstra-description': 'Recreación del comportamiento del algoritmo de Dijkstra para encontrar caminos más cortos en grafos ponderados. Recibe matriz de costos desde archivo, donde nodos no conectados tienen costo 500 en lugar de infinito.',
-
-
-
-
-
-
-
-
-
+        
+        // GitHub Projects
+        'proj-github-button': 'View on GitHub →',
+        'proj-stm32-title': 'STM32 Bare-Metal Reaction Games',
+        'proj-stm32-description': 'Bare-metal embedded systems project implementing two two-player reaction-time games on STM32L152RE board, using low-level programming with timers, EXTI interrupts, ADC, PWM, and USART for serial communication.',
+        'proj-scheduler-title': 'Process Scheduler Emulator',
+        'proj-scheduler-description': 'C application emulating process scheduler behavior with interactive schedule table management, binary file I/O operations, fork/exec execution, Round Robin scheduling, and SIGINT/SIGALRM signal handling.',
+        'proj-fakenews-title': 'Fake News Detection with ML and Transformers',
+        'proj-fakenews-description': 'Misinformation classification project comparing multiple approaches: TF-IDF + Random Forest, Word2Vec + MLP, BERT embeddings, and Transformer fine-tuning, achieving 96-97% accuracy with PyTorch and HuggingFace.',
+        'proj-meereen-title': 'Meereen - Java Concurrency Simulation',
+        'proj-meereen-description': 'Shared-resource synchronization problem simulation in Java with 300 alchemists and 3 dragons. Implements synchronized monitors, wait/notifyAll, multi-zone management, and dynamic capacity for deadlock prevention inspired by Game of Thrones.',
+        'proj-trie-title': 'IP Route Lookup with Compressed Trie',
+        'proj-trie-description': 'IP route lookup system using Patricia Trie (compressed trie) for longest prefix match with O(W) complexity. Implemented in C with performance metrics, memory management, and linear search comparison in routing tables.',
+        'proj-sip-title': 'SIP Protocol Implementation',
+        'proj-sip-description': 'Development of VoIP communication application using SIP (Session Initiation Protocol) for multimedia session establishment and management in telecommunications networks.',
+        'proj-sdn-title': 'SDN Development Laboratory',
+        'proj-sdn-description': 'Software-Defined Networking laboratory implementing ICMP rules, dispatchers (CONFIG and MAIN), event handlers, ICMP echo replies, and ARP replies for programmatic network infrastructure management.',
+        'proj-mininet-title': 'Mininet and Ryu Laboratory',
+        'proj-mininet-description': 'Network emulation practices with Mininet, installation and activation of OpenFlow 1.3, Mininet programming with Python, and SDN controller development using Ryu framework for virtual topology management.',
+        'proj-dijkstra-title': 'Dijkstra Algorithm Implementation',
+        'proj-dijkstra-description': 'Recreation of Dijkstra\'s algorithm behavior for finding shortest paths in weighted graphs. Receives cost matrix from file, where unconnected nodes have cost 500 instead of infinity.',
         
         // Skills
         'skills-title': 'Technical Skills',
@@ -254,7 +231,6 @@ const translations = {
         'contact-title': 'Contact',
         'contact-lead': 'Do you have a project in mind or want to collaborate?',
         'contact-text': 'I\'m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.',
-        'contact-phone': 'Phone',
         'contact-email-cta': 'Send email',
         
         // Footer
@@ -262,6 +238,7 @@ const translations = {
     }
 };
 
+// (El resto del código sigue igual...)
 // Estado actual del idioma
 let currentLanguage = localStorage.getItem('language') || 'es';
 
@@ -271,11 +248,9 @@ function changeLanguage(lang) {
     currentLanguage = lang;
     localStorage.setItem('language', lang);
     
-    // Actualizar todos los elementos con data-lang
     document.querySelectorAll('[data-lang]').forEach(element => {
         const key = element.getAttribute('data-lang');
         if (translations[lang] && translations[lang][key]) {
-            // Para elementos con data-text (glitch effect)
             if (element.hasAttribute('data-text')) {
                 element.setAttribute('data-text', translations[lang][key]);
             }
@@ -283,7 +258,6 @@ function changeLanguage(lang) {
         }
     });
     
-    // Actualizar el botón de idioma
     const langText = document.getElementById('langText');
     const langCurrent = document.querySelector('.lang-current');
     
@@ -295,7 +269,6 @@ function changeLanguage(lang) {
         langCurrent.textContent = lang.toUpperCase();
     }
     
-    // Actualizar el atributo lang del html
     document.documentElement.lang = lang;
     
     console.log('✅ Idioma actualizado a:', lang.toUpperCase());
@@ -312,13 +285,8 @@ function setupLanguageToggle() {
             const newLang = currentLanguage === 'es' ? 'en' : 'es';
             console.log('🌐 CLICK! Cambiando de', currentLanguage, 'a', newLang);
             changeLanguage(newLang);
-            
-            // Alerta temporal para verificar que funciona (puedes quitarla después)
-            // Descomenta la siguiente línea para ver una confirmación visual:
-            // alert('✓ Idioma cambiado a: ' + (newLang === 'es' ? 'Español' : 'English'));
         });
         console.log('✅ Event listener de idioma añadido correctamente');
-        console.log('💡 Haz clic en el botón 🌐 para cambiar el idioma');
     } else {
         console.error('❌ ERROR: No se encontró el botón de idioma con ID "langToggle"');
     }
@@ -332,7 +300,6 @@ if (document.readyState === 'loading') {
         setupLanguageToggle();
     });
 } else {
-    // El DOM ya está cargado
     console.log('DOM ya cargado - Inicializando idioma:', currentLanguage);
     changeLanguage(currentLanguage);
     setupLanguageToggle();
@@ -346,7 +313,6 @@ const navLinks = document.querySelectorAll('.nav-link');
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     
-    // Animate toggle icon
     const spans = navToggle.querySelectorAll('span');
     if (navMenu.classList.contains('active')) {
         spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
@@ -359,7 +325,6 @@ navToggle.addEventListener('click', () => {
     }
 });
 
-// Close mobile menu when clicking a link
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -370,13 +335,12 @@ navLinks.forEach(link => {
     });
 });
 
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offset = 80; // Height of fixed navbar
+            const offset = 80;
             const targetPosition = target.offsetTop - offset;
             window.scrollTo({
                 top: targetPosition,
@@ -386,7 +350,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Active navigation link on scroll
 const sections = document.querySelectorAll('.section');
 const navItems = document.querySelectorAll('.nav-link');
 
@@ -409,7 +372,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Timeline expand/collapse functionality
 const timelineItems = document.querySelectorAll('.timeline-item');
 
 timelineItems.forEach(item => {
@@ -419,19 +381,16 @@ timelineItems.forEach(item => {
         e.stopPropagation();
         const isExpanded = item.getAttribute('data-expanded') === 'true';
         
-        // Close all other items
         timelineItems.forEach(otherItem => {
             if (otherItem !== item) {
                 otherItem.setAttribute('data-expanded', 'false');
             }
         });
         
-        // Toggle current item
         item.setAttribute('data-expanded', !isExpanded);
     });
 });
 
-// Scroll animations
 const observerOptions = {
     threshold: 0.15,
     rootMargin: '0px 0px -100px 0px'
@@ -442,7 +401,6 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             
-            // Trigger skill bar animations when skills section is visible
             if (entry.target.classList.contains('skills-section')) {
                 animateSkillBars();
             }
@@ -450,13 +408,11 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections and timeline items
 document.querySelectorAll('.section, .timeline-item, .project-card').forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
 });
 
-// Animate skill bars
 function animateSkillBars() {
     const skillBars = document.querySelectorAll('.skill-fill');
     skillBars.forEach((bar, index) => {
@@ -466,29 +422,28 @@ function animateSkillBars() {
     });
 }
 
-// Initialize skill bars at 0 width
 document.querySelectorAll('.skill-fill').forEach(bar => {
     const targetWidth = bar.style.getPropertyValue('--skill-width');
     bar.setAttribute('data-width', targetWidth);
     bar.style.width = '0%';
 });
 
-// Project card interactions
 const projectCards = document.querySelectorAll('.project-card');
 
 projectCards.forEach(card => {
     const expandBtn = card.querySelector('.project-expand');
     
-    expandBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const message = currentLanguage === 'es' 
-            ? 'Aquí podrías añadir más detalles del proyecto en un modal o página separada'
-            : 'Here you could add more project details in a modal or separate page';
-        alert(message);
-    });
+    if (expandBtn) {
+        expandBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const message = currentLanguage === 'es' 
+                ? 'Aquí podrías añadir más detalles del proyecto en un modal o página separada'
+                : 'Here you could add more project details in a modal or separate page';
+            alert(message);
+        });
+    }
 });
 
-// Parallax effect for hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
     const heroContent = document.querySelector('.hero-content');
@@ -498,7 +453,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add glitch effect on hover for hero title
 const glitchTexts = document.querySelectorAll('.glitch-text');
 
 glitchTexts.forEach(text => {
@@ -528,7 +482,6 @@ glitchTexts.forEach(text => {
     });
 });
 
-// Navbar background on scroll
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -540,14 +493,12 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add stagger animation to hero stats
 const statsItems = document.querySelectorAll('.stat-item');
 statsItems.forEach((stat, index) => {
     stat.style.animationDelay = `${index * 0.2}s`;
     stat.style.animation = 'fadeInUp 0.8s ease forwards';
 });
 
-// Add CSS animation for stats
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fadeInUp {
@@ -567,16 +518,14 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Animate frequency bars continuously
 const frequencyBars = document.querySelectorAll('.bar');
 setInterval(() => {
     frequencyBars.forEach(bar => {
-        const randomHeight = Math.random() * 50 + 40; // Between 40% and 90%
+        const randomHeight = Math.random() * 50 + 40;
         bar.style.setProperty('--height', `${randomHeight}%`);
     });
 }, 2000);
 
-// Console easter egg
 const consoleMessage = currentLanguage === 'es' 
     ? ['¡Hola, developer! 👋', '¿Interesado en cómo funciona este portfolio?', 'Este sitio fue creado con HTML, CSS y JavaScript vanilla.', '¡Hablemos! 💼']
     : ['Hello, developer! 👋', 'Interested in how this portfolio works?', 'This site was created with vanilla HTML, CSS and JavaScript.', 'Let\'s talk! 💼'];
