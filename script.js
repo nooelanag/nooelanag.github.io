@@ -169,10 +169,10 @@ function makeEverythingVisible() {
         item.style.transform = 'translateY(0)';
     });
 }
-
+ 
 // Estado del idioma
 let currentLanguage = localStorage.getItem('language') || 'es';
-
+ 
 // Función para cambiar idioma
 function changeLanguage(lang) {
     currentLanguage = lang;
@@ -196,7 +196,7 @@ function changeLanguage(lang) {
     
     document.documentElement.lang = lang;
 }
-
+ 
 // Configurar botón de idioma
 function setupLanguageToggle() {
     const langToggle = document.getElementById('langToggle');
@@ -208,30 +208,83 @@ function setupLanguageToggle() {
         });
     }
 }
-
+ 
 // Inicializar
 function init() {
     changeLanguage(currentLanguage);
     setupLanguageToggle();
     makeEverythingVisible();
 }
-
+ 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
 } else {
     init();
 }
-
+ 
 // Mobile navigation
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
-
+const navLinks = document.querySelectorAll('.nav-link');
+ 
+// Create overlay for mobile menu
+let navOverlay = document.querySelector('.nav-overlay');
+if (!navOverlay && navToggle) {
+    navOverlay = document.createElement('div');
+    navOverlay.className = 'nav-overlay';
+    document.body.appendChild(navOverlay);
+}
+ 
 if (navToggle && navMenu) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
+        if (navOverlay) {
+            navOverlay.classList.toggle('active');
+        }
+        
+        const spans = navToggle.querySelectorAll('span');
+        if (navMenu.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            document.body.style.overflow = 'hidden';
+        } else {
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close menu when clicking overlay
+    if (navOverlay) {
+        navOverlay.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            navOverlay.classList.remove('active');
+            const spans = navToggle.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+            document.body.style.overflow = '';
+        });
+    }
+    
+    // Close menu when clicking nav link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            if (navOverlay) {
+                navOverlay.classList.remove('active');
+            }
+            const spans = navToggle.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+            document.body.style.overflow = '';
+        });
     });
 }
-
+ 
 // Timeline expand
 document.querySelectorAll('.timeline-item').forEach(item => {
     const expandBtn = item.querySelector('.expand-btn');
@@ -245,4 +298,43 @@ document.querySelectorAll('.timeline-item').forEach(item => {
             item.setAttribute('data-expanded', !isExpanded);
         });
     }
+});
+ 
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const offset = 80;
+            const targetPosition = target.offsetTop - offset;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+ 
+// Active section highlighting
+const sections = document.querySelectorAll('.section');
+const navItems = document.querySelectorAll('.nav-link');
+ 
+window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === `#${current}`) {
+            item.classList.add('active');
+        }
+    });
 });
