@@ -1,10 +1,4 @@
-// ============================================
-// SCRIPT.JS - VERSIÓN ULTRA SIMPLE CON DEBUG
-// ============================================
-
-console.log('🚀 INICIANDO script.js...');
-
-// Traducciones - VERSIÓN SIMPLIFICADA
+// Traducciones
 const translations = {
     es: {
         'nav-about': 'About',
@@ -38,7 +32,7 @@ const translations = {
         'proj2-title': 'Sistema de Monitorización de Redes',
         'proj2-description': 'Desarrollo de plataforma de análisis en tiempo real para monitorización de KPIs de red con machine learning para detección predictiva de fallos.',
         'proj-button': 'Ver más detalles',
-        'proj-github-button': 'Ver en GitHub →',
+        'proj-github-button': 'Ver en GitHub',
         'proj-stm32-title': 'Juegos de Reacción STM32 Bare-Metal',
         'proj-stm32-description': 'Proyecto de sistemas embebidos bare-metal que implementa dos juegos de tiempo de reacción para dos jugadores en placa STM32L152RE, utilizando programación de bajo nivel con timers, interrupciones EXTI, ADC, PWM y USART para comunicación serie.',
         'proj-scheduler-title': 'Emulador de Planificador de Procesos',
@@ -96,7 +90,7 @@ const translations = {
         'proj2-title': 'Network Monitoring System',
         'proj2-description': 'Development of real-time analysis platform for network KPI monitoring with machine learning for predictive failure detection.',
         'proj-button': 'View more details',
-        'proj-github-button': 'View on GitHub →',
+        'proj-github-button': 'View on GitHub',
         'proj-stm32-title': 'STM32 Bare-Metal Reaction Games',
         'proj-stm32-description': 'Bare-metal embedded systems project implementing two two-player reaction-time games on STM32L152RE board, using low-level programming with timers, EXTI interrupts, ADC, PWM, and USART for serial communication.',
         'proj-scheduler-title': 'Process Scheduler Emulator',
@@ -124,47 +118,29 @@ const translations = {
     }
 };
 
-console.log('✅ Traducciones definidas:', Object.keys(translations));
-
-// HACER TODO VISIBLE INMEDIATAMENTE
-console.log('🔧 Haciendo tarjetas visibles...');
-
+// Hacer todo visible inmediatamente
 function makeEverythingVisible() {
-    // Tarjetas de proyectos
-    const cards = document.querySelectorAll('.project-card');
-    console.log('📦 Tarjetas encontradas:', cards.length);
-    cards.forEach((card, i) => {
+    document.querySelectorAll('.project-card').forEach(card => {
         card.style.opacity = '1';
         card.style.transform = 'translateY(0)';
-        console.log(`  ✓ Tarjeta ${i+1} ahora visible`);
     });
     
-    // Secciones
-    const sections = document.querySelectorAll('.section');
-    console.log('📑 Secciones encontradas:', sections.length);
-    sections.forEach(section => {
+    document.querySelectorAll('.section').forEach(section => {
         section.style.opacity = '1';
         section.style.transform = 'translateY(0)';
     });
     
-    // Timeline items
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    console.log('📅 Timeline items encontrados:', timelineItems.length);
-    timelineItems.forEach(item => {
+    document.querySelectorAll('.timeline-item').forEach(item => {
         item.style.opacity = '1';
         item.style.transform = 'translateY(0)';
     });
-    
-    console.log('✅ TODO DEBERÍA SER VISIBLE AHORA');
 }
 
 // Estado del idioma
 let currentLanguage = localStorage.getItem('language') || 'es';
-console.log('🌍 Idioma inicial:', currentLanguage);
 
 // Función para cambiar idioma
 function changeLanguage(lang) {
-    console.log('🔄 Cambiando idioma a:', lang);
     currentLanguage = lang;
     localStorage.setItem('language', lang);
     
@@ -185,7 +161,6 @@ function changeLanguage(lang) {
     if (langCurrent) langCurrent.textContent = lang.toUpperCase();
     
     document.documentElement.lang = lang;
-    console.log('✅ Idioma cambiado a:', lang);
 }
 
 // Configurar botón de idioma
@@ -197,19 +172,14 @@ function setupLanguageToggle() {
             const newLang = currentLanguage === 'es' ? 'en' : 'es';
             changeLanguage(newLang);
         });
-        console.log('✅ Botón de idioma configurado');
-    } else {
-        console.warn('⚠️ No se encontró botón de idioma');
     }
 }
 
-// Inicializar cuando DOM esté listo
+// Inicializar
 function init() {
-    console.log('🎬 Iniciando aplicación...');
     changeLanguage(currentLanguage);
     setupLanguageToggle();
     makeEverythingVisible();
-    console.log('🎉 APLICACIÓN LISTA');
 }
 
 if (document.readyState === 'loading') {
@@ -218,7 +188,7 @@ if (document.readyState === 'loading') {
     init();
 }
 
-// Mobile nav (simplificado)
+// Mobile navigation
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -228,7 +198,7 @@ if (navToggle && navMenu) {
     });
 }
 
-// Timeline expand (simplificado)
+// Timeline expand
 document.querySelectorAll('.timeline-item').forEach(item => {
     const expandBtn = item.querySelector('.expand-btn');
     if (expandBtn) {
@@ -242,5 +212,3 @@ document.querySelectorAll('.timeline-item').forEach(item => {
         });
     }
 });
-
-console.log('🏁 Script completamente cargado');
