@@ -51,7 +51,26 @@ const translations = {
         'proj-mininet-description': 'Prácticas de emulación de redes con Mininet, instalación y activación de OpenFlow 1.3, programación de Mininet con Python y desarrollo de controladores SDN con framework Ryu para gestión de topologías virtuales.',
         'proj-dijkstra-title': 'Implementación del Algoritmo de Dijkstra',
         'proj-dijkstra-description': 'Recreación del comportamiento del algoritmo de Dijkstra para encontrar caminos más cortos en grafos ponderados. Recibe matriz de costos desde archivo, donde nodos no conectados tienen costo 500 en lugar de infinito.',
+        
+
+
+
+
+
         'skills-title': 'Habilidades Técnicas',
+        'skills-cat1': 'Lenguajes de Programación',
+        'skills-cat2': 'Cloud Native & DevOps',
+        'skills-cat3': 'Networking & Telecomunicaciones',
+        'skills-cat4': 'Frameworks & Herramientas',
+
+
+
+
+
+
+
+
+
         'contact-title': 'Contacto',
         'contact-lead': '¿Tienes un proyecto en mente o quieres colaborar?',
         'contact-text': 'Estoy siempre abierto a discutir nuevos proyectos, ideas creativas o oportunidades para formar parte de tu visión.',
@@ -109,7 +128,22 @@ const translations = {
         'proj-mininet-description': 'Network emulation practices with Mininet, installation and activation of OpenFlow 1.3, Mininet programming with Python, and SDN controller development using Ryu framework for virtual topology management.',
         'proj-dijkstra-title': 'Dijkstra Algorithm Implementation',
         'proj-dijkstra-description': 'Recreation of Dijkstra\'s algorithm behavior for finding shortest paths in weighted graphs. Receives cost matrix from file, where unconnected nodes have cost 500 instead of infinity.',
+        
+
+
+
+
+
         'skills-title': 'Technical Skills',
+        'skills-cat1': 'Programming Languages',
+        'skills-cat2': 'Cloud Native & DevOps',
+        'skills-cat3': 'Networking & Telecommunications',
+        'skills-cat4': 'Frameworks & Tools',
+
+
+
+
+
         'contact-title': 'Contact',
         'contact-lead': 'Do you have a project in mind or want to collaborate?',
         'contact-text': 'I\'m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.',
