@@ -218,9 +218,9 @@ if (navToggle && navMenu) {
         
         const spans = navToggle.querySelectorAll('span');
         if (navMenu.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+            spans[0].style.transform = 'rotate(45deg) translate(5px, 7px)';
             spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+            spans[2].style.transform = 'rotate(-45deg) translate(5px, -7px)';
             document.body.style.overflow = 'hidden';
         } else {
             spans[0].style.transform = 'none';
