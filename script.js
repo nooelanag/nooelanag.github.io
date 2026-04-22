@@ -25,7 +25,7 @@ const translations = {
         'proj-ericsson-title': 'Plataforma de Visualización de Testing Cloud-Native',
         'proj-ericsson-description': 'Desarrollo de plataforma cloud-native para centralizar y visualizar resultados de tests de Jenkins usando arquitectura de microservicios en Kubernetes, con backend REST, frontend web y dashboards de Grafana.',
         'proj-ericsson-note': 'Proyecto desarrollado en Ericsson',
-        'proj-f1bot-title': 'F1 News Bot',
+        'proj-f1bot-title': 'Bot de noticias de F1',
         'proj-f1bot-description': 'Bot autónomo de Telegram que monitoriza noticias de Fórmula 1 en tiempo real desde 8 fuentes en español e inglés, enviando notificaciones automáticas cada 30 minutos. Controlable directamente desde Telegram con comandos de pausa, activación y consulta instantánea.',
         'proj-pentesting-title': 'Framework de Automatización de Pentesting Modular',
         'proj-pentesting-description': 'Framework modular de pentesting desarrollado en Python y Robot Framework, con CLI interactivo para escaneo y análisis de servicios SSL/TLS y SSH, generando reportes detallados con clasificación de seguridad y recomendaciones automatizadas.',
