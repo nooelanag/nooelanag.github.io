@@ -29,10 +29,6 @@ const translations = {
         'proj-f1bot-description': 'Bot autónomo de Telegram que monitoriza noticias de Fórmula 1 en tiempo real desde 8 fuentes en español e inglés, enviando notificaciones automáticas cada 30 minutos. Controlable directamente desde Telegram con comandos de pausa, activación y consulta instantánea.',
         'proj-pentesting-title': 'Framework de Automatización de Pentesting Modular',
         'proj-pentesting-description': 'Framework modular de pentesting desarrollado en Python y Robot Framework, con CLI interactivo para escaneo y análisis de servicios SSL/TLS y SSH, generando reportes detallados con clasificación de seguridad y recomendaciones automatizadas.',
-        'proj1-title': 'Red 5G Industrial',
-        'proj1-description': 'Implementación de red 5G privada para una fábrica inteligente, habilitando comunicación ultra-confiable de baja latencia (URLLC) para aplicaciones críticas.',
-        'proj2-title': 'Sistema de Monitorización de Redes',
-        'proj2-description': 'Desarrollo de plataforma de análisis en tiempo real para monitorización de KPIs de red con machine learning para detección predictiva de fallos.',
         'proj-button': 'Ver más detalles',
         'proj-github-button': 'Ver en GitHub',
         'proj-stm32-title': 'Juegos de Reacción STM32 Bare-Metal',
@@ -53,6 +49,10 @@ const translations = {
         'proj-mininet-description': 'Prácticas de emulación de redes con Mininet, instalación y activación de OpenFlow 1.3, programación de Mininet con Python y desarrollo de controladores SDN con framework Ryu para gestión de topologías virtuales.',
         'proj-dijkstra-title': 'Implementación del Algoritmo de Dijkstra',
         'proj-dijkstra-description': 'Recreación del comportamiento del algoritmo de Dijkstra para encontrar caminos más cortos en grafos ponderados. Recibe matriz de costos desde archivo, donde nodos no conectados tienen costo 500 en lugar de infinito.',
+        // --- NUEVO PROYECTO ---
+        'proj-conv-title': 'Códigos Convolucionales y Decodificador Viterbi',
+        'proj-conv-description': 'Simulación end-to-end de un sistema de comunicaciones digitales con código convolucional R=1/2, canal AWGN y modulación BPSK. Incluye decodificador Viterbi con decisión dura, cancelación de interferencias mediante filtro de Kalman y evaluación de BER por Monte Carlo.',
+        // ----------------------
         'skills-title': 'Habilidades Técnicas',
         'skills-cat1': 'Lenguajes de Programación',
         'skills-cat2': 'Cloud Native & DevOps',
@@ -93,10 +93,6 @@ const translations = {
         'proj-f1bot-description': 'Autonomous Telegram bot that monitors Formula 1 news in real time from 8 sources in Spanish and English, sending automatic notifications every 30 minutes. Fully controllable from Telegram with pause, resume, and instant query commands.',
         'proj-pentesting-title': 'Modular Pentesting Automation Framework',
         'proj-pentesting-description': 'Modular pentesting framework developed in Python and Robot Framework, with an interactive CLI for scanning and analyzing SSL/TLS and SSH services, generating detailed reports with security classification and automated recommendations.',
-        'proj1-title': 'Industrial 5G Network',
-        'proj1-description': 'Implementation of private 5G network for a smart factory, enabling ultra-reliable low-latency communication (URLLC) for critical applications.',
-        'proj2-title': 'Network Monitoring System',
-        'proj2-description': 'Development of real-time analysis platform for network KPI monitoring with machine learning for predictive failure detection.',
         'proj-button': 'View more details',
         'proj-github-button': 'View on GitHub',
         'proj-stm32-title': 'STM32 Bare-Metal Reaction Games',
@@ -117,6 +113,10 @@ const translations = {
         'proj-mininet-description': 'Network emulation practices with Mininet, installation and activation of OpenFlow 1.3, Mininet programming with Python, and SDN controller development using Ryu framework for virtual topology management.',
         'proj-dijkstra-title': 'Dijkstra Algorithm Implementation',
         'proj-dijkstra-description': 'Recreation of Dijkstra\'s algorithm behavior for finding shortest paths in weighted graphs. Receives cost matrix from file, where unconnected nodes have cost 500 instead of infinity.',
+        // --- NEW PROJECT ---
+        'proj-conv-title': 'Convolutional Codes and Viterbi Decoder',
+        'proj-conv-description': 'End-to-end simulation of a digital communications system with rate-1/2 convolutional coding, AWGN channel, and BPSK modulation. Includes a hard-decision Viterbi decoder, Kalman filter-based interference cancellation, and Monte Carlo BER evaluation.',
+        // -------------------
         'skills-title': 'Technical Skills',
         'skills-cat1': 'Programming Languages',
         'skills-cat2': 'Cloud Native & DevOps',
