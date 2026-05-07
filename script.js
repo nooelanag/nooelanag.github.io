@@ -49,10 +49,8 @@ const translations = {
         'proj-mininet-description': 'Prácticas de emulación de redes con Mininet, instalación y activación de OpenFlow 1.3, programación de Mininet con Python y desarrollo de controladores SDN con framework Ryu para gestión de topologías virtuales.',
         'proj-dijkstra-title': 'Implementación del Algoritmo de Dijkstra',
         'proj-dijkstra-description': 'Recreación del comportamiento del algoritmo de Dijkstra para encontrar caminos más cortos en grafos ponderados. Recibe matriz de costos desde archivo, donde nodos no conectados tienen costo 500 en lugar de infinito.',
-        // --- NUEVO PROYECTO ---
         'proj-conv-title': 'Códigos Convolucionales y Decodificador Viterbi',
         'proj-conv-description': 'Simulación end-to-end de un sistema de comunicaciones digitales con código convolucional R=1/2, canal AWGN y modulación BPSK. Incluye decodificador Viterbi con decisión dura, cancelación de interferencias mediante filtro de Kalman y evaluación de BER por Monte Carlo.',
-        // ----------------------
         'skills-title': 'Habilidades Técnicas',
         'skills-cat1': 'Lenguajes de Programación',
         'skills-cat2': 'Cloud Native & DevOps',
@@ -113,10 +111,8 @@ const translations = {
         'proj-mininet-description': 'Network emulation practices with Mininet, installation and activation of OpenFlow 1.3, Mininet programming with Python, and SDN controller development using Ryu framework for virtual topology management.',
         'proj-dijkstra-title': 'Dijkstra Algorithm Implementation',
         'proj-dijkstra-description': 'Recreation of Dijkstra\'s algorithm behavior for finding shortest paths in weighted graphs. Receives cost matrix from file, where unconnected nodes have cost 500 instead of infinity.',
-        // --- NEW PROJECT ---
         'proj-conv-title': 'Convolutional Codes and Viterbi Decoder',
-        'proj-conv-description': 'End-to-end simulation of a digital communications system with rate-1/2 convolutional coding, AWGN channel, and BPSK modulation. Includes a hard-decision Viterbi decoder, Kalman filter-based interference cancellation, and Monte Carlo BER evaluation.',
-        // -------------------
+        'proj-conv-description': 'End-to-end simulation of a digital communications system with rate = 1/2 convolutional coding, AWGN channel, and BPSK modulation. Includes a hard-decision Viterbi decoder, Kalman filter-based interference cancellation, and Monte Carlo BER evaluation.',
         'skills-title': 'Technical Skills',
         'skills-cat1': 'Programming Languages',
         'skills-cat2': 'Cloud Native & DevOps',
