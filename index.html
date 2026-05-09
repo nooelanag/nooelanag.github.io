@@ -322,6 +322,53 @@
             </div>
             <div class="projects-grid">
 
+                <!-- Filtro de Partículas vs Kalman -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <!-- Trayectoria suavizada (Kalman) -->
+                                <path d="M10 70 Q30 55, 50 45 Q70 35, 90 30"
+                                      stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 3" opacity="0.7"/>
+                                <!-- Partículas dispersas -->
+                                <circle cx="15" cy="65" r="2" fill="currentColor" opacity="0.5"/>
+                                <circle cx="22" cy="75" r="2" fill="currentColor" opacity="0.5"/>
+                                <circle cx="30" cy="60" r="2" fill="currentColor" opacity="0.5"/>
+                                <circle cx="38" cy="50" r="2" fill="currentColor" opacity="0.5"/>
+                                <circle cx="45" cy="55" r="2" fill="currentColor" opacity="0.5"/>
+                                <circle cx="52" cy="40" r="2" fill="currentColor" opacity="0.5"/>
+                                <circle cx="60" cy="48" r="2" fill="currentColor" opacity="0.5"/>
+                                <circle cx="68" cy="33" r="2" fill="currentColor" opacity="0.5"/>
+                                <circle cx="76" cy="38" r="2" fill="currentColor" opacity="0.5"/>
+                                <circle cx="84" cy="28" r="2" fill="currentColor" opacity="0.5"/>
+                                <!-- Media ponderada (línea principal) -->
+                                <path d="M10 68 Q30 57, 50 47 Q70 37, 90 31"
+                                      stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <!-- Barco (destino) -->
+                                <polygon points="88,26 92,26 90,22" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-lang="proj-pf-title">Filtro de Partículas vs Filtro de Kalman</h3>
+                        <p class="project-description" data-lang="proj-pf-description">
+                            Implementación y comparación de filtrado Bayesiano secuencial para el seguimiento de un barco con observaciones de sónar. Incluye SIS con remuestreo sistemático, filtro de Kalman óptimo, estimación de funcionales no lineales de la posterior y experimentos de MSE sobre 50 simulaciones Monte Carlo.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Particle Filter</span>
+                            <span class="tag">Kalman Filter</span>
+                            <span class="tag">Bayesian Estimation</span>
+                            <span class="tag">Monte Carlo</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">SIS</span>
+                        </div>
+                        <a href="https://github.com/nooelanag/filtro-particulas" target="_blank" class="project-expand" data-lang="proj-github-button">
+                            Ver en GitHub
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Códigos Convolucionales y Viterbi -->
                 <div class="project-card">
                     <div class="project-image">
@@ -455,14 +502,6 @@
                     </div>
                 </div>
                 
-                <!-- ========================================
-                PROYECTOS DE GITHUB
-                ======================================== -->
-
-
-
-
-
                 <!-- STM32 Reaction Games -->
                 <div class="project-card">
                     <div class="project-image">
@@ -746,9 +785,6 @@
                         </a>
                     </div>
                 </div>
-
-                
-                <!-- FIN NUEVO proyecto -->
 
             </div>
         </div>
