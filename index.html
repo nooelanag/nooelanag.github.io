@@ -433,6 +433,129 @@
                     </div>
                 </div>
 
+                <!-- Mezclador Balanceado Pasivo - AWR -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <!-- Simbolo de mezclador -->
+                                <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <line x1="36" y1="36" x2="64" y2="64" stroke="currentColor" stroke-width="2"/>
+                                <line x1="64" y1="36" x2="36" y2="64" stroke="currentColor" stroke-width="2"/>
+                                <!-- Entrada RF -->
+                                <line x1="12" y1="50" x2="28" y2="50" stroke="currentColor" stroke-width="2"/>
+                                <polygon points="28,47 34,50 28,53" fill="currentColor"/>
+                                <!-- Entrada de oscilador local -->
+                                <line x1="50" y1="88" x2="50" y2="74" stroke="currentColor" stroke-width="2"/>
+                                <polygon points="47,74 50,68 53,74" fill="currentColor"/>
+                                <!-- Salida de frecuencia intermedia -->
+                                <line x1="70" y1="50" x2="88" y2="50" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
+                                <!-- Diodo Schottky -->
+                                <polygon points="18,20 30,26 18,32" fill="currentColor" opacity="0.7"/>
+                                <line x1="30" y1="19" x2="30" y2="33" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-lang="proj-mezclador-title">Mezclador Balanceado Pasivo con Diodos Schottky</h3>
+                        <p class="project-description" data-lang="proj-mezclador-description">
+                            Diseño y simulación en AWR Microwave Office de un mezclador balanceado pasivo con diodos Schottky autopolarizados HSMS-28xx en tecnología microstrip sobre FR4 (εr = 4,6; h = 0,5 mm), con RF a 2,3 GHz, oscilador local a 2,1 GHz y frecuencia intermedia a 200 MHz. Incluye el diseño de un híbrido de 180° (rat-race) partiendo de líneas ideales TLIN y su conversión a microstrip real mediante TXLine, la adaptación del oscilador local en régimen de gran señal con análisis de balance armónico y un filtro LC paso bajo de segundo orden en la salida de FI para atenuar los productos de RF y OL por encima de 30 dB.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">AWR Microwave Office</span>
+                            <span class="tag">RF Design</span>
+                            <span class="tag">Microstrip</span>
+                            <span class="tag">Schottky Diodes</span>
+                            <span class="tag">Rat-Race Hybrid</span>
+                            <span class="tag">Harmonic Balance</span>
+                        </div>
+                        <div class="project-note" data-lang="proj-sra-note">
+                            <small>Práctica del Máster en Ingeniería de Telecomunicación (UC3M)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Procesador Monopulso - AWR -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <!-- Elementos radiantes -->
+                                <line x1="28" y1="14" x2="28" y2="34" stroke="currentColor" stroke-width="2.5"/>
+                                <line x1="22" y1="14" x2="34" y2="14" stroke="currentColor" stroke-width="2.5"/>
+                                <line x1="72" y1="14" x2="72" y2="34" stroke="currentColor" stroke-width="2.5"/>
+                                <line x1="66" y1="14" x2="78" y2="14" stroke="currentColor" stroke-width="2.5"/>
+                                <!-- Red de alimentacion -->
+                                <line x1="28" y1="34" x2="28" y2="48" stroke="currentColor" stroke-width="2"/>
+                                <line x1="72" y1="34" x2="72" y2="48" stroke="currentColor" stroke-width="2"/>
+                                <line x1="28" y1="48" x2="38" y2="52" stroke="currentColor" stroke-width="2"/>
+                                <line x1="72" y1="48" x2="62" y2="52" stroke="currentColor" stroke-width="2"/>
+                                <!-- Anillo rat-race -->
+                                <circle cx="50" cy="58" r="16" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <!-- Canales suma y diferencia -->
+                                <line x1="42" y1="73" x2="38" y2="84" stroke="currentColor" stroke-width="2"/>
+                                <line x1="58" y1="73" x2="62" y2="84" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="37" cy="88" r="3" fill="currentColor"/>
+                                <circle cx="63" cy="88" r="3" fill="currentColor" opacity="0.55"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-lang="proj-monopulso-title">Procesador Monopulso con Amplificador de Bajo Ruido</h3>
+                        <p class="project-description" data-lang="proj-monopulso-description">
+                            Diseño completo en AWR Microwave Office de un procesador monopulso a 2,3 GHz en tecnología microstrip sobre FR4: divisor Wilkinson, híbrido rat-race que genera los canales suma y diferencia, línea desfasadora de 86° que compensa la separación de 0,7λ entre elementos radiantes para una incidencia de 20° y amplificador de bajo ruido con transistor ATF-36163, con 16,6 dB de ganancia y 0,87 dB de figura de ruido. Incluye el análisis de estabilidad y los círculos de ruido para la elección del punto de polarización, las redes de polarización de puerta y drenador, la conversión a líneas reales con discontinuidades MTEE, MBEND y MSTEP y componentes SMD 0402, y el layout final del amplificador balanceado.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">AWR Microwave Office</span>
+                            <span class="tag">Monopulse</span>
+                            <span class="tag">Wilkinson Divider</span>
+                            <span class="tag">LNA</span>
+                            <span class="tag">S-Parameters</span>
+                            <span class="tag">Microstrip Layout</span>
+                        </div>
+                        <div class="project-note" data-lang="proj-sra-note">
+                            <small>Práctica del Máster en Ingeniería de Telecomunicación (UC3M)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Antena Dipolo en ANSYS HFSS -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <!-- Brazos del dipolo -->
+                                <line x1="50" y1="16" x2="50" y2="44" stroke="currentColor" stroke-width="3"/>
+                                <line x1="50" y1="56" x2="50" y2="84" stroke="currentColor" stroke-width="3"/>
+                                <!-- Alimentacion en el gap -->
+                                <circle cx="50" cy="50" r="3" fill="currentColor"/>
+                                <!-- Diagrama de radiacion -->
+                                <path d="M50 50 Q16 28, 16 50 Q16 72, 50 50" stroke="currentColor" stroke-width="2" fill="none" opacity="0.75"/>
+                                <path d="M50 50 Q84 28, 84 50 Q84 72, 50 50" stroke="currentColor" stroke-width="2" fill="none" opacity="0.75"/>
+                                <path d="M50 50 Q29 37, 29 50 Q29 63, 50 50" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
+                                <path d="M50 50 Q71 37, 71 50 Q71 63, 50 50" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-lang="proj-dipolo-title">Diseño de Antena Dipolo en ANSYS HFSS</h3>
+                        <p class="project-description" data-lang="proj-dipolo-description">
+                            Diseño y caracterización electromagnética de un dipolo de media onda a 2,3 GHz en ANSYS HFSS, optimizando su longitud mediante un barrido paramétrico con Optimetrics hasta 0,441λ para situar la resonancia en la frecuencia objetivo, obteniendo un S11 de −17,19 dB, una impedancia de entrada de 63,81 − j7,59 Ω y un ancho de banda fraccional del 13,39%. Incluye directividad 3D y diagramas de radiación 2D en elevación y azimut (2,51 dB de directividad máxima y un ancho de haz a −3 dB de 74°), eficiencia de radiación y total frente a frecuencia, y la comparación de la distribución de corriente superficial para dipolos de λ/4, λ/2 y λ frente a la teoría.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">ANSYS HFSS</span>
+                            <span class="tag">Antenna Design</span>
+                            <span class="tag">Electromagnetic Simulation</span>
+                            <span class="tag">Radiation Pattern</span>
+                            <span class="tag">S-Parameters</span>
+                            <span class="tag">Optimetrics</span>
+                        </div>
+                        <div class="project-note" data-lang="proj-sra-note">
+                            <small>Práctica del Máster en Ingeniería de Telecomunicación (UC3M)</small>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Filtro de Partículas vs Kalman -->
                 <div class="project-card">
                     <div class="project-image">
