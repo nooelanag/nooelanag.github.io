@@ -345,6 +345,94 @@
             </div>
             <div class="projects-grid">
 
+                <!-- Clasificación de Sonido Urbano - CNN-LSTM -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <!-- Espectrograma log-mel -->
+                                <rect x="16" y="30" width="8" height="34" fill="currentColor" opacity="0.35"/>
+                                <rect x="26" y="22" width="8" height="42" fill="currentColor" opacity="0.55"/>
+                                <rect x="36" y="34" width="8" height="30" fill="currentColor" opacity="0.4"/>
+                                <rect x="46" y="18" width="8" height="46" fill="currentColor" opacity="0.75"/>
+                                <rect x="56" y="28" width="8" height="36" fill="currentColor" opacity="0.5"/>
+                                <rect x="66" y="38" width="8" height="26" fill="currentColor" opacity="0.35"/>
+                                <rect x="76" y="26" width="8" height="38" fill="currentColor" opacity="0.6"/>
+                                <!-- Eje temporal -->
+                                <line x1="14" y1="68" x2="88" y2="68" stroke="currentColor" stroke-width="2"/>
+                                <!-- Secuencia de celdas LSTM -->
+                                <rect x="24" y="76" width="14" height="12" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
+                                <rect x="44" y="76" width="14" height="12" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
+                                <rect x="64" y="76" width="14" height="12" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
+                                <line x1="38" y1="82" x2="44" y2="82" stroke="currentColor" stroke-width="2"/>
+                                <line x1="58" y1="82" x2="64" y2="82" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-lang="proj-urbansound-title">Clasificación de Sonido Urbano con CNN-LSTM (UrbanSound8K)</h3>
+                        <p class="project-description" data-lang="proj-urbansound-description">
+                            Clasificación de las 10 clases de sonidos urbanos del dataset UrbanSound8K (8.732 fragmentos de audio) a partir de espectrogramas log-mel de 128x128 extraídos con librosa. Arquitectura CNN-LSTM en PyTorch con tres bloques convolucionales y una LSTM de dos capas, aumento de datos online (desplazamiento temporal y ruido gaussiano) y comparación de tres variantes many-to-one: último instante temporal, mean-pooling y LSTM bidireccional, alcanzando un 68,64% de accuracy en test con mean-pooling.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">CNN-LSTM</span>
+                            <span class="tag">Audio Processing</span>
+                            <span class="tag">Log-Mel Spectrogram</span>
+                            <span class="tag">librosa</span>
+                            <span class="tag">Data Augmentation</span>
+                        </div>
+                        <a href="https://github.com/nooelanag/urbansound8k-sound-classification-cnn-lstm" target="_blank" class="project-expand" data-lang="proj-github-button">
+                            Ver en GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Clasificación de Imágenes CIFAR-10 - PyTorch -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <!-- Imagen de entrada -->
+                                <rect x="14" y="26" width="34" height="34" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
+                                <line x1="14" y1="37" x2="48" y2="37" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                                <line x1="14" y1="48" x2="48" y2="48" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                                <line x1="25" y1="26" x2="25" y2="60" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                                <line x1="36" y1="26" x2="36" y2="60" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                                <!-- Kernel convolucional -->
+                                <rect x="25" y="37" width="11" height="11" fill="currentColor" opacity="0.8"/>
+                                <!-- Mapas de características -->
+                                <rect x="58" y="28" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
+                                <rect x="66" y="40" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" rx="2" opacity="0.6"/>
+                                <!-- Capa de salida -->
+                                <circle cx="30" cy="78" r="4" fill="currentColor"/>
+                                <circle cx="50" cy="78" r="4" fill="currentColor" opacity="0.6"/>
+                                <circle cx="70" cy="78" r="4" fill="currentColor" opacity="0.35"/>
+                                <line x1="48" y1="58" x2="34" y2="72" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-lang="proj-cifar-title">Clasificación de Imágenes CIFAR-10 con PyTorch</h3>
+                        <p class="project-description" data-lang="proj-cifar-description">
+                            Comparación de redes totalmente conectadas (MLP con activaciones tanh) frente a una red convolucional estilo AlexNet para clasificar las 10 clases de CIFAR-10 en PyTorch. Incluye el estudio del learning rate (1e-1, 1e-3 y 1e-5) mediante curvas de entrenamiento y validación, la elección del número de épocas a partir del mínimo de la pérdida de validación para evitar el sobreajuste (73,62% de accuracy en test con la CNN frente al 46,66% de la red densa) y la visualización de los filtros y mapas de activación de la primera capa convolucional.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">CNN</span>
+                            <span class="tag">AlexNet</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">torchvision</span>
+                            <span class="tag">Deep Learning</span>
+                        </div>
+                        <a href="https://github.com/nooelanag/cifar10-image-classification-pytorch" target="_blank" class="project-expand" data-lang="proj-github-button">
+                            Ver en GitHub
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Filtro de Partículas vs Kalman -->
                 <div class="project-card">
                     <div class="project-image">

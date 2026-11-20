@@ -91,6 +91,10 @@ const translations = {
         'proj-dijkstra-title': 'Implementación del Algoritmo de Dijkstra',
         'proj-dijkstra-description': 'Recreación del comportamiento del algoritmo de Dijkstra para encontrar caminos más cortos en grafos ponderados. Recibe matriz de costos desde archivo, donde nodos no conectados tienen costo 500 en lugar de infinito.',
         // --- NUEVOS PROYECTOS ---
+        'proj-urbansound-title': 'Clasificación de Sonido Urbano con CNN-LSTM (UrbanSound8K)',
+        'proj-urbansound-description': 'Clasificación de las 10 clases de sonidos urbanos del dataset UrbanSound8K (8.732 fragmentos de audio) a partir de espectrogramas log-mel de 128x128 extraídos con librosa. Arquitectura CNN-LSTM en PyTorch con tres bloques convolucionales y una LSTM de dos capas, aumento de datos online (desplazamiento temporal y ruido gaussiano) y comparación de tres variantes many-to-one: último instante temporal, mean-pooling y LSTM bidireccional, alcanzando un 68,64% de accuracy en test con mean-pooling.',
+        'proj-cifar-title': 'Clasificación de Imágenes CIFAR-10 con PyTorch',
+        'proj-cifar-description': 'Comparación de redes totalmente conectadas (MLP con activaciones tanh) frente a una red convolucional estilo AlexNet para clasificar las 10 clases de CIFAR-10 en PyTorch. Incluye el estudio del learning rate (1e-1, 1e-3 y 1e-5) mediante curvas de entrenamiento y validación, la elección del número de épocas a partir del mínimo de la pérdida de validación para evitar el sobreajuste (73,62% de accuracy en test con la CNN frente al 46,66% de la red densa) y la visualización de los filtros y mapas de activación de la primera capa convolucional.',
         'proj-pf-title': 'Filtro de Partículas vs Filtro de Kalman',
         'proj-pf-description': 'Implementación y comparación de filtrado Bayesiano secuencial para el seguimiento de un barco con observaciones de sónar. Incluye SIS con remuestreo sistemático, filtro de Kalman óptimo, estimación de funcionales no lineales de la posterior y experimentos de MSE sobre 50 simulaciones Monte Carlo.',
         'proj-conv-title': 'Códigos Convolucionales y Decodificador Viterbi',
@@ -213,6 +217,10 @@ const translations = {
         'proj-dijkstra-title': 'Dijkstra Algorithm Implementation',
         'proj-dijkstra-description': 'Recreation of Dijkstra\'s algorithm behavior for finding shortest paths in weighted graphs. Receives cost matrix from file, where unconnected nodes have cost 500 instead of infinity.',
         // --- NEW PROJECTS ---
+        'proj-urbansound-title': 'Urban Sound Classification with CNN-LSTM (UrbanSound8K)',
+        'proj-urbansound-description': 'Classification of the 10 urban sound classes of the UrbanSound8K dataset (8,732 audio excerpts) from 128x128 log-mel spectrograms extracted with librosa. CNN-LSTM architecture in PyTorch with three convolutional blocks and a two-layer LSTM, online data augmentation (time shifting and Gaussian noise) and a comparison of three many-to-one variants: last time step, mean-pooling and bidirectional LSTM, reaching 68.64% test accuracy with mean-pooling.',
+        'proj-cifar-title': 'CIFAR-10 Image Classification with PyTorch',
+        'proj-cifar-description': 'Comparison of fully connected networks (MLP with tanh activations) against an AlexNet-style convolutional network for classifying the 10 CIFAR-10 classes in PyTorch. Covers a learning-rate study (1e-1, 1e-3 and 1e-5) through training and validation curves, the choice of the number of epochs from the minimum of the validation loss to avoid overfitting (73.62% test accuracy with the CNN against 46.66% for the dense network) and the visualisation of the filters and activation maps of the first convolutional layer.',
         'proj-pf-title': 'Particle Filter vs Kalman Filter',
         'proj-pf-description': 'Implementation and comparison of sequential Bayesian filtering for ship tracking using sonar observations. Features SIS with systematic resampling, optimal Kalman filter, nonlinear posterior functional estimation, and MSE experiments averaged over 50 Monte Carlo simulations.',
         'proj-conv-title': 'Convolutional Codes and Viterbi Decoder',
