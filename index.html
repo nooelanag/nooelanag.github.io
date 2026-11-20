@@ -343,968 +343,1022 @@
                 <span class="section-number">04</span>
                 <h2 class="section-title" data-lang="projects-title">Proyectos Destacados</h2>
             </div>
-            <div class="projects-grid">
-
-                <!-- Clasificación de Sonido Urbano - CNN-LSTM -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Espectrograma log-mel -->
-                                <rect x="16" y="30" width="8" height="34" fill="currentColor" opacity="0.35"/>
-                                <rect x="26" y="22" width="8" height="42" fill="currentColor" opacity="0.55"/>
-                                <rect x="36" y="34" width="8" height="30" fill="currentColor" opacity="0.4"/>
-                                <rect x="46" y="18" width="8" height="46" fill="currentColor" opacity="0.75"/>
-                                <rect x="56" y="28" width="8" height="36" fill="currentColor" opacity="0.5"/>
-                                <rect x="66" y="38" width="8" height="26" fill="currentColor" opacity="0.35"/>
-                                <rect x="76" y="26" width="8" height="38" fill="currentColor" opacity="0.6"/>
-                                <!-- Eje temporal -->
-                                <line x1="14" y1="68" x2="88" y2="68" stroke="currentColor" stroke-width="2"/>
-                                <!-- Secuencia de celdas LSTM -->
-                                <rect x="24" y="76" width="14" height="12" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
-                                <rect x="44" y="76" width="14" height="12" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
-                                <rect x="64" y="76" width="14" height="12" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
-                                <line x1="38" y1="82" x2="44" y2="82" stroke="currentColor" stroke-width="2"/>
-                                <line x1="58" y1="82" x2="64" y2="82" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-urbansound-title">Clasificación de Sonido Urbano con CNN-LSTM (UrbanSound8K)</h3>
-                        <p class="project-description" data-lang="proj-urbansound-description">
-                            Clasificación de las 10 clases de sonidos urbanos del dataset UrbanSound8K (8.732 fragmentos de audio) a partir de espectrogramas log-mel de 128x128 extraídos con librosa. Arquitectura CNN-LSTM en PyTorch con tres bloques convolucionales y una LSTM de dos capas, aumento de datos online (desplazamiento temporal y ruido gaussiano) y comparación de tres variantes many-to-one: último instante temporal, mean-pooling y LSTM bidireccional, alcanzando un 68,64% de accuracy en test con mean-pooling.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">CNN-LSTM</span>
-                            <span class="tag">Audio Processing</span>
-                            <span class="tag">Log-Mel Spectrogram</span>
-                            <span class="tag">librosa</span>
-                            <span class="tag">Data Augmentation</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/urbansound8k-sound-classification-cnn-lstm" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Clasificación de Imágenes CIFAR-10 - PyTorch -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Imagen de entrada -->
-                                <rect x="14" y="26" width="34" height="34" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
-                                <line x1="14" y1="37" x2="48" y2="37" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
-                                <line x1="14" y1="48" x2="48" y2="48" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
-                                <line x1="25" y1="26" x2="25" y2="60" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
-                                <line x1="36" y1="26" x2="36" y2="60" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
-                                <!-- Kernel convolucional -->
-                                <rect x="25" y="37" width="11" height="11" fill="currentColor" opacity="0.8"/>
-                                <!-- Mapas de características -->
-                                <rect x="58" y="28" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
-                                <rect x="66" y="40" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" rx="2" opacity="0.6"/>
-                                <!-- Capa de salida -->
-                                <circle cx="30" cy="78" r="4" fill="currentColor"/>
-                                <circle cx="50" cy="78" r="4" fill="currentColor" opacity="0.6"/>
-                                <circle cx="70" cy="78" r="4" fill="currentColor" opacity="0.35"/>
-                                <line x1="48" y1="58" x2="34" y2="72" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-cifar-title">Clasificación de Imágenes CIFAR-10 con PyTorch</h3>
-                        <p class="project-description" data-lang="proj-cifar-description">
-                            Comparación de redes totalmente conectadas (MLP con activaciones tanh) frente a una red convolucional estilo AlexNet para clasificar las 10 clases de CIFAR-10 en PyTorch. Incluye el estudio del learning rate (1e-1, 1e-3 y 1e-5) mediante curvas de entrenamiento y validación, la elección del número de épocas a partir del mínimo de la pérdida de validación para evitar el sobreajuste (73,62% de accuracy en test con la CNN frente al 46,66% de la red densa) y la visualización de los filtros y mapas de activación de la primera capa convolucional.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">CNN</span>
-                            <span class="tag">AlexNet</span>
-                            <span class="tag">Computer Vision</span>
-                            <span class="tag">torchvision</span>
-                            <span class="tag">Deep Learning</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/cifar10-image-classification-pytorch" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Mezclador Balanceado Pasivo - AWR -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Simbolo de mezclador -->
-                                <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <line x1="36" y1="36" x2="64" y2="64" stroke="currentColor" stroke-width="2"/>
-                                <line x1="64" y1="36" x2="36" y2="64" stroke="currentColor" stroke-width="2"/>
-                                <!-- Entrada RF -->
-                                <line x1="12" y1="50" x2="28" y2="50" stroke="currentColor" stroke-width="2"/>
-                                <polygon points="28,47 34,50 28,53" fill="currentColor"/>
-                                <!-- Entrada de oscilador local -->
-                                <line x1="50" y1="88" x2="50" y2="74" stroke="currentColor" stroke-width="2"/>
-                                <polygon points="47,74 50,68 53,74" fill="currentColor"/>
-                                <!-- Salida de frecuencia intermedia -->
-                                <line x1="70" y1="50" x2="88" y2="50" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
-                                <!-- Diodo Schottky -->
-                                <polygon points="18,20 30,26 18,32" fill="currentColor" opacity="0.7"/>
-                                <line x1="30" y1="19" x2="30" y2="33" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-mezclador-title">Mezclador Balanceado Pasivo con Diodos Schottky</h3>
-                        <p class="project-description" data-lang="proj-mezclador-description">
-                            Diseño y simulación en AWR Microwave Office de un mezclador balanceado pasivo con diodos Schottky autopolarizados HSMS-28xx en tecnología microstrip sobre FR4 (εr = 4,6; h = 0,5 mm), con RF a 2,3 GHz, oscilador local a 2,1 GHz y frecuencia intermedia a 200 MHz. Incluye el diseño de un híbrido de 180° (rat-race) partiendo de líneas ideales TLIN y su conversión a microstrip real mediante TXLine, la adaptación del oscilador local en régimen de gran señal con análisis de balance armónico y un filtro LC paso bajo de segundo orden en la salida de FI para atenuar los productos de RF y OL por encima de 30 dB.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">AWR Microwave Office</span>
-                            <span class="tag">RF Design</span>
-                            <span class="tag">Microstrip</span>
-                            <span class="tag">Schottky Diodes</span>
-                            <span class="tag">Rat-Race Hybrid</span>
-                            <span class="tag">Harmonic Balance</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/passive-balanced-mixer-schottky-awr" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Procesador Monopulso - AWR -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Elementos radiantes -->
-                                <line x1="28" y1="14" x2="28" y2="34" stroke="currentColor" stroke-width="2.5"/>
-                                <line x1="22" y1="14" x2="34" y2="14" stroke="currentColor" stroke-width="2.5"/>
-                                <line x1="72" y1="14" x2="72" y2="34" stroke="currentColor" stroke-width="2.5"/>
-                                <line x1="66" y1="14" x2="78" y2="14" stroke="currentColor" stroke-width="2.5"/>
-                                <!-- Red de alimentacion -->
-                                <line x1="28" y1="34" x2="28" y2="48" stroke="currentColor" stroke-width="2"/>
-                                <line x1="72" y1="34" x2="72" y2="48" stroke="currentColor" stroke-width="2"/>
-                                <line x1="28" y1="48" x2="38" y2="52" stroke="currentColor" stroke-width="2"/>
-                                <line x1="72" y1="48" x2="62" y2="52" stroke="currentColor" stroke-width="2"/>
-                                <!-- Anillo rat-race -->
-                                <circle cx="50" cy="58" r="16" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <!-- Canales suma y diferencia -->
-                                <line x1="42" y1="73" x2="38" y2="84" stroke="currentColor" stroke-width="2"/>
-                                <line x1="58" y1="73" x2="62" y2="84" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="37" cy="88" r="3" fill="currentColor"/>
-                                <circle cx="63" cy="88" r="3" fill="currentColor" opacity="0.55"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-monopulso-title">Procesador Monopulso con Amplificador de Bajo Ruido</h3>
-                        <p class="project-description" data-lang="proj-monopulso-description">
-                            Diseño completo en AWR Microwave Office de un procesador monopulso a 2,3 GHz en tecnología microstrip sobre FR4: divisor Wilkinson, híbrido rat-race que genera los canales suma y diferencia, línea desfasadora de 86° que compensa la separación de 0,7λ entre elementos radiantes para una incidencia de 20° y amplificador de bajo ruido con transistor ATF-36163, con 16,6 dB de ganancia y 0,87 dB de figura de ruido. Incluye el análisis de estabilidad y los círculos de ruido para la elección del punto de polarización, las redes de polarización de puerta y drenador, la conversión a líneas reales con discontinuidades MTEE, MBEND y MSTEP y componentes SMD 0402, y el layout final del amplificador balanceado.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">AWR Microwave Office</span>
-                            <span class="tag">Monopulse</span>
-                            <span class="tag">Wilkinson Divider</span>
-                            <span class="tag">LNA</span>
-                            <span class="tag">S-Parameters</span>
-                            <span class="tag">Microstrip Layout</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/monopulse-processor-lna-awr" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Antena Dipolo en ANSYS HFSS -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Brazos del dipolo -->
-                                <line x1="50" y1="16" x2="50" y2="44" stroke="currentColor" stroke-width="3"/>
-                                <line x1="50" y1="56" x2="50" y2="84" stroke="currentColor" stroke-width="3"/>
-                                <!-- Alimentacion en el gap -->
-                                <circle cx="50" cy="50" r="3" fill="currentColor"/>
-                                <!-- Diagrama de radiacion -->
-                                <path d="M50 50 Q16 28, 16 50 Q16 72, 50 50" stroke="currentColor" stroke-width="2" fill="none" opacity="0.75"/>
-                                <path d="M50 50 Q84 28, 84 50 Q84 72, 50 50" stroke="currentColor" stroke-width="2" fill="none" opacity="0.75"/>
-                                <path d="M50 50 Q29 37, 29 50 Q29 63, 50 50" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
-                                <path d="M50 50 Q71 37, 71 50 Q71 63, 50 50" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-dipolo-title">Diseño de Antena Dipolo en ANSYS HFSS</h3>
-                        <p class="project-description" data-lang="proj-dipolo-description">
-                            Diseño y caracterización electromagnética de un dipolo de media onda a 2,3 GHz en ANSYS HFSS, optimizando su longitud mediante un barrido paramétrico con Optimetrics hasta 0,441λ para situar la resonancia en la frecuencia objetivo, obteniendo un S11 de −17,19 dB, una impedancia de entrada de 63,81 − j7,59 Ω y un ancho de banda fraccional del 13,39%. Incluye directividad 3D y diagramas de radiación 2D en elevación y azimut (2,51 dB de directividad máxima y un ancho de haz a −3 dB de 74°), eficiencia de radiación y total frente a frecuencia, y la comparación de la distribución de corriente superficial para dipolos de λ/4, λ/2 y λ frente a la teoría.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">ANSYS HFSS</span>
-                            <span class="tag">Antenna Design</span>
-                            <span class="tag">Electromagnetic Simulation</span>
-                            <span class="tag">Radiation Pattern</span>
-                            <span class="tag">S-Parameters</span>
-                            <span class="tag">Optimetrics</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/dipole-antenna-design-ansys-hfss" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Filtro de Partículas vs Kalman -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Trayectoria suavizada (Kalman) -->
-                                <path d="M10 70 Q30 55, 50 45 Q70 35, 90 30"
-                                      stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 3" opacity="0.7"/>
-                                <!-- Partículas dispersas -->
-                                <circle cx="15" cy="65" r="2" fill="currentColor" opacity="0.5"/>
-                                <circle cx="22" cy="75" r="2" fill="currentColor" opacity="0.5"/>
-                                <circle cx="30" cy="60" r="2" fill="currentColor" opacity="0.5"/>
-                                <circle cx="38" cy="50" r="2" fill="currentColor" opacity="0.5"/>
-                                <circle cx="45" cy="55" r="2" fill="currentColor" opacity="0.5"/>
-                                <circle cx="52" cy="40" r="2" fill="currentColor" opacity="0.5"/>
-                                <circle cx="60" cy="48" r="2" fill="currentColor" opacity="0.5"/>
-                                <circle cx="68" cy="33" r="2" fill="currentColor" opacity="0.5"/>
-                                <circle cx="76" cy="38" r="2" fill="currentColor" opacity="0.5"/>
-                                <circle cx="84" cy="28" r="2" fill="currentColor" opacity="0.5"/>
-                                <!-- Media ponderada (línea principal) -->
-                                <path d="M10 68 Q30 57, 50 47 Q70 37, 90 31"
-                                      stroke="currentColor" stroke-width="2.5" fill="none"/>
-                                <!-- Barco (destino) -->
-                                <polygon points="88,26 92,26 90,22" fill="currentColor"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-pf-title">Filtro de Partículas vs Filtro de Kalman</h3>
-                        <p class="project-description" data-lang="proj-pf-description">
-                            Implementación y comparación de filtrado Bayesiano secuencial para el seguimiento de un barco con observaciones de sónar. Incluye SIS con remuestreo sistemático, filtro de Kalman óptimo, estimación de funcionales no lineales de la posterior y experimentos de MSE sobre 50 simulaciones Monte Carlo.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Particle Filter</span>
-                            <span class="tag">Kalman Filter</span>
-                            <span class="tag">Bayesian Estimation</span>
-                            <span class="tag">Monte Carlo</span>
-                            <span class="tag">NumPy</span>
-                            <span class="tag">SIS</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/filtro-particulas" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Códigos Convolucionales y Viterbi -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Forma de onda sinusoidal -->
-                                <path d="M10 50 Q20 25, 30 50 Q40 75, 50 50 Q60 25, 70 50 Q80 75, 90 50"
-                                      stroke="currentColor" stroke-width="2.5" fill="none"/>
-                                <!-- Línea base -->
-                                <line x1="10" y1="72" x2="90" y2="72" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"/>
-                                <!-- Puntos de muestreo -->
-                                <circle cx="30" cy="50" r="3" fill="currentColor"/>
-                                <circle cx="50" cy="50" r="3" fill="currentColor"/>
-                                <circle cx="70" cy="50" r="3" fill="currentColor"/>
-                                <!-- Flechas de trellis -->
-                                <line x1="15" y1="30" x2="35" y2="22" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
-                                <line x1="15" y1="30" x2="35" y2="38" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-conv-title">Códigos Convolucionales y Decodificador Viterbi</h3>
-                        <p class="project-description" data-lang="proj-conv-description">
-                            Simulación end-to-end de un sistema de comunicaciones digitales con código convolucional R=1/2, canal AWGN y modulación BPSK. Incluye decodificador Viterbi con decisión dura, cancelación de interferencias mediante filtro de Kalman y evaluación de BER por Monte Carlo.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Viterbi</span>
-                            <span class="tag">Kalman Filter</span>
-                            <span class="tag">AWGN</span>
-                            <span class="tag">BPSK</span>
-                            <span class="tag">Monte Carlo</span>
-                            <span class="tag">NumPy</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/codigos-convolucionales" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Igualación de Canal - Ecualizadores MIMO -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Antenas transmisoras -->
-                                <circle cx="25" cy="28" r="4" fill="currentColor"/>
-                                <circle cx="25" cy="50" r="4" fill="currentColor"/>
-                                <circle cx="25" cy="72" r="4" fill="currentColor"/>
-                                <!-- Antenas receptoras -->
-                                <circle cx="75" cy="28" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="75" cy="50" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="75" cy="72" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <!-- Canal MIMO cruzado -->
-                                <line x1="29" y1="28" x2="71" y2="28" stroke="currentColor" stroke-width="1.5" opacity="0.8"/>
-                                <line x1="29" y1="28" x2="71" y2="50" stroke="currentColor" stroke-width="1.5" opacity="0.45"/>
-                                <line x1="29" y1="50" x2="71" y2="28" stroke="currentColor" stroke-width="1.5" opacity="0.45"/>
-                                <line x1="29" y1="50" x2="71" y2="50" stroke="currentColor" stroke-width="1.5" opacity="0.8"/>
-                                <line x1="29" y1="50" x2="71" y2="72" stroke="currentColor" stroke-width="1.5" opacity="0.45"/>
-                                <line x1="29" y1="72" x2="71" y2="50" stroke="currentColor" stroke-width="1.5" opacity="0.45"/>
-                                <line x1="29" y1="72" x2="71" y2="72" stroke="currentColor" stroke-width="1.5" opacity="0.8"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-eq-title">Igualación de Canal: Ecualizadores MIMO</h3>
-                        <p class="project-description" data-lang="proj-eq-description">
-                            Estudio comparativo de ecualizadores zero-forcing (ZF), MMSE y un detector secuencial basado en descomposición de Cholesky, evaluados con BPSK y 4-PAM sobre canales diagonales, complejos 3x3 y rectangulares 2x3. Incluye el efecto del orden de cancelación sucesiva en la propagación de errores y la recuperación de un mensaje oculto combinando filtro de Kalman y decodificador Viterbi.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">MIMO</span>
-                            <span class="tag">Zero-Forcing</span>
-                            <span class="tag">MMSE</span>
-                            <span class="tag">Cholesky</span>
-                            <span class="tag">Monte Carlo</span>
-                            <span class="tag">NumPy</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/igualacion-canal" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <rect x="20" y="30" width="60" height="40" stroke="currentColor" stroke-width="2" fill="none" rx="5"/>
-                                <line x1="35" y1="45" x2="65" y2="45" stroke="currentColor" stroke-width="2"/>
-                                <line x1="35" y1="55" x2="55" y2="55" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="75" cy="35" r="8" fill="currentColor"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-ericsson-title">Plataforma de Visualización de Testing Cloud-Native</h3>
-                        <p class="project-description" data-lang="proj-ericsson-description">
-                            Desarrollo de plataforma cloud-native para centralizar y visualizar resultados de tests de Jenkins usando arquitectura de microservicios en Kubernetes, con backend REST, frontend web y dashboards de Grafana.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Kubernetes</span>
-                            <span class="tag">Microservices</span>
-                            <span class="tag">REST API</span>
-                            <span class="tag">Grafana</span>
-                            <span class="tag">Jenkins</span>
-                            <span class="tag">Cloud Native</span>
-                        </div>
-                        <div class="project-note" data-lang="proj-ericsson-note">
-                            <small>Proyecto desarrollado en Ericsson</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <path d="M 50 25 L 50 45" stroke="currentColor" stroke-width="3"/>
-                                <circle cx="50" cy="55" r="4" fill="currentColor"/>
-                                <path d="M 30 70 L 70 70" stroke="currentColor" stroke-width="2"/>
-                                <rect x="45" y="65" width="10" height="15" fill="currentColor"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-pentesting-title">Framework de Automatización de Pentesting Modular</h3>
-                        <p class="project-description" data-lang="proj-pentesting-description">
-                            Framework modular de pentesting desarrollado en Python y Robot Framework, con CLI interactivo para escaneo y análisis de servicios SSL/TLS y SSH, generando reportes detallados con clasificación de seguridad y recomendaciones automatizadas.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Robot Framework</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Scapy</span>
-                            <span class="tag">Security Assessment</span>
-                            <span class="tag">Network Scanning</span>
-                            <span class="tag">Modular Architecture</span>
-                            <span class="tag">Concurrent Scanning</span>
-                        </div>
-                        <div class="project-note" data-lang="proj-ericsson-note">
-                            <small> Proyecto desarrollado en Ericsson</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Buscador de Actividades Deportivas - JEE -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Navegador -->
-                                <rect x="18" y="22" width="64" height="46" stroke="currentColor" stroke-width="2" fill="none" rx="4"/>
-                                <line x1="18" y1="32" x2="82" y2="32" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="24" cy="27" r="1.8" fill="currentColor"/>
-                                <circle cx="30" cy="27" r="1.8" fill="currentColor"/>
-                                <!-- Lupa de búsqueda -->
-                                <circle cx="46" cy="47" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
-                                <line x1="53" y1="54" x2="64" y2="63" stroke="currentColor" stroke-width="2.5"/>
-                                <!-- Base de datos -->
-                                <ellipse cx="50" cy="78" rx="16" ry="4" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <path d="M34 78 L34 86 Q50 91, 66 86 L66 78" stroke="currentColor" stroke-width="2" fill="none"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-buscador-title">Buscador de Actividades Deportivas (JEE)</h3>
-                        <p class="project-description" data-lang="proj-buscador-description">
-                            Aplicación web Java EE con Servlets, JSP y MySQL siguiendo el patrón MVC y desplegada en Apache Tomcat. Registro multi-paso con precarga mediante cookies, sesiones de servidor con intentos de login limitados, búsqueda de actividades por precio, plazas o pabellón y área independiente de gestor, con seguridad reforzada mediante PreparedStatement, escapado HTML y hashing SHA-256 con pepper.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Java EE</span>
-                            <span class="tag">Servlets</span>
-                            <span class="tag">JSP</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">MVC</span>
-                            <span class="tag">Tomcat</span>
-                            <span class="tag">Web Security</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/buscador-deportivo" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Gestor de Actividades Deportivas - Java y JDBC -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Cilindros de base de datos -->
-                                <ellipse cx="50" cy="26" rx="22" ry="6" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <path d="M28 26 L28 42 Q50 49, 72 42 L72 26" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <path d="M28 42 L28 58 Q50 65, 72 58 L72 42" stroke="currentColor" stroke-width="2" fill="none" opacity="0.7"/>
-                                <!-- Conexión JDBC -->
-                                <line x1="50" y1="64" x2="50" y2="76" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
-                                <rect x="34" y="76" width="32" height="12" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-gestor-title">Gestor de Actividades Deportivas (Java y JDBC)</h3>
-                        <p class="project-description" data-lang="proj-gestor-description">
-                            Aplicación Java en modo texto para gestionar actividades deportivas, clientes y pabellones sobre una base de datos MySQL mediante JDBC. Perfiles separados de gestor y cliente con auto-registro, operaciones de inscripción, listado de plazas libres e identificación de actividades con más del 80% de ocupación, sobre una arquitectura en capas control/vista/modelo con capa de acceso a datos reutilizable.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">JDBC</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">Layered Architecture</span>
-                            <span class="tag">Relational Design</span>
-                            <span class="tag">SHA-256</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/gestor-deportivo" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Servicios Web REST en Python -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Cliente -->
-                                <rect x="14" y="40" width="22" height="20" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
-                                <!-- Servidor / API -->
-                                <rect x="64" y="40" width="22" height="20" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
-                                <!-- Petición GET -->
-                                <line x1="38" y1="46" x2="60" y2="46" stroke="currentColor" stroke-width="2"/>
-                                <polygon points="60,43 66,46 60,49" fill="currentColor"/>
-                                <!-- Respuesta JSON -->
-                                <line x1="62" y1="55" x2="40" y2="55" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
-                                <polygon points="40,52 34,55 40,58" fill="currentColor"/>
-                                <!-- Llaves JSON -->
-                                <path d="M44 22 Q38 22, 38 28 Q38 32, 34 32 Q38 32, 38 36 Q38 42, 44 42" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <path d="M56 22 Q62 22, 62 28 Q62 32, 66 32 Q62 32, 62 36 Q62 42, 56 42" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="50" cy="32" r="2.5" fill="currentColor"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-apirest-title">Servicios Web REST en Python</h3>
-                        <p class="project-description" data-lang="proj-apirest-description">
-                            Notebook interactivo en Google Colab para consumir APIs REST públicas (GitHub, openFDA y Harvard Art Museums) con la librería requests. Cubre peticiones GET, parsing de JSON, parámetros de consulta, paginación automática (skip/limit y page/size), autenticación por API key y filtrado de datos, con manejo robusto de errores en cada llamada.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">REST API</span>
-                            <span class="tag">requests</span>
-                            <span class="tag">JSON</span>
-                            <span class="tag">Jupyter</span>
-                            <span class="tag">Pagination</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/api-rest" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Portfolio Web Personal -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Escritorio -->
-                                <rect x="14" y="24" width="48" height="36" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
-                                <line x1="14" y1="33" x2="62" y2="33" stroke="currentColor" stroke-width="2"/>
-                                <line x1="22" y1="42" x2="48" y2="42" stroke="currentColor" stroke-width="2" opacity="0.7"/>
-                                <line x1="22" y1="49" x2="40" y2="49" stroke="currentColor" stroke-width="2" opacity="0.7"/>
-                                <!-- Móvil -->
-                                <rect x="68" y="38" width="20" height="34" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
-                                <line x1="74" y1="47" x2="82" y2="47" stroke="currentColor" stroke-width="2" opacity="0.7"/>
-                                <line x1="74" y1="54" x2="82" y2="54" stroke="currentColor" stroke-width="2" opacity="0.7"/>
-                                <circle cx="78" cy="66" r="2" fill="currentColor"/>
-                                <!-- Globo de idiomas -->
-                                <circle cx="32" cy="76" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <ellipse cx="32" cy="76" rx="4" ry="10" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                                <line x1="22" y1="76" x2="42" y2="76" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-webportfolio-title">Portfolio Web Personal</h3>
-                        <p class="project-description" data-lang="proj-webportfolio-description">
-                            Portfolio web bilingüe y responsive desarrollado con HTML5, CSS3 y JavaScript vanilla, con un sistema de traducción propio y persistencia del idioma en localStorage entre sesiones. Diseño mobile-first en tres breakpoints (968px, 640px y 375px), menú hamburguesa con overlay, scroll suave con resaltado de la sección activa y objetivos táctiles de 44x44px conforme a las guías WCAG.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Responsive Design</span>
-                            <span class="tag">i18n</span>
-                            <span class="tag">Accessibility</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/nooelanag.github.io" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- F1 News Bot -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <text x="50" y="45" text-anchor="middle" font-size="32" fill="currentColor"></text>
-                                <line x1="20" y1="60" x2="80" y2="60" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="35" cy="68" r="5" fill="currentColor"/>
-                                <circle cx="65" cy="68" r="5" fill="currentColor"/>
-                                <path d="M30 55 Q50 40 70 55" stroke="currentColor" stroke-width="2" fill="none"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-f1bot-title">F1 News Bot</h3>
-                        <p class="project-description" data-lang="proj-f1bot-description">
-                            Bot autónomo de Telegram que monitoriza noticias de Fórmula 1 en tiempo real desde 8 fuentes en español e inglés, enviando notificaciones automáticas cada 30 minutos. Controlable directamente desde Telegram con comandos de pausa, activación y consulta instantánea.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Telegram Bot</span>
-                            <span class="tag">RSS</span>
-                            <span class="tag">Automation</span>
-                            <span class="tag">Web Scraping</span>
-                            <span class="tag">Async</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/f1-news-bot" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- STM32 Reaction Games -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <rect x="30" y="25" width="40" height="50" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
-                                <circle cx="50" cy="45" r="8" fill="currentColor"/>
-                                <line x1="40" y1="60" x2="60" y2="60" stroke="currentColor" stroke-width="2"/>
-                                <line x1="45" y1="65" x2="55" y2="65" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-stm32-title">Juegos de Reacción STM32 Bare-Metal</h3>
-                        <p class="project-description" data-lang="proj-stm32-description">
-                            Proyecto de sistemas embebidos bare-metal que implementa dos juegos de tiempo de reacción para dos jugadores en placa STM32L152RE, utilizando programación de bajo nivel con timers, interrupciones EXTI, ADC, PWM y USART para comunicación serie.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">STM32</span>
-                            <span class="tag">C</span>
-                            <span class="tag">Embedded Systems</span>
-                            <span class="tag">Interrupts</span>
-                            <span class="tag">Bare-Metal</span>
-                            <span class="tag">ARM Cortex-M3</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/stm32-reaction-games" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-                <!-- Process Scheduler Emulator -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <rect x="20" y="30" width="15" height="40" fill="currentColor" opacity="0.7"/>
-                                <rect x="42" y="20" width="15" height="50" fill="currentColor" opacity="0.85"/>
-                                <rect x="64" y="35" width="15" height="35" fill="currentColor" opacity="0.6"/>
-                                <line x1="15" y1="70" x2="85" y2="70" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-scheduler-title">Emulador de Planificador de Procesos</h3>
-                        <p class="project-description" data-lang="proj-scheduler-description">
-                            Aplicación en C que emula el comportamiento de un planificador de procesos con gestión interactiva de tabla de planificación, operaciones de E/S con archivos binarios, ejecución con fork/exec, Round Robin y manejo de señales SIGINT/SIGALRM.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">C</span>
-                            <span class="tag">Operating Systems</span>
-                            <span class="tag">Round Robin</span>
-                            <span class="tag">Process Management</span>
-                            <span class="tag">Signals</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/process-scheduler" target="_blank" class="project-expand" data-lang="proj-github-button">
-                             Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-                <!-- Fake News Detection with ML/DL -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <rect x="25" y="30" width="50" height="40" stroke="currentColor" stroke-width="2" fill="none" rx="5"/>
-                                <circle cx="45" cy="45" r="5" fill="currentColor"/>
-                                <circle cx="55" cy="45" r="5" fill="currentColor"/>
-                                <path d="M 40 58 Q 50 63, 60 58" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <line x1="35" y1="50" x2="40" y2="48" stroke="currentColor" stroke-width="2"/>
-                                <line x1="60" y1="48" x2="65" y2="50" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-fakenews-title">Detección de Fake News con ML y Transformers</h3>
-                        <p class="project-description" data-lang="proj-fakenews-description">
-                            Proyecto de clasificación de noticias desinformativas comparando múltiples enfoques: TF-IDF + Random Forest, Word2Vec + MLP, embeddings BERT y fine-tuning de modelo Transformer, alcanzando 96-97% de accuracy con PyTorch y HuggingFace.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">BERT</span>
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">Transformers</span>
-                            <span class="tag">Machine Learning</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/td_project" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-                <!-- Modulaciones Digitales y Simulación de Canal -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Ejes I/Q -->
-                                <line x1="50" y1="14" x2="50" y2="86" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-                                <line x1="14" y1="50" x2="86" y2="50" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-                                <!-- Constelación 16-QAM -->
-                                <circle cx="29" cy="29" r="2.5" fill="currentColor"/>
-                                <circle cx="43" cy="29" r="2.5" fill="currentColor"/>
-                                <circle cx="57" cy="29" r="2.5" fill="currentColor"/>
-                                <circle cx="71" cy="29" r="2.5" fill="currentColor"/>
-                                <circle cx="29" cy="43" r="2.5" fill="currentColor"/>
-                                <circle cx="43" cy="43" r="2.5" fill="currentColor"/>
-                                <circle cx="57" cy="43" r="2.5" fill="currentColor"/>
-                                <circle cx="71" cy="43" r="2.5" fill="currentColor"/>
-                                <circle cx="29" cy="57" r="2.5" fill="currentColor"/>
-                                <circle cx="43" cy="57" r="2.5" fill="currentColor"/>
-                                <circle cx="57" cy="57" r="2.5" fill="currentColor"/>
-                                <circle cx="71" cy="57" r="2.5" fill="currentColor"/>
-                                <circle cx="29" cy="71" r="2.5" fill="currentColor"/>
-                                <circle cx="43" cy="71" r="2.5" fill="currentColor"/>
-                                <circle cx="57" cy="71" r="2.5" fill="currentColor"/>
-                                <circle cx="71" cy="71" r="2.5" fill="currentColor"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-modulaciones-title">Modulaciones Digitales y Simulación de Canal</h3>
-                        <p class="project-description" data-lang="proj-modulaciones-description">
-                            Framework de simulación en MATLAB para sistemas de comunicaciones digitales con transmisores QPSK, OQPSK, 8-PSK, 16-QAM y 64-QAM a 128 ksps y pulso de coseno alzado, analizados mediante formas de onda I/Q, diagramas de ojo, espectros y constelaciones. Incluye estimación de BER por Monte Carlo frente a curvas teóricas AWGN, canal móvil de dos rayos con dispersión Doppler e igualación por pilotos, y amplificador no lineal AM/AM con saturación configurable.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">MATLAB</span>
-                            <span class="tag">QPSK</span>
-                            <span class="tag">16-QAM</span>
-                            <span class="tag">BER</span>
-                            <span class="tag">AWGN</span>
-                            <span class="tag">Doppler</span>
-                            <span class="tag">Digital Communications</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/modulaciones-digitales" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-                <!-- Meereen - Concurrent Dragon Lair -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <path d="M 30 50 Q 40 30, 50 50 Q 60 70, 70 50" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="35" cy="45" r="4" fill="currentColor"/>
-                                <circle cx="50" cy="35" r="4" fill="currentColor"/>
-                                <circle cx="65" cy="45" r="4" fill="currentColor"/>
-                               <path d="M 25 60 L 35 70 L 50 65 L 65 70 L 75 60" stroke="currentColor" stroke-width="2" fill="none"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-meereen-title">Meereen - Simulación de Concurrencia en Java</h3>
-                        <p class="project-description" data-lang="proj-meereen-description">
-                            Simulación de problema de sincronización de recursos compartidos en Java con 300 alquimistas y 3 dragones. Implementa monitores synchronized, wait/notifyAll, gestión multi-zona y capacidad dinámica para prevención de deadlocks inspirado en Game of Thrones.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">Concurrency</span>
-                            <span class="tag">Threads</span>
-                            <span class="tag">Synchronization</span>
-                            <span class="tag">Deadlock Prevention</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/meereen" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-                <!-- Compressed Trie Route Lookup -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <circle cx="50" cy="20" r="6" fill="currentColor"/>
-                                <circle cx="35" cy="45" r="5" fill="currentColor"/>
-                                <circle cx="65" cy="45" r="5" fill="currentColor"/>
-                                <circle cx="25" cy="70" r="4" fill="currentColor"/>
-                                <circle cx="45" cy="70" r="4" fill="currentColor"/>
-                                <circle cx="75" cy="70" r="4" fill="currentColor"/>
-                                <line x1="50" y1="26" x2="35" y2="40" stroke="currentColor" stroke-width="2"/>
-                                <line x1="50" y1="26" x2="65" y2="40" stroke="currentColor" stroke-width="2"/>
-                                <line x1="35" y1="50" x2="25" y2="66" stroke="currentColor" stroke-width="2"/>
-                                <line x1="35" y1="50" x2="45" y2="66" stroke="currentColor" stroke-width="2"/>
-                                <line x1="65" y1="50" x2="75" y2="66" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-trie-title">Búsqueda de Rutas IP con Trie Comprimido</h3>
-                        <p class="project-description" data-lang="proj-trie-description">
-                            Sistema de búsqueda de rutas IP usando Patricia Trie (trie comprimido) para longest prefix match con complejidad O(W). Implementado en C con métricas de rendimiento, gestión de memoria y comparación con búsqueda lineal en tablas de enrutamiento.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">C</span>
-                            <span class="tag">Data Structures</span>
-                            <span class="tag">Patricia Trie</span>
-                            <span class="tag">IP Routing</span>
-                            <span class="tag">Network Algorithms</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/compressed-trie-route-lookup" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-                <!-- Vodafone Challenge 2023 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <!-- Torre de antena -->
-                                <line x1="50" y1="30" x2="38" y2="80" stroke="currentColor" stroke-width="2"/>
-                                <line x1="50" y1="30" x2="62" y2="80" stroke="currentColor" stroke-width="2"/>
-                                <line x1="43" y1="55" x2="57" y2="55" stroke="currentColor" stroke-width="1.5"/>
-                                <line x1="41" y1="68" x2="59" y2="68" stroke="currentColor" stroke-width="1.5"/>
-                                <circle cx="50" cy="26" r="3.5" fill="currentColor"/>
-                                <!-- Ondas de radiación -->
-                                <path d="M34 20 Q30 26, 34 32" stroke="currentColor" stroke-width="2" fill="none" opacity="0.8"/>
-                                <path d="M27 14 Q20 26, 27 38" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
-                                <path d="M66 20 Q70 26, 66 32" stroke="currentColor" stroke-width="2" fill="none" opacity="0.8"/>
-                                <path d="M73 14 Q80 26, 73 38" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
-                                <!-- Base -->
-                                <line x1="32" y1="80" x2="68" y2="80" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-vodafone-title">Vodafone Challenge 2023</h3>
-                        <p class="project-description" data-lang="proj-vodafone-description">
-                            Participación en el Vodafone Challenge 2023 dentro de la asignatura de Comunicaciones Móviles, con sesiones en la sede de Vodafone en Madrid sobre 5G, Massive MIMO, RAN y Open RAN. Lideré un proyecto de grupo sobre opciones de Low Layer Split en downlink, presentando los resultados ante ingenieros senior de Vodafone.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">5G</span>
-                            <span class="tag">Massive MIMO</span>
-                            <span class="tag">Open RAN</span>
-                            <span class="tag">Low Layer Split</span>
-                            <span class="tag">Teamwork</span>
-                        </div>
-                        <div class="project-note" data-lang="proj-vodafone-note">
-                            <small>Proyecto académico en colaboración con Vodafone</small>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyecto SIP -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                        <svg width="100" height="100" viewBox="0 0 100 100">
-                                <circle cx="30" cy="40" r="12" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="70" cy="40" r="12" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <path d="M 42 40 L 58 40" stroke="currentColor" stroke-width="2"/>
-                                <path d="M 45 45 L 55 45" stroke="currentColor" stroke-width="2"/>
-                                <path d="M 45 50 L 55 50" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="30" cy="65" r="3" fill="currentColor"/>
-                                <circle cx="50" cy="65" r="3" fill="currentColor"/>
-                                <circle cx="70" cy="65" r="3" fill="currentColor"/>
-                        </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-sip-title">Implementación de Protocolo SIP</h3>
-                        <p class="project-description" data-lang="proj-sip-description">
-                            Desarrollo de aplicación de comunicación VoIP utilizando el protocolo SIP (Session Initiation Protocol) para establecimiento y gestión de sesiones multimedia en redes de telecomunicaciones.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">SIP</span>
-                            <span class="tag">VoIP</span>
-                            <span class="tag">Networking</span>
-                            <span class="tag">Multimedia</span>
-                        </div>
-                       <a href="https://github.com/nooelanag/PROYECTO-SIP" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-                <!-- SDN Development LAB -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <rect x="35" y="15" width="30" height="20" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
-                                <text x="50" y="28" text-anchor="middle" font-size="10" fill="currentColor">SDN</text>
-                                <circle cx="30" cy="60" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="50" cy="60" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="70" cy="60" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <line x1="45" y1="35" x2="30" y2="52" stroke="currentColor" stroke-width="2"/>
-                                <line x1="50" y1="35" x2="50" y2="52" stroke="currentColor" stroke-width="2"/>
-                                <line x1="55" y1="35" x2="70" y2="52" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-sdn-title">Laboratorio de Desarrollo SDN</h3>
-                        <p class="project-description" data-lang="proj-sdn-description">
-                            Laboratorio de redes definidas por software implementando reglas ICMP, dispatchers (CONFIG y MAIN), manejadores de eventos, respuestas ICMP echo reply y ARP reply para gestión programática de infraestructura de red.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">SDN</span>
-                            <span class="tag">OpenFlow</span>
-                            <span class="tag">ICMP</span>
-                            <span class="tag">ARP</span>
-                            <span class="tag">Network Programming</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/SDN-Development-LAB" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-                <!-- Mininet and Ryu LAB -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <circle cx="50" cy="30" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <rect x="20" y="55" width="20" height="15" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <rect x="60" y="55" width="20" height="15" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <line x1="50" y1="38" x2="30" y2="55" stroke="currentColor" stroke-width="2"/>
-                                <line x1="50" y1="38" x2="70" y2="55" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-mininet-title">Laboratorio Mininet y Ryu</h3>
-                        <p class="project-description" data-lang="proj-mininet-description">
-                            Prácticas de emulación de redes con Mininet, instalación y activación de OpenFlow 1.3, programación de Mininet con Python y desarrollo de controladores SDN con framework Ryu para gestión de topologías virtuales.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Mininet</span>
-                            <span class="tag">Ryu Controller</span>
-                            <span class="tag">OpenFlow 1.3</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Network Emulation</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/Mininet-and-Ryu-LAB" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-                <!-- Dijkstra Algorithm -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100">
-                                <circle cx="25" cy="25" r="8" stroke="currentColor" stroke-width="2" fill="currentColor"/>
-                                <circle cx="75" cy="25" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="25" cy="75" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="75" cy="75" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <line x1="33" y1="25" x2="67" y2="25" stroke="currentColor" stroke-width="2"/>
-                                <line x1="25" y1="33" x2="25" y2="67" stroke="currentColor" stroke-width="2" stroke-dasharray="3"/>
-                                <line x1="33" y1="71" x2="67" y2="29" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title" data-lang="proj-dijkstra-title">Implementación del Algoritmo de Dijkstra</h3>
-                        <p class="project-description" data-lang="proj-dijkstra-description">
-                            Recreación del comportamiento del algoritmo de Dijkstra para encontrar caminos más cortos en grafos ponderados. Recibe matriz de costos desde archivo, donde nodos no conectados tienen costo 500 en lugar de infinito.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Algorithms</span>
-                            <span class="tag">Graph Theory</span>
-                            <span class="tag">Shortest Path</span>
-                            <span class="tag">Computer Networks</span>
-                        </div>
-                        <a href="https://github.com/nooelanag/Dijkstra_Algorythm" target="_blank" class="project-expand" data-lang="proj-github-button">
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
+            <div class="project-filters" role="group" aria-label="Filtrar proyectos por categoría">
+                <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true" data-lang="filter-all">Todos</button>
+                <button type="button" class="filter-btn" data-filter="rf" aria-pressed="false" data-lang="filter-rf">RF y Procesado de Señal</button>
+                <button type="button" class="filter-btn" data-filter="ai" aria-pressed="false" data-lang="filter-ai">IA y Machine Learning</button>
+                <button type="button" class="filter-btn" data-filter="cloud" aria-pressed="false" data-lang="filter-cloud">Cloud y Sistemas Distribuidos</button>
+                <button type="button" class="filter-btn" data-filter="sw" aria-pressed="false" data-lang="filter-sw">Ingeniería de Software</button>
+                <button type="button" class="filter-btn" data-filter="embedded" aria-pressed="false" data-lang="filter-embedded">Sistemas Embebidos</button>
             </div>
+
+            <div class="projects-block" data-block="featured">
+                <h3 class="projects-subtitle" data-lang="featured-title">Proyectos Destacados</h3>
+                <div class="projects-grid projects-grid--featured">
+                    <!-- Medida y Caracterizacion de Senales de Radio (TFG) -->
+                    <div class="project-card" data-category="rf">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Ejes de medida -->
+                                    <line x1="14" y1="50" x2="88" y2="50" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                                    <line x1="18" y1="18" x2="18" y2="84" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                                    <!-- Senal de referencia -->
+                                    <path d="M18 50 Q30 22, 42 50 Q54 78, 66 50 Q78 22, 88 46" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                    <!-- Senal desfasada -->
+                                    <path d="M18 62 Q30 34, 42 62 Q54 90, 66 62 Q78 40, 88 58" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.45" stroke-dasharray="4 3"/>
+                                    <!-- Marca de amplitud -->
+                                    <line x1="30" y1="24" x2="30" y2="50" stroke="currentColor" stroke-width="1.5" opacity="0.8"/>
+                                    <polygon points="27,28 33,28 30,21" fill="currentColor" opacity="0.8"/>
+                                    <!-- Marcas de fase -->
+                                    <circle cx="42" cy="50" r="2.5" fill="currentColor"/>
+                                    <circle cx="42" cy="62" r="2.5" fill="currentColor" opacity="0.5"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-rf">RF y Procesado de Señal</span>
+                            <h3 class="project-title" data-lang="proj-tfg-title">Medida y Caracterización de Señales de Radio en Amplitud y Fase</h3>
+                            <p class="project-description" data-lang="proj-tfg-description">
+                                Trabajo Fin de Grado centrado en la medida y caracterización de señales de radio en amplitud y fase, con trabajo de laboratorio sobre instrumentación RF y análisis de las señales capturadas para contrastar las medidas con el comportamiento teórico esperado.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">RF</span>
+                                <span class="tag">RF Measurements</span>
+                                <span class="tag">Amplitude & Phase</span>
+                                <span class="tag">Signal Characterization</span>
+                                <span class="tag">Lab Instrumentation</span>
+                            </div>
+                            <div class="project-note">
+                                <small data-lang="proj-tfg-note">Trabajo Fin de Grado (UC3M)</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mezclador Balanceado Pasivo - AWR -->
+                    <div class="project-card" data-category="rf">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Simbolo de mezclador -->
+                                    <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <line x1="36" y1="36" x2="64" y2="64" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="64" y1="36" x2="36" y2="64" stroke="currentColor" stroke-width="2"/>
+                                    <!-- Entrada RF -->
+                                    <line x1="12" y1="50" x2="28" y2="50" stroke="currentColor" stroke-width="2"/>
+                                    <polygon points="28,47 34,50 28,53" fill="currentColor"/>
+                                    <!-- Entrada de oscilador local -->
+                                    <line x1="50" y1="88" x2="50" y2="74" stroke="currentColor" stroke-width="2"/>
+                                    <polygon points="47,74 50,68 53,74" fill="currentColor"/>
+                                    <!-- Salida de frecuencia intermedia -->
+                                    <line x1="70" y1="50" x2="88" y2="50" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
+                                    <!-- Diodo Schottky -->
+                                    <polygon points="18,20 30,26 18,32" fill="currentColor" opacity="0.7"/>
+                                    <line x1="30" y1="19" x2="30" y2="33" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-rf">RF y Procesado de Señal</span>
+                            <h3 class="project-title" data-lang="proj-mezclador-title">Mezclador Balanceado Pasivo con Diodos Schottky</h3>
+                            <p class="project-description" data-lang="proj-mezclador-description">
+                                Diseño y simulación en AWR Microwave Office de un mezclador balanceado pasivo con diodos Schottky autopolarizados HSMS-28xx en tecnología microstrip sobre FR4 (εr = 4,6; h = 0,5 mm), con RF a 2,3 GHz, oscilador local a 2,1 GHz y frecuencia intermedia a 200 MHz. Incluye el diseño de un híbrido de 180° (rat-race) partiendo de líneas ideales TLIN y su conversión a microstrip real mediante TXLine, la adaptación del oscilador local en régimen de gran señal con análisis de balance armónico y un filtro LC paso bajo de segundo orden en la salida de FI para atenuar los productos de RF y OL por encima de 30 dB.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">RF</span>
+                                <span class="tag">Microwave</span>
+                                <span class="tag">AWR Microwave Office</span>
+                                <span class="tag">Microstrip</span>
+                                <span class="tag">Harmonic Balance</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/passive-balanced-mixer-schottky-awr" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Procesador Monopulso - AWR -->
+                    <div class="project-card" data-category="rf">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Elementos radiantes -->
+                                    <line x1="28" y1="14" x2="28" y2="34" stroke="currentColor" stroke-width="2.5"/>
+                                    <line x1="22" y1="14" x2="34" y2="14" stroke="currentColor" stroke-width="2.5"/>
+                                    <line x1="72" y1="14" x2="72" y2="34" stroke="currentColor" stroke-width="2.5"/>
+                                    <line x1="66" y1="14" x2="78" y2="14" stroke="currentColor" stroke-width="2.5"/>
+                                    <!-- Red de alimentacion -->
+                                    <line x1="28" y1="34" x2="28" y2="48" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="72" y1="34" x2="72" y2="48" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="28" y1="48" x2="38" y2="52" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="72" y1="48" x2="62" y2="52" stroke="currentColor" stroke-width="2"/>
+                                    <!-- Anillo rat-race -->
+                                    <circle cx="50" cy="58" r="16" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <!-- Canales suma y diferencia -->
+                                    <line x1="42" y1="73" x2="38" y2="84" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="58" y1="73" x2="62" y2="84" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="37" cy="88" r="3" fill="currentColor"/>
+                                    <circle cx="63" cy="88" r="3" fill="currentColor" opacity="0.55"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-rf">RF y Procesado de Señal</span>
+                            <h3 class="project-title" data-lang="proj-monopulso-title">Procesador Monopulso con Amplificador de Bajo Ruido</h3>
+                            <p class="project-description" data-lang="proj-monopulso-description">
+                                Diseño completo en AWR Microwave Office de un procesador monopulso a 2,3 GHz en tecnología microstrip sobre FR4: divisor Wilkinson, híbrido rat-race que genera los canales suma y diferencia, línea desfasadora de 86° que compensa la separación de 0,7λ entre elementos radiantes para una incidencia de 20° y amplificador de bajo ruido con transistor ATF-36163, con 16,6 dB de ganancia y 0,87 dB de figura de ruido. Incluye el análisis de estabilidad y los círculos de ruido para la elección del punto de polarización, las redes de polarización de puerta y drenador, la conversión a líneas reales con discontinuidades MTEE, MBEND y MSTEP y componentes SMD 0402, y el layout final del amplificador balanceado.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">RF</span>
+                                <span class="tag">Microwave</span>
+                                <span class="tag">AWR Microwave Office</span>
+                                <span class="tag">LNA</span>
+                                <span class="tag">Radar</span>
+                                <span class="tag">Microstrip</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/monopulse-processor-lna-awr" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Igualación de Canal - Ecualizadores MIMO -->
+                    <div class="project-card" data-category="rf">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Antenas transmisoras -->
+                                    <circle cx="25" cy="28" r="4" fill="currentColor"/>
+                                    <circle cx="25" cy="50" r="4" fill="currentColor"/>
+                                    <circle cx="25" cy="72" r="4" fill="currentColor"/>
+                                    <!-- Antenas receptoras -->
+                                    <circle cx="75" cy="28" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="75" cy="50" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="75" cy="72" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <!-- Canal MIMO cruzado -->
+                                    <line x1="29" y1="28" x2="71" y2="28" stroke="currentColor" stroke-width="1.5" opacity="0.8"/>
+                                    <line x1="29" y1="28" x2="71" y2="50" stroke="currentColor" stroke-width="1.5" opacity="0.45"/>
+                                    <line x1="29" y1="50" x2="71" y2="28" stroke="currentColor" stroke-width="1.5" opacity="0.45"/>
+                                    <line x1="29" y1="50" x2="71" y2="50" stroke="currentColor" stroke-width="1.5" opacity="0.8"/>
+                                    <line x1="29" y1="50" x2="71" y2="72" stroke="currentColor" stroke-width="1.5" opacity="0.45"/>
+                                    <line x1="29" y1="72" x2="71" y2="50" stroke="currentColor" stroke-width="1.5" opacity="0.45"/>
+                                    <line x1="29" y1="72" x2="71" y2="72" stroke="currentColor" stroke-width="1.5" opacity="0.8"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-rf">RF y Procesado de Señal</span>
+                            <h3 class="project-title" data-lang="proj-eq-title">Igualación de Canal: Ecualizadores MIMO</h3>
+                            <p class="project-description" data-lang="proj-eq-description">
+                                Estudio comparativo de ecualizadores zero-forcing (ZF), MMSE y un detector secuencial basado en descomposición de Cholesky, evaluados con BPSK y 4-PAM sobre canales diagonales, complejos 3x3 y rectangulares 2x3. Incluye el efecto del orden de cancelación sucesiva en la propagación de errores y la recuperación de un mensaje oculto combinando filtro de Kalman y decodificador Viterbi.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">DSP</span>
+                                <span class="tag">MIMO</span>
+                                <span class="tag">Digital Communications</span>
+                                <span class="tag">Equalization</span>
+                                <span class="tag">Interference Cancellation</span>
+                                <span class="tag">Python</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/igualacion-canal" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Filtro de Partículas vs Kalman -->
+                    <div class="project-card" data-category="rf">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Trayectoria suavizada (Kalman) -->
+                                    <path d="M10 70 Q30 55, 50 45 Q70 35, 90 30"
+                                          stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 3" opacity="0.7"/>
+                                    <!-- Partículas dispersas -->
+                                    <circle cx="15" cy="65" r="2" fill="currentColor" opacity="0.5"/>
+                                    <circle cx="22" cy="75" r="2" fill="currentColor" opacity="0.5"/>
+                                    <circle cx="30" cy="60" r="2" fill="currentColor" opacity="0.5"/>
+                                    <circle cx="38" cy="50" r="2" fill="currentColor" opacity="0.5"/>
+                                    <circle cx="45" cy="55" r="2" fill="currentColor" opacity="0.5"/>
+                                    <circle cx="52" cy="40" r="2" fill="currentColor" opacity="0.5"/>
+                                    <circle cx="60" cy="48" r="2" fill="currentColor" opacity="0.5"/>
+                                    <circle cx="68" cy="33" r="2" fill="currentColor" opacity="0.5"/>
+                                    <circle cx="76" cy="38" r="2" fill="currentColor" opacity="0.5"/>
+                                    <circle cx="84" cy="28" r="2" fill="currentColor" opacity="0.5"/>
+                                    <!-- Media ponderada (línea principal) -->
+                                    <path d="M10 68 Q30 57, 50 47 Q70 37, 90 31"
+                                          stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                    <!-- Barco (destino) -->
+                                    <polygon points="88,26 92,26 90,22" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-rf">RF y Procesado de Señal</span>
+                            <h3 class="project-title" data-lang="proj-pf-title">Filtro de Partículas vs Filtro de Kalman</h3>
+                            <p class="project-description" data-lang="proj-pf-description">
+                                Implementación y comparación de filtrado Bayesiano secuencial para el seguimiento de un barco con observaciones de sónar. Incluye SIS con remuestreo sistemático, filtro de Kalman óptimo, estimación de funcionales no lineales de la posterior y experimentos de MSE sobre 50 simulaciones Monte Carlo.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Signal Processing</span>
+                                <span class="tag">Bayesian Estimation</span>
+                                <span class="tag">Kalman Filter</span>
+                                <span class="tag">Particle Filter</span>
+                                <span class="tag">Monte Carlo</span>
+                                <span class="tag">Python</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/filtro-particulas" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Clasificación de Sonido Urbano - CNN-LSTM -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Espectrograma log-mel -->
+                                    <rect x="16" y="30" width="8" height="34" fill="currentColor" opacity="0.35"/>
+                                    <rect x="26" y="22" width="8" height="42" fill="currentColor" opacity="0.55"/>
+                                    <rect x="36" y="34" width="8" height="30" fill="currentColor" opacity="0.4"/>
+                                    <rect x="46" y="18" width="8" height="46" fill="currentColor" opacity="0.75"/>
+                                    <rect x="56" y="28" width="8" height="36" fill="currentColor" opacity="0.5"/>
+                                    <rect x="66" y="38" width="8" height="26" fill="currentColor" opacity="0.35"/>
+                                    <rect x="76" y="26" width="8" height="38" fill="currentColor" opacity="0.6"/>
+                                    <!-- Eje temporal -->
+                                    <line x1="14" y1="68" x2="88" y2="68" stroke="currentColor" stroke-width="2"/>
+                                    <!-- Secuencia de celdas LSTM -->
+                                    <rect x="24" y="76" width="14" height="12" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
+                                    <rect x="44" y="76" width="14" height="12" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
+                                    <rect x="64" y="76" width="14" height="12" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
+                                    <line x1="38" y1="82" x2="44" y2="82" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="58" y1="82" x2="64" y2="82" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-ai">IA y Machine Learning</span>
+                            <h3 class="project-title" data-lang="proj-urbansound-title">Clasificación de Sonido Urbano con CNN-LSTM (UrbanSound8K)</h3>
+                            <p class="project-description" data-lang="proj-urbansound-description">
+                                Clasificación de las 10 clases de sonidos urbanos del dataset UrbanSound8K (8.732 fragmentos de audio) a partir de espectrogramas log-mel de 128x128 extraídos con librosa. Arquitectura CNN-LSTM en PyTorch con tres bloques convolucionales y una LSTM de dos capas, aumento de datos online (desplazamiento temporal y ruido gaussiano) y comparación de tres variantes many-to-one: último instante temporal, mean-pooling y LSTM bidireccional, alcanzando un 68,64% de accuracy en test con mean-pooling.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">AI/ML</span>
+                                <span class="tag">PyTorch</span>
+                                <span class="tag">CNN-LSTM</span>
+                                <span class="tag">Audio Processing</span>
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">librosa</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/urbansound8k-sound-classification-cnn-lstm" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Fake News Detection with ML/DL -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <rect x="25" y="30" width="50" height="40" stroke="currentColor" stroke-width="2" fill="none" rx="5"/>
+                                    <circle cx="45" cy="45" r="5" fill="currentColor"/>
+                                    <circle cx="55" cy="45" r="5" fill="currentColor"/>
+                                    <path d="M 40 58 Q 50 63, 60 58" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <line x1="35" y1="50" x2="40" y2="48" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="60" y1="48" x2="65" y2="50" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-ai">IA y Machine Learning</span>
+                            <h3 class="project-title" data-lang="proj-fakenews-title">Detección de Fake News con ML y Transformers</h3>
+                            <p class="project-description" data-lang="proj-fakenews-description">
+                                Proyecto de clasificación de noticias desinformativas comparando múltiples enfoques: TF-IDF + Random Forest, Word2Vec + MLP, embeddings BERT y fine-tuning de modelo Transformer, alcanzando 96-97% de accuracy con PyTorch y HuggingFace.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">AI/ML</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">BERT</span>
+                                <span class="tag">Transformers</span>
+                                <span class="tag">PyTorch</span>
+                                <span class="tag">Hugging Face</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/td_project" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="cloud">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <rect x="20" y="30" width="60" height="40" stroke="currentColor" stroke-width="2" fill="none" rx="5"/>
+                                    <line x1="35" y1="45" x2="65" y2="45" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="35" y1="55" x2="55" y2="55" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="75" cy="35" r="8" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-cloud">Cloud y Sistemas Distribuidos</span>
+                            <h3 class="project-title" data-lang="proj-ericsson-title">Plataforma de Visualización de Testing Cloud-Native</h3>
+                            <p class="project-description" data-lang="proj-ericsson-description">
+                                Desarrollo de plataforma cloud-native para centralizar y visualizar resultados de tests de Jenkins usando arquitectura de microservicios en Kubernetes, con backend REST, frontend web y dashboards de Grafana.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Cloud Native</span>
+                                <span class="tag">Kubernetes</span>
+                                <span class="tag">Microservices</span>
+                                <span class="tag">REST API</span>
+                                <span class="tag">Grafana</span>
+                                <span class="tag">Jenkins</span>
+                            </div>
+                            <div class="project-note">
+                                <small data-lang="proj-ericsson-note">Proyecto desarrollado en Ericsson</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-block" data-block="all">
+                <h3 class="projects-subtitle" data-lang="all-projects-title">Todos los Proyectos</h3>
+                <div class="projects-grid projects-grid--compact">
+                    <!-- Antena Dipolo en ANSYS HFSS -->
+                    <div class="project-card" data-category="rf">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Brazos del dipolo -->
+                                    <line x1="50" y1="16" x2="50" y2="44" stroke="currentColor" stroke-width="3"/>
+                                    <line x1="50" y1="56" x2="50" y2="84" stroke="currentColor" stroke-width="3"/>
+                                    <!-- Alimentacion en el gap -->
+                                    <circle cx="50" cy="50" r="3" fill="currentColor"/>
+                                    <!-- Diagrama de radiacion -->
+                                    <path d="M50 50 Q16 28, 16 50 Q16 72, 50 50" stroke="currentColor" stroke-width="2" fill="none" opacity="0.75"/>
+                                    <path d="M50 50 Q84 28, 84 50 Q84 72, 50 50" stroke="currentColor" stroke-width="2" fill="none" opacity="0.75"/>
+                                    <path d="M50 50 Q29 37, 29 50 Q29 63, 50 50" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
+                                    <path d="M50 50 Q71 37, 71 50 Q71 63, 50 50" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-rf">RF y Procesado de Señal</span>
+                            <h3 class="project-title" data-lang="proj-dipolo-title">Diseño de Antena Dipolo en ANSYS HFSS</h3>
+                            <p class="project-description" data-lang="proj-dipolo-description">
+                                Diseño y caracterización electromagnética de un dipolo de media onda a 2,3 GHz en ANSYS HFSS, optimizando su longitud mediante un barrido paramétrico con Optimetrics hasta 0,441λ para situar la resonancia en la frecuencia objetivo, obteniendo un S11 de −17,19 dB, una impedancia de entrada de 63,81 − j7,59 Ω y un ancho de banda fraccional del 13,39%. Incluye directividad 3D y diagramas de radiación 2D en elevación y azimut (2,51 dB de directividad máxima y un ancho de haz a −3 dB de 74°), eficiencia de radiación y total frente a frecuencia, y la comparación de la distribución de corriente superficial para dipolos de λ/4, λ/2 y λ frente a la teoría.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">RF</span>
+                                <span class="tag">Antennas</span>
+                                <span class="tag">HFSS</span>
+                                <span class="tag">Microwave</span>
+                                <span class="tag">Electromagnetics</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/dipole-antenna-design-ansys-hfss" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Códigos Convolucionales y Viterbi -->
+                    <div class="project-card" data-category="rf">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Forma de onda sinusoidal -->
+                                    <path d="M10 50 Q20 25, 30 50 Q40 75, 50 50 Q60 25, 70 50 Q80 75, 90 50"
+                                          stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                    <!-- Línea base -->
+                                    <line x1="10" y1="72" x2="90" y2="72" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"/>
+                                    <!-- Puntos de muestreo -->
+                                    <circle cx="30" cy="50" r="3" fill="currentColor"/>
+                                    <circle cx="50" cy="50" r="3" fill="currentColor"/>
+                                    <circle cx="70" cy="50" r="3" fill="currentColor"/>
+                                    <!-- Flechas de trellis -->
+                                    <line x1="15" y1="30" x2="35" y2="22" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+                                    <line x1="15" y1="30" x2="35" y2="38" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-rf">RF y Procesado de Señal</span>
+                            <h3 class="project-title" data-lang="proj-conv-title">Códigos Convolucionales y Decodificador Viterbi</h3>
+                            <p class="project-description" data-lang="proj-conv-description">
+                                Simulación end-to-end de un sistema de comunicaciones digitales con código convolucional R=1/2, canal AWGN y modulación BPSK. Incluye decodificador Viterbi con decisión dura, cancelación de interferencias mediante filtro de Kalman y evaluación de BER por Monte Carlo.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">DSP</span>
+                                <span class="tag">Digital Communications</span>
+                                <span class="tag">Viterbi</span>
+                                <span class="tag">Kalman Filter</span>
+                                <span class="tag">AWGN</span>
+                                <span class="tag">Python</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/codigos-convolucionales" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Modulaciones Digitales y Simulación de Canal -->
+                    <div class="project-card" data-category="rf">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Ejes I/Q -->
+                                    <line x1="50" y1="14" x2="50" y2="86" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                                    <line x1="14" y1="50" x2="86" y2="50" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                                    <!-- Constelación 16-QAM -->
+                                    <circle cx="29" cy="29" r="2.5" fill="currentColor"/>
+                                    <circle cx="43" cy="29" r="2.5" fill="currentColor"/>
+                                    <circle cx="57" cy="29" r="2.5" fill="currentColor"/>
+                                    <circle cx="71" cy="29" r="2.5" fill="currentColor"/>
+                                    <circle cx="29" cy="43" r="2.5" fill="currentColor"/>
+                                    <circle cx="43" cy="43" r="2.5" fill="currentColor"/>
+                                    <circle cx="57" cy="43" r="2.5" fill="currentColor"/>
+                                    <circle cx="71" cy="43" r="2.5" fill="currentColor"/>
+                                    <circle cx="29" cy="57" r="2.5" fill="currentColor"/>
+                                    <circle cx="43" cy="57" r="2.5" fill="currentColor"/>
+                                    <circle cx="57" cy="57" r="2.5" fill="currentColor"/>
+                                    <circle cx="71" cy="57" r="2.5" fill="currentColor"/>
+                                    <circle cx="29" cy="71" r="2.5" fill="currentColor"/>
+                                    <circle cx="43" cy="71" r="2.5" fill="currentColor"/>
+                                    <circle cx="57" cy="71" r="2.5" fill="currentColor"/>
+                                    <circle cx="71" cy="71" r="2.5" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-rf">RF y Procesado de Señal</span>
+                            <h3 class="project-title" data-lang="proj-modulaciones-title">Modulaciones Digitales y Simulación de Canal</h3>
+                            <p class="project-description" data-lang="proj-modulaciones-description">
+                                Framework de simulación en MATLAB para sistemas de comunicaciones digitales con transmisores QPSK, OQPSK, 8-PSK, 16-QAM y 64-QAM a 128 ksps y pulso de coseno alzado, analizados mediante formas de onda I/Q, diagramas de ojo, espectros y constelaciones. Incluye estimación de BER por Monte Carlo frente a curvas teóricas AWGN, canal móvil de dos rayos con dispersión Doppler e igualación por pilotos, y amplificador no lineal AM/AM con saturación configurable.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">DSP</span>
+                                <span class="tag">Digital Communications</span>
+                                <span class="tag">MATLAB</span>
+                                <span class="tag">QAM</span>
+                                <span class="tag">BER</span>
+                                <span class="tag">Doppler</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/modulaciones-digitales" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Vodafone Challenge 2023 -->
+                    <div class="project-card" data-category="rf">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Torre de antena -->
+                                    <line x1="50" y1="30" x2="38" y2="80" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="50" y1="30" x2="62" y2="80" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="43" y1="55" x2="57" y2="55" stroke="currentColor" stroke-width="1.5"/>
+                                    <line x1="41" y1="68" x2="59" y2="68" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="50" cy="26" r="3.5" fill="currentColor"/>
+                                    <!-- Ondas de radiación -->
+                                    <path d="M34 20 Q30 26, 34 32" stroke="currentColor" stroke-width="2" fill="none" opacity="0.8"/>
+                                    <path d="M27 14 Q20 26, 27 38" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
+                                    <path d="M66 20 Q70 26, 66 32" stroke="currentColor" stroke-width="2" fill="none" opacity="0.8"/>
+                                    <path d="M73 14 Q80 26, 73 38" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
+                                    <!-- Base -->
+                                    <line x1="32" y1="80" x2="68" y2="80" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-rf">RF y Procesado de Señal</span>
+                            <h3 class="project-title" data-lang="proj-vodafone-title">Vodafone Challenge 2023</h3>
+                            <p class="project-description" data-lang="proj-vodafone-description">
+                                Participación en el Vodafone Challenge 2023 dentro de la asignatura de Comunicaciones Móviles, con sesiones en la sede de Vodafone en Madrid sobre 5G, Massive MIMO, RAN y Open RAN. Lideré un proyecto de grupo sobre opciones de Low Layer Split en downlink, presentando los resultados ante ingenieros senior de Vodafone.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Mobile Networks</span>
+                                <span class="tag">5G</span>
+                                <span class="tag">Massive MIMO</span>
+                                <span class="tag">Open RAN</span>
+                                <span class="tag">Low Layer Split</span>
+                            </div>
+                            <div class="project-note">
+                                <small data-lang="proj-vodafone-note">Proyecto académico en colaboración con Vodafone</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Clasificación de Imágenes CIFAR-10 - PyTorch -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Imagen de entrada -->
+                                    <rect x="14" y="26" width="34" height="34" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
+                                    <line x1="14" y1="37" x2="48" y2="37" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                                    <line x1="14" y1="48" x2="48" y2="48" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                                    <line x1="25" y1="26" x2="25" y2="60" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                                    <line x1="36" y1="26" x2="36" y2="60" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                                    <!-- Kernel convolucional -->
+                                    <rect x="25" y="37" width="11" height="11" fill="currentColor" opacity="0.8"/>
+                                    <!-- Mapas de características -->
+                                    <rect x="58" y="28" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
+                                    <rect x="66" y="40" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" rx="2" opacity="0.6"/>
+                                    <!-- Capa de salida -->
+                                    <circle cx="30" cy="78" r="4" fill="currentColor"/>
+                                    <circle cx="50" cy="78" r="4" fill="currentColor" opacity="0.6"/>
+                                    <circle cx="70" cy="78" r="4" fill="currentColor" opacity="0.35"/>
+                                    <line x1="48" y1="58" x2="34" y2="72" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-ai">IA y Machine Learning</span>
+                            <h3 class="project-title" data-lang="proj-cifar-title">Clasificación de Imágenes CIFAR-10 con PyTorch</h3>
+                            <p class="project-description" data-lang="proj-cifar-description">
+                                Comparación de redes totalmente conectadas (MLP con activaciones tanh) frente a una red convolucional estilo AlexNet para clasificar las 10 clases de CIFAR-10 en PyTorch. Incluye el estudio del learning rate (1e-1, 1e-3 y 1e-5) mediante curvas de entrenamiento y validación, la elección del número de épocas a partir del mínimo de la pérdida de validación para evitar el sobreajuste (73,62% de accuracy en test con la CNN frente al 46,66% de la red densa) y la visualización de los filtros y mapas de activación de la primera capa convolucional.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">AI/ML</span>
+                                <span class="tag">PyTorch</span>
+                                <span class="tag">CNN</span>
+                                <span class="tag">Computer Vision</span>
+                                <span class="tag">AlexNet</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/cifar10-image-classification-pytorch" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- SDN Development LAB -->
+                    <div class="project-card" data-category="cloud">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <rect x="35" y="15" width="30" height="20" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
+                                    <text x="50" y="28" text-anchor="middle" font-size="10" fill="currentColor">SDN</text>
+                                    <circle cx="30" cy="60" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="50" cy="60" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="70" cy="60" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <line x1="45" y1="35" x2="30" y2="52" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="50" y1="35" x2="50" y2="52" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="55" y1="35" x2="70" y2="52" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-cloud">Cloud y Sistemas Distribuidos</span>
+                            <h3 class="project-title" data-lang="proj-sdn-title">Laboratorio de Desarrollo SDN</h3>
+                            <p class="project-description" data-lang="proj-sdn-description">
+                                Laboratorio de redes definidas por software implementando reglas ICMP, dispatchers (CONFIG y MAIN), manejadores de eventos, respuestas ICMP echo reply y ARP reply para gestión programática de infraestructura de red.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">SDN</span>
+                                <span class="tag">OpenFlow</span>
+                                <span class="tag">Network Programming</span>
+                                <span class="tag">ICMP</span>
+                                <span class="tag">ARP</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/SDN-Development-LAB" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Mininet and Ryu LAB -->
+                    <div class="project-card" data-category="cloud">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="30" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <rect x="20" y="55" width="20" height="15" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <rect x="60" y="55" width="20" height="15" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <line x1="50" y1="38" x2="30" y2="55" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="50" y1="38" x2="70" y2="55" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-cloud">Cloud y Sistemas Distribuidos</span>
+                            <h3 class="project-title" data-lang="proj-mininet-title">Laboratorio Mininet y Ryu</h3>
+                            <p class="project-description" data-lang="proj-mininet-description">
+                                Prácticas de emulación de redes con Mininet, instalación y activación de OpenFlow 1.3, programación de Mininet con Python y desarrollo de controladores SDN con framework Ryu para gestión de topologías virtuales.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">SDN</span>
+                                <span class="tag">Mininet</span>
+                                <span class="tag">Ryu Controller</span>
+                                <span class="tag">OpenFlow 1.3</span>
+                                <span class="tag">Python</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/Mininet-and-Ryu-LAB" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="sw">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <path d="M 50 25 L 50 45" stroke="currentColor" stroke-width="3"/>
+                                    <circle cx="50" cy="55" r="4" fill="currentColor"/>
+                                    <path d="M 30 70 L 70 70" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="45" y="65" width="10" height="15" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-sw">Ingeniería de Software</span>
+                            <h3 class="project-title" data-lang="proj-pentesting-title">Framework de Automatización de Pentesting Modular</h3>
+                            <p class="project-description" data-lang="proj-pentesting-description">
+                                Framework modular de pentesting desarrollado en Python y Robot Framework, con CLI interactivo para escaneo y análisis de servicios SSL/TLS y SSH, generando reportes detallados con clasificación de seguridad y recomendaciones automatizadas.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Software Engineering</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Robot Framework</span>
+                                <span class="tag">Automation</span>
+                                <span class="tag">Security</span>
+                                <span class="tag">Modular Design</span>
+                            </div>
+                            <div class="project-note">
+                                <small data-lang="proj-ericsson-note"> Proyecto desarrollado en Ericsson</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Buscador de Actividades Deportivas - JEE -->
+                    <div class="project-card" data-category="sw">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Navegador -->
+                                    <rect x="18" y="22" width="64" height="46" stroke="currentColor" stroke-width="2" fill="none" rx="4"/>
+                                    <line x1="18" y1="32" x2="82" y2="32" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="24" cy="27" r="1.8" fill="currentColor"/>
+                                    <circle cx="30" cy="27" r="1.8" fill="currentColor"/>
+                                    <!-- Lupa de búsqueda -->
+                                    <circle cx="46" cy="47" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                    <line x1="53" y1="54" x2="64" y2="63" stroke="currentColor" stroke-width="2.5"/>
+                                    <!-- Base de datos -->
+                                    <ellipse cx="50" cy="78" rx="16" ry="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <path d="M34 78 L34 86 Q50 91, 66 86 L66 78" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-sw">Ingeniería de Software</span>
+                            <h3 class="project-title" data-lang="proj-buscador-title">Buscador de Actividades Deportivas (JEE)</h3>
+                            <p class="project-description" data-lang="proj-buscador-description">
+                                Aplicación web Java EE con Servlets, JSP y MySQL siguiendo el patrón MVC y desplegada en Apache Tomcat. Registro multi-paso con precarga mediante cookies, sesiones de servidor con intentos de login limitados, búsqueda de actividades por precio, plazas o pabellón y área independiente de gestor, con seguridad reforzada mediante PreparedStatement, escapado HTML y hashing SHA-256 con pepper.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Java EE</span>
+                                <span class="tag">Servlets</span>
+                                <span class="tag">JSP</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">MVC</span>
+                                <span class="tag">Web Security</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/buscador-deportivo" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Gestor de Actividades Deportivas - Java y JDBC -->
+                    <div class="project-card" data-category="sw">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Cilindros de base de datos -->
+                                    <ellipse cx="50" cy="26" rx="22" ry="6" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <path d="M28 26 L28 42 Q50 49, 72 42 L72 26" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <path d="M28 42 L28 58 Q50 65, 72 58 L72 42" stroke="currentColor" stroke-width="2" fill="none" opacity="0.7"/>
+                                    <!-- Conexión JDBC -->
+                                    <line x1="50" y1="64" x2="50" y2="76" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
+                                    <rect x="34" y="76" width="32" height="12" stroke="currentColor" stroke-width="2" fill="none" rx="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-sw">Ingeniería de Software</span>
+                            <h3 class="project-title" data-lang="proj-gestor-title">Gestor de Actividades Deportivas (Java y JDBC)</h3>
+                            <p class="project-description" data-lang="proj-gestor-description">
+                                Aplicación Java en modo texto para gestionar actividades deportivas, clientes y pabellones sobre una base de datos MySQL mediante JDBC. Perfiles separados de gestor y cliente con auto-registro, operaciones de inscripción, listado de plazas libres e identificación de actividades con más del 80% de ocupación, sobre una arquitectura en capas control/vista/modelo con capa de acceso a datos reutilizable.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">JDBC</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Layered Architecture</span>
+                                <span class="tag">SHA-256</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/gestor-deportivo" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Servicios Web REST en Python -->
+                    <div class="project-card" data-category="sw">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Cliente -->
+                                    <rect x="14" y="40" width="22" height="20" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
+                                    <!-- Servidor / API -->
+                                    <rect x="64" y="40" width="22" height="20" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
+                                    <!-- Petición GET -->
+                                    <line x1="38" y1="46" x2="60" y2="46" stroke="currentColor" stroke-width="2"/>
+                                    <polygon points="60,43 66,46 60,49" fill="currentColor"/>
+                                    <!-- Respuesta JSON -->
+                                    <line x1="62" y1="55" x2="40" y2="55" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
+                                    <polygon points="40,52 34,55 40,58" fill="currentColor"/>
+                                    <!-- Llaves JSON -->
+                                    <path d="M44 22 Q38 22, 38 28 Q38 32, 34 32 Q38 32, 38 36 Q38 42, 44 42" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <path d="M56 22 Q62 22, 62 28 Q62 32, 66 32 Q62 32, 62 36 Q62 42, 56 42" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="50" cy="32" r="2.5" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-sw">Ingeniería de Software</span>
+                            <h3 class="project-title" data-lang="proj-apirest-title">Servicios Web REST en Python</h3>
+                            <p class="project-description" data-lang="proj-apirest-description">
+                                Notebook interactivo en Google Colab para consumir APIs REST públicas (GitHub, openFDA y Harvard Art Museums) con la librería requests. Cubre peticiones GET, parsing de JSON, parámetros de consulta, paginación automática (skip/limit y page/size), autenticación por API key y filtrado de datos, con manejo robusto de errores en cada llamada.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">REST API</span>
+                                <span class="tag">requests</span>
+                                <span class="tag">JSON</span>
+                                <span class="tag">Pagination</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/api-rest" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Compressed Trie Route Lookup -->
+                    <div class="project-card" data-category="sw">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="20" r="6" fill="currentColor"/>
+                                    <circle cx="35" cy="45" r="5" fill="currentColor"/>
+                                    <circle cx="65" cy="45" r="5" fill="currentColor"/>
+                                    <circle cx="25" cy="70" r="4" fill="currentColor"/>
+                                    <circle cx="45" cy="70" r="4" fill="currentColor"/>
+                                    <circle cx="75" cy="70" r="4" fill="currentColor"/>
+                                    <line x1="50" y1="26" x2="35" y2="40" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="50" y1="26" x2="65" y2="40" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="35" y1="50" x2="25" y2="66" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="35" y1="50" x2="45" y2="66" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="65" y1="50" x2="75" y2="66" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-sw">Ingeniería de Software</span>
+                            <h3 class="project-title" data-lang="proj-trie-title">Búsqueda de Rutas IP con Trie Comprimido</h3>
+                            <p class="project-description" data-lang="proj-trie-description">
+                                Sistema de búsqueda de rutas IP usando Patricia Trie (trie comprimido) para longest prefix match con complejidad O(W). Implementado en C con métricas de rendimiento, gestión de memoria y comparación con búsqueda lineal en tablas de enrutamiento.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">C</span>
+                                <span class="tag">Data Structures</span>
+                                <span class="tag">Patricia Trie</span>
+                                <span class="tag">Longest Prefix Match</span>
+                                <span class="tag">IP Routing</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/compressed-trie-route-lookup" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Dijkstra Algorithm -->
+                    <div class="project-card" data-category="sw">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <circle cx="25" cy="25" r="8" stroke="currentColor" stroke-width="2" fill="currentColor"/>
+                                    <circle cx="75" cy="25" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="25" cy="75" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="75" cy="75" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <line x1="33" y1="25" x2="67" y2="25" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="25" y1="33" x2="25" y2="67" stroke="currentColor" stroke-width="2" stroke-dasharray="3"/>
+                                    <line x1="33" y1="71" x2="67" y2="29" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-sw">Ingeniería de Software</span>
+                            <h3 class="project-title" data-lang="proj-dijkstra-title">Implementación del Algoritmo de Dijkstra</h3>
+                            <p class="project-description" data-lang="proj-dijkstra-description">
+                                Recreación del comportamiento del algoritmo de Dijkstra para encontrar caminos más cortos en grafos ponderados. Recibe matriz de costos desde archivo, donde nodos no conectados tienen costo 500 en lugar de infinito.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Algorithms</span>
+                                <span class="tag">Graph Theory</span>
+                                <span class="tag">Shortest Path</span>
+                                <span class="tag">Computer Networks</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/Dijkstra_Algorithm" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Meereen - Concurrent Dragon Lair -->
+                    <div class="project-card" data-category="sw">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <path d="M 30 50 Q 40 30, 50 50 Q 60 70, 70 50" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="35" cy="45" r="4" fill="currentColor"/>
+                                    <circle cx="50" cy="35" r="4" fill="currentColor"/>
+                                    <circle cx="65" cy="45" r="4" fill="currentColor"/>
+                                   <path d="M 25 60 L 35 70 L 50 65 L 65 70 L 75 60" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-sw">Ingeniería de Software</span>
+                            <h3 class="project-title" data-lang="proj-meereen-title">Meereen - Simulación de Concurrencia en Java</h3>
+                            <p class="project-description" data-lang="proj-meereen-description">
+                                Simulación de problema de sincronización de recursos compartidos en Java con 300 alquimistas y 3 dragones. Implementa monitores synchronized, wait/notifyAll, gestión multi-zona y capacidad dinámica para prevención de deadlocks inspirado en Game of Thrones.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">Concurrency</span>
+                                <span class="tag">Threads</span>
+                                <span class="tag">Synchronization</span>
+                                <span class="tag">Deadlock Prevention</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/meereen" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Proyecto SIP -->
+                    <div class="project-card" data-category="sw">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <circle cx="30" cy="40" r="12" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="70" cy="40" r="12" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <path d="M 42 40 L 58 40" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M 45 45 L 55 45" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M 45 50 L 55 50" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="30" cy="65" r="3" fill="currentColor"/>
+                                    <circle cx="50" cy="65" r="3" fill="currentColor"/>
+                                    <circle cx="70" cy="65" r="3" fill="currentColor"/>
+                            </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-sw">Ingeniería de Software</span>
+                            <h3 class="project-title" data-lang="proj-sip-title">Implementación de Protocolo SIP</h3>
+                            <p class="project-description" data-lang="proj-sip-description">
+                                Desarrollo de aplicación de comunicación VoIP utilizando el protocolo SIP (Session Initiation Protocol) para establecimiento y gestión de sesiones multimedia en redes de telecomunicaciones.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">SIP</span>
+                                <span class="tag">VoIP</span>
+                                <span class="tag">Networking</span>
+                                <span class="tag">Multimedia</span>
+                            </div>
+                           <div class="project-note">
+                               <small data-lang="proj-academic-note">Proyecto académico (UC3M)</small>
+                           </div>
+                        </div>
+                    </div>
+                    <!-- F1 News Bot -->
+                    <div class="project-card" data-category="sw">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <text x="50" y="45" text-anchor="middle" font-size="32" fill="currentColor"></text>
+                                    <line x1="20" y1="60" x2="80" y2="60" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="35" cy="68" r="5" fill="currentColor"/>
+                                    <circle cx="65" cy="68" r="5" fill="currentColor"/>
+                                    <path d="M30 55 Q50 40 70 55" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-sw">Ingeniería de Software</span>
+                            <h3 class="project-title" data-lang="proj-f1bot-title">F1 News Bot</h3>
+                            <p class="project-description" data-lang="proj-f1bot-description">
+                                Bot autónomo de Telegram que monitoriza noticias de Fórmula 1 en tiempo real desde 8 fuentes en español e inglés, enviando notificaciones automáticas cada 30 minutos. Controlable directamente desde Telegram con comandos de pausa, activación y consulta instantánea.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Telegram Bot</span>
+                                <span class="tag">RSS</span>
+                                <span class="tag">Automation</span>
+                                <span class="tag">Async</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/f1-news-bot" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Portfolio Web Personal -->
+                    <div class="project-card" data-category="sw">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <!-- Escritorio -->
+                                    <rect x="14" y="24" width="48" height="36" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
+                                    <line x1="14" y1="33" x2="62" y2="33" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="22" y1="42" x2="48" y2="42" stroke="currentColor" stroke-width="2" opacity="0.7"/>
+                                    <line x1="22" y1="49" x2="40" y2="49" stroke="currentColor" stroke-width="2" opacity="0.7"/>
+                                    <!-- Móvil -->
+                                    <rect x="68" y="38" width="20" height="34" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
+                                    <line x1="74" y1="47" x2="82" y2="47" stroke="currentColor" stroke-width="2" opacity="0.7"/>
+                                    <line x1="74" y1="54" x2="82" y2="54" stroke="currentColor" stroke-width="2" opacity="0.7"/>
+                                    <circle cx="78" cy="66" r="2" fill="currentColor"/>
+                                    <!-- Globo de idiomas -->
+                                    <circle cx="32" cy="76" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <ellipse cx="32" cy="76" rx="4" ry="10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                    <line x1="22" y1="76" x2="42" y2="76" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-sw">Ingeniería de Software</span>
+                            <h3 class="project-title" data-lang="proj-webportfolio-title">Portfolio Web Personal</h3>
+                            <p class="project-description" data-lang="proj-webportfolio-description">
+                                Portfolio web bilingüe y responsive desarrollado con HTML5, CSS3 y JavaScript vanilla, con un sistema de traducción propio y persistencia del idioma en localStorage entre sesiones. Diseño mobile-first en tres breakpoints (968px, 640px y 375px), menú hamburguesa con overlay, scroll suave con resaltado de la sección activa y objetivos táctiles de 44x44px conforme a las guías WCAG.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Responsive Design</span>
+                                <span class="tag">i18n</span>
+                                <span class="tag">Accessibility</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/nooelanag.github.io" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- STM32 Reaction Games -->
+                    <div class="project-card" data-category="embedded">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <rect x="30" y="25" width="40" height="50" stroke="currentColor" stroke-width="2" fill="none" rx="3"/>
+                                    <circle cx="50" cy="45" r="8" fill="currentColor"/>
+                                    <line x1="40" y1="60" x2="60" y2="60" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="45" y1="65" x2="55" y2="65" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-embedded">Sistemas Embebidos</span>
+                            <h3 class="project-title" data-lang="proj-stm32-title">Juegos de Reacción STM32 Bare-Metal</h3>
+                            <p class="project-description" data-lang="proj-stm32-description">
+                                Proyecto de sistemas embebidos bare-metal que implementa dos juegos de tiempo de reacción para dos jugadores en placa STM32L152RE, utilizando programación de bajo nivel con timers, interrupciones EXTI, ADC, PWM y USART para comunicación serie.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">C</span>
+                                <span class="tag">STM32</span>
+                                <span class="tag">Bare-Metal</span>
+                                <span class="tag">ARM Cortex-M3</span>
+                                <span class="tag">Interrupts</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/stm32-reaction-games" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Process Scheduler Emulator -->
+                    <div class="project-card" data-category="embedded">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                    <rect x="20" y="30" width="15" height="40" fill="currentColor" opacity="0.7"/>
+                                    <rect x="42" y="20" width="15" height="50" fill="currentColor" opacity="0.85"/>
+                                    <rect x="64" y="35" width="15" height="35" fill="currentColor" opacity="0.6"/>
+                                    <line x1="15" y1="70" x2="85" y2="70" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category" data-lang="cat-embedded">Sistemas Embebidos</span>
+                            <h3 class="project-title" data-lang="proj-scheduler-title">Emulador de Planificador de Procesos</h3>
+                            <p class="project-description" data-lang="proj-scheduler-description">
+                                Aplicación en C que emula el comportamiento de un planificador de procesos con gestión interactiva de tabla de planificación, operaciones de E/S con archivos binarios, ejecución con fork/exec, Round Robin y manejo de señales SIGINT/SIGALRM.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">C</span>
+                                <span class="tag">Operating Systems</span>
+                                <span class="tag">Round Robin</span>
+                                <span class="tag">Process Management</span>
+                                <span class="tag">Signals</span>
+                            </div>
+                            <a href="https://github.com/nooelanag/process-scheduler" target="_blank" class="project-expand" data-lang="proj-github-button">
+                                 Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="filter-empty" data-lang="filter-empty" hidden>No hay proyectos en esta categoría.</p>
         </div>
     </section>
 

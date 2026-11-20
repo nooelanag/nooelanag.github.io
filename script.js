@@ -62,9 +62,27 @@ const translations = {
         'edu4-title': 'Bachillerato',
         'edu4-focus': 'Estudios bilingües',
         'edu4-item2': 'Participación en el grupo de teatro en inglés',
-        'projects-title': 'Proyectos Destacados',
-        'proj-ericsson-title': 'Plataforma de Visualización de Testing Cloud-Native',
-        'proj-ericsson-description': 'Desarrollo de plataforma cloud-native para centralizar y visualizar resultados de tests de Jenkins usando arquitectura de microservicios en Kubernetes, con backend REST, frontend web y dashboards de Grafana.',
+        'projects-title': 'Proyectos',
+        'featured-title': 'Proyectos Destacados',
+        'all-projects-title': 'Todos los Proyectos',
+        'filter-all': 'Todos',
+        'filter-rf': 'RF y Procesado de Señal',
+        'filter-ai': 'IA y Machine Learning',
+        'filter-cloud': 'Cloud y Sistemas Distribuidos',
+        'filter-sw': 'Ingeniería de Software',
+        'filter-embedded': 'Sistemas Embebidos',
+        'filter-empty': 'No hay proyectos en esta categoría.',
+        'cat-rf': 'RF y Procesado de Señal',
+        'cat-ai': 'IA y Machine Learning',
+        'cat-cloud': 'Cloud y Sistemas Distribuidos',
+        'cat-sw': 'Ingeniería de Software',
+        'cat-embedded': 'Sistemas Embebidos',
+        'proj-tfg-title': 'Medida y Caracterización de Señales de Radio en Amplitud y Fase',
+        'proj-tfg-description': 'Trabajo Fin de Grado centrado en la medida y caracterización de señales de radio en amplitud y fase, con trabajo de laboratorio sobre instrumentación RF y análisis de las señales capturadas para contrastar las medidas con el comportamiento teórico esperado.',
+        'proj-tfg-note': 'Trabajo Fin de Grado (UC3M)',
+        'proj-academic-note': 'Proyecto académico (UC3M)',
+        'proj-ericsson-title': 'Plataforma Cloud-Native de Resultados CI/CD (TCDB)',
+        'proj-ericsson-description': 'Plataforma cloud-native desplegada en Kubernetes con Helm que centraliza y expone los resultados de los pipelines CI/CD de Jenkins. Arquitectura de microservicios con API REST en FastAPI y Node.js, frontend React, persistencia en MySQL mediante SQLAlchemy y dashboards de Grafana multi-tenant.',
         'proj-ericsson-note': 'Proyecto desarrollado en Ericsson',
         'proj-f1bot-title': 'Bot de noticias de F1',
         'proj-f1bot-description': 'Bot autónomo de Telegram que monitoriza noticias de Fórmula 1 en tiempo real desde 8 fuentes en español e inglés, enviando notificaciones automáticas cada 30 minutos. Controlable directamente desde Telegram con comandos de pausa, activación y consulta instantánea.',
@@ -77,13 +95,13 @@ const translations = {
         'proj-scheduler-title': 'Emulador de Planificador de Procesos',
         'proj-scheduler-description': 'Aplicación en C que emula el comportamiento de un planificador de procesos con gestión interactiva de tabla de planificación, operaciones de E/S con archivos binarios, ejecución con fork/exec, Round Robin y manejo de señales SIGINT/SIGALRM.',
         'proj-fakenews-title': 'Detección de Fake News con ML y Transformers',
-        'proj-fakenews-description': 'Proyecto de clasificación de noticias desinformativas comparando múltiples enfoques: TF-IDF + Random Forest, Word2Vec + MLP, embeddings BERT y fine-tuning de modelo Transformer, alcanzando 96-97% de accuracy con PyTorch y HuggingFace.',
+        'proj-fakenews-description': 'Detección de noticias desinformativas comparando TF-IDF con Random Forest, Word2Vec con MLP, embeddings BERT y fine-tuning de un Transformer sobre unas 40.000 noticias etiquetadas, alcanzando un 96-97% de accuracy y F1 con PyTorch y Hugging Face tras identificar y mitigar el sesgo por fuente.',
         'proj-meereen-title': 'Meereen - Simulación de Concurrencia en Java',
         'proj-meereen-description': 'Simulación de problema de sincronización de recursos compartidos en Java con 300 alquimistas y 3 dragones. Implementa monitores synchronized, wait/notifyAll, gestión multi-zona y capacidad dinámica para prevención de deadlocks inspirado en Game of Thrones.',
         'proj-trie-title': 'Búsqueda de Rutas IP con Trie Comprimido',
         'proj-trie-description': 'Sistema de búsqueda de rutas IP usando Patricia Trie (trie comprimido) para longest prefix match con complejidad O(W). Implementado en C con métricas de rendimiento, gestión de memoria y comparación con búsqueda lineal en tablas de enrutamiento.',
         'proj-sip-title': 'Implementación de Protocolo SIP',
-        'proj-sip-description': 'Desarrollo de aplicación de comunicación VoIP utilizando el protocolo SIP (Session Initiation Protocol) para establecimiento y gestión de sesiones multimedia en redes de telecomunicaciones.',
+        'proj-sip-description': 'Implementación de una aplicación de comunicación VoIP sobre SIP, cubriendo el establecimiento, modificación y cierre de sesiones multimedia mediante los mensajes de señalización del protocolo.',
         'proj-sdn-title': 'Laboratorio de Desarrollo SDN',
         'proj-sdn-description': 'Laboratorio de redes definidas por software implementando reglas ICMP, dispatchers (CONFIG y MAIN), manejadores de eventos, respuestas ICMP echo reply y ARP reply para gestión programática de infraestructura de red.',
         'proj-mininet-title': 'Laboratorio Mininet y Ryu',
@@ -92,31 +110,31 @@ const translations = {
         'proj-dijkstra-description': 'Recreación del comportamiento del algoritmo de Dijkstra para encontrar caminos más cortos en grafos ponderados. Recibe matriz de costos desde archivo, donde nodos no conectados tienen costo 500 en lugar de infinito.',
         // --- NUEVOS PROYECTOS ---
         'proj-urbansound-title': 'Clasificación de Sonido Urbano con CNN-LSTM (UrbanSound8K)',
-        'proj-urbansound-description': 'Clasificación de las 10 clases de sonidos urbanos del dataset UrbanSound8K (8.732 fragmentos de audio) a partir de espectrogramas log-mel de 128x128 extraídos con librosa. Arquitectura CNN-LSTM en PyTorch con tres bloques convolucionales y una LSTM de dos capas, aumento de datos online (desplazamiento temporal y ruido gaussiano) y comparación de tres variantes many-to-one: último instante temporal, mean-pooling y LSTM bidireccional, alcanzando un 68,64% de accuracy en test con mean-pooling.',
+        'proj-urbansound-description': 'Clasificación de las 10 clases de sonido urbano de UrbanSound8K (8.732 fragmentos de audio) a partir de espectrogramas log-mel de 128x128 extraídos con librosa. Arquitectura CNN-LSTM en PyTorch con aumento de datos online y comparación de tres variantes many-to-one, alcanzando un 68,64% de accuracy en test con mean-pooling.',
         'proj-cifar-title': 'Clasificación de Imágenes CIFAR-10 con PyTorch',
-        'proj-cifar-description': 'Comparación de redes totalmente conectadas (MLP con activaciones tanh) frente a una red convolucional estilo AlexNet para clasificar las 10 clases de CIFAR-10 en PyTorch. Incluye el estudio del learning rate (1e-1, 1e-3 y 1e-5) mediante curvas de entrenamiento y validación, la elección del número de épocas a partir del mínimo de la pérdida de validación para evitar el sobreajuste (73,62% de accuracy en test con la CNN frente al 46,66% de la red densa) y la visualización de los filtros y mapas de activación de la primera capa convolucional.',
+        'proj-cifar-description': 'Comparación de redes totalmente conectadas y una CNN estilo AlexNet para clasificar las 10 clases de CIFAR-10 en PyTorch, con estudio del learning rate y elección del número de épocas a partir de las curvas de validación: del 46,66% al 73,62% de accuracy en test, más la visualización de filtros y mapas de activación.',
         'proj-mezclador-title': 'Mezclador Balanceado Pasivo con Diodos Schottky',
-        'proj-mezclador-description': 'Diseño y simulación en AWR Microwave Office de un mezclador balanceado pasivo con diodos Schottky autopolarizados HSMS-28xx en tecnología microstrip sobre FR4 (εr = 4,6; h = 0,5 mm), con RF a 2,3 GHz, oscilador local a 2,1 GHz y frecuencia intermedia a 200 MHz. Incluye el diseño de un híbrido de 180° (rat-race) partiendo de líneas ideales TLIN y su conversión a microstrip real mediante TXLine, la adaptación del oscilador local en régimen de gran señal con análisis de balance armónico y un filtro LC paso bajo de segundo orden en la salida de FI para atenuar los productos de RF y OL por encima de 30 dB.',
+        'proj-mezclador-description': 'Mezclador balanceado pasivo con diodos Schottky autopolarizados en microstrip sobre FR4, diseñado en AWR Microwave Office con RF a 2,3 GHz, oscilador local a 2,1 GHz y frecuencia intermedia de 200 MHz. Incluye híbrido rat-race de 180°, adaptación del oscilador local en gran señal mediante balance armónico y filtro paso bajo de FI, verificando adaptación de puertos, aislamiento del OL y pérdidas de conversión.',
         'proj-monopulso-title': 'Procesador Monopulso con Amplificador de Bajo Ruido',
-        'proj-monopulso-description': 'Diseño completo en AWR Microwave Office de un procesador monopulso a 2,3 GHz en tecnología microstrip sobre FR4: divisor Wilkinson, híbrido rat-race que genera los canales suma y diferencia, línea desfasadora de 86° que compensa la separación de 0,7λ entre elementos radiantes para una incidencia de 20° y amplificador de bajo ruido con transistor ATF-36163, con 16,6 dB de ganancia y 0,87 dB de figura de ruido. Incluye el análisis de estabilidad y los círculos de ruido para la elección del punto de polarización, las redes de polarización de puerta y drenador, la conversión a líneas reales con discontinuidades MTEE, MBEND y MSTEP y componentes SMD 0402, y el layout final del amplificador balanceado.',
+        'proj-monopulso-description': 'Procesador monopulso a 2,3 GHz en microstrip sobre FR4 diseñado en AWR Microwave Office: divisor Wilkinson, híbrido rat-race para los canales suma y diferencia, línea desfasadora de 86° para una separación de 0,7λ entre elementos radiantes y amplificador de bajo ruido con ATF-36163, con 16,6 dB de ganancia y 0,87 dB de figura de ruido.',
         'proj-dipolo-title': 'Diseño de Antena Dipolo en ANSYS HFSS',
-        'proj-dipolo-description': 'Diseño y caracterización electromagnética de un dipolo de media onda a 2,3 GHz en ANSYS HFSS, optimizando su longitud mediante un barrido paramétrico con Optimetrics hasta 0,441λ para situar la resonancia en la frecuencia objetivo, obteniendo un S11 de −17,19 dB, una impedancia de entrada de 63,81 − j7,59 Ω y un ancho de banda fraccional del 13,39%. Incluye directividad 3D y diagramas de radiación 2D en elevación y azimut (2,51 dB de directividad máxima y un ancho de haz a −3 dB de 74°), eficiencia de radiación y total frente a frecuencia, y la comparación de la distribución de corriente superficial para dipolos de λ/4, λ/2 y λ frente a la teoría.',
+        'proj-dipolo-description': 'Dipolo de media onda a 2,3 GHz diseñado y caracterizado en ANSYS HFSS, con la longitud optimizada mediante barrido paramétrico hasta 0,441λ: S11 de −17,19 dB, 13,39% de ancho de banda fraccional y 2,51 dB de directividad máxima, junto al análisis de diagramas de radiación, eficiencia y corriente superficial.',
         'proj-pf-title': 'Filtro de Partículas vs Filtro de Kalman',
-        'proj-pf-description': 'Implementación y comparación de filtrado Bayesiano secuencial para el seguimiento de un barco con observaciones de sónar. Incluye SIS con remuestreo sistemático, filtro de Kalman óptimo, estimación de funcionales no lineales de la posterior y experimentos de MSE sobre 50 simulaciones Monte Carlo.',
+        'proj-pf-description': 'Comparación de filtrado bayesiano secuencial para el seguimiento de un barco a partir de observaciones de sónar: filtro de partículas SIS con remuestreo sistemático frente al filtro de Kalman óptimo, con estimación de funcionales no lineales de la posterior y evaluación del MSE sobre 50 simulaciones Monte Carlo.',
         'proj-conv-title': 'Códigos Convolucionales y Decodificador Viterbi',
         'proj-conv-description': 'Simulación end-to-end de un sistema de comunicaciones digitales con código convolucional R=1/2, canal AWGN y modulación BPSK. Incluye decodificador Viterbi con decisión dura, cancelación de interferencias mediante filtro de Kalman y evaluación de BER por Monte Carlo.',
         'proj-eq-title': 'Igualación de Canal: Ecualizadores MIMO',
-        'proj-eq-description': 'Estudio comparativo de ecualizadores zero-forcing (ZF), MMSE y un detector secuencial basado en descomposición de Cholesky, evaluados con BPSK y 4-PAM sobre canales diagonales, complejos 3x3 y rectangulares 2x3. Incluye el efecto del orden de cancelación sucesiva en la propagación de errores y la recuperación de un mensaje oculto combinando filtro de Kalman y decodificador Viterbi.',
+        'proj-eq-description': 'Estudio comparativo de ecualizadores MIMO en Python: zero-forcing, MMSE y un detector secuencial basado en descomposición de Cholesky, evaluados con BPSK y 4-PAM sobre canales complejos 3x3 y rectangulares 2x3. Analiza el efecto del orden de cancelación sucesiva en la propagación de errores y recupera un mensaje oculto combinando filtro de Kalman y decodificador Viterbi.',
         'proj-buscador-title': 'Buscador de Actividades Deportivas (JEE)',
-        'proj-buscador-description': 'Aplicación web Java EE con Servlets, JSP y MySQL siguiendo el patrón MVC y desplegada en Apache Tomcat. Registro multi-paso con precarga mediante cookies, sesiones de servidor con intentos de login limitados, búsqueda de actividades por precio, plazas o pabellón y área independiente de gestor, con seguridad reforzada mediante PreparedStatement, escapado HTML y hashing SHA-256 con pepper.',
+        'proj-buscador-description': 'Aplicación web Java EE con Servlets, JSP y MySQL siguiendo el patrón MVC sobre Apache Tomcat, con registro multi-paso, sesiones de servidor con intentos de login limitados, búsqueda de actividades y área independiente de gestor, endurecida con PreparedStatement, escapado HTML y hashing SHA-256 con pepper.',
         'proj-gestor-title': 'Gestor de Actividades Deportivas (Java y JDBC)',
-        'proj-gestor-description': 'Aplicación Java en modo texto para gestionar actividades deportivas, clientes y pabellones sobre una base de datos MySQL mediante JDBC. Perfiles separados de gestor y cliente con auto-registro, operaciones de inscripción, listado de plazas libres e identificación de actividades con más del 80% de ocupación, sobre una arquitectura en capas control/vista/modelo con capa de acceso a datos reutilizable.',
+        'proj-gestor-description': 'Aplicación Java en modo texto para gestionar actividades deportivas, clientes y pabellones sobre MySQL mediante JDBC, con perfiles separados de gestor y cliente, inscripciones, listado de plazas libres e identificación de actividades con más del 80% de ocupación, sobre una arquitectura en capas con acceso a datos reutilizable.',
         'proj-apirest-title': 'Servicios Web REST en Python',
-        'proj-apirest-description': 'Notebook interactivo en Google Colab para consumir APIs REST públicas (GitHub, openFDA y Harvard Art Museums) con la librería requests. Cubre peticiones GET, parsing de JSON, parámetros de consulta, paginación automática (skip/limit y page/size), autenticación por API key y filtrado de datos, con manejo robusto de errores en cada llamada.',
+        'proj-apirest-description': 'Notebook en Google Colab para consumir APIs REST públicas (GitHub, openFDA y Harvard Art Museums) con la librería requests: peticiones GET, parsing de JSON, parámetros de consulta, paginación automática, autenticación por API key y manejo de errores en cada llamada.',
         'proj-webportfolio-title': 'Portfolio Web Personal',
-        'proj-webportfolio-description': 'Portfolio web bilingüe y responsive desarrollado con HTML5, CSS3 y JavaScript vanilla, con un sistema de traducción propio y persistencia del idioma en localStorage entre sesiones. Diseño mobile-first en tres breakpoints (968px, 640px y 375px), menú hamburguesa con overlay, scroll suave con resaltado de la sección activa y objetivos táctiles de 44x44px conforme a las guías WCAG.',
+        'proj-webportfolio-description': 'Portfolio web bilingüe y responsive en HTML5, CSS3 y JavaScript vanilla, con sistema de traducción propio y persistencia del idioma en localStorage, diseño mobile-first en tres breakpoints, menú hamburguesa con overlay y objetivos táctiles de 44x44px conforme a las guías WCAG.',
         'proj-modulaciones-title': 'Modulaciones Digitales y Simulación de Canal',
-        'proj-modulaciones-description': 'Framework de simulación en MATLAB para sistemas de comunicaciones digitales con transmisores QPSK, OQPSK, 8-PSK, 16-QAM y 64-QAM a 128 ksps y pulso de coseno alzado, analizados mediante formas de onda I/Q, diagramas de ojo, espectros y constelaciones. Incluye estimación de BER por Monte Carlo frente a curvas teóricas AWGN, canal móvil de dos rayos con dispersión Doppler e igualación por pilotos, y amplificador no lineal AM/AM con saturación configurable.',
+        'proj-modulaciones-description': 'Framework de simulación en MATLAB de transmisores QPSK, OQPSK, 8-PSK, 16-QAM y 64-QAM a 128 ksps con pulso de coseno alzado, analizados mediante diagramas de ojo, espectros y constelaciones. Incluye estimación de BER por Monte Carlo frente a curvas teóricas AWGN, canal de dos rayos con dispersión Doppler e igualación por pilotos, y amplificador no lineal AM/AM.',
         'proj-vodafone-title': 'Vodafone Challenge 2023',
         'proj-vodafone-description': 'Participación en el Vodafone Challenge 2023 dentro de la asignatura de Comunicaciones Móviles, con sesiones en la sede de Vodafone en Madrid sobre 5G, Massive MIMO, RAN y Open RAN. Lideré un proyecto de grupo sobre opciones de Low Layer Split en downlink, presentando los resultados ante ingenieros senior de Vodafone.',
         'proj-vodafone-note': 'Proyecto académico en colaboración con Vodafone',
@@ -194,9 +212,27 @@ const translations = {
         'edu4-title': 'Secondary School (Bachillerato)',
         'edu4-focus': 'Bilingual studies',
         'edu4-item2': 'Member of the English-language theatre group',
-        'projects-title': 'Featured Projects',
-        'proj-ericsson-title': 'Cloud-Native Testing Visualization Platform',
-        'proj-ericsson-description': 'Development of a cloud-native platform that centralizes and visualizes Jenkins test results using a microservices architecture on Kubernetes, featuring a REST backend, web frontend, and Grafana dashboards.',
+        'projects-title': 'Projects',
+        'featured-title': 'Featured Projects',
+        'all-projects-title': 'All Projects',
+        'filter-all': 'All',
+        'filter-rf': 'RF & Signal Processing',
+        'filter-ai': 'AI & Machine Learning',
+        'filter-cloud': 'Cloud & Distributed Systems',
+        'filter-sw': 'Software Engineering',
+        'filter-embedded': 'Embedded & Systems',
+        'filter-empty': 'No projects in this category.',
+        'cat-rf': 'RF & Signal Processing',
+        'cat-ai': 'AI & Machine Learning',
+        'cat-cloud': 'Cloud & Distributed Systems',
+        'cat-sw': 'Software Engineering',
+        'cat-embedded': 'Embedded & Systems',
+        'proj-tfg-title': 'Measurement and Characterization of Radio Signals in Amplitude and Phase',
+        'proj-tfg-description': 'Bachelor\'s thesis on the measurement and characterisation of radio signals in amplitude and phase, combining hands-on work with RF test instrumentation and analysis of the captured signals to compare the measurements against the expected theoretical behaviour.',
+        'proj-tfg-note': 'Bachelor\'s Thesis (UC3M)',
+        'proj-academic-note': 'Academic project (UC3M)',
+        'proj-ericsson-title': 'Cloud-Native CI/CD Results Platform (TCDB)',
+        'proj-ericsson-description': 'Cloud-native platform deployed on Kubernetes with Helm that centralises and exposes the results of Jenkins CI/CD pipelines. Microservices architecture with REST APIs in FastAPI and Node.js, a React frontend, MySQL persistence through SQLAlchemy and multi-tenant Grafana dashboards.',
         'proj-ericsson-note': 'Project developed at Ericsson',
         'proj-f1bot-title': 'F1 News Bot',
         'proj-f1bot-description': 'Autonomous Telegram bot that monitors Formula 1 news in real time from 8 sources in Spanish and English, sending automatic notifications every 30 minutes. Fully controllable from Telegram with pause, resume, and instant query commands.',
@@ -209,13 +245,13 @@ const translations = {
         'proj-scheduler-title': 'Process Scheduler Emulator',
         'proj-scheduler-description': 'C application emulating process scheduler behavior with interactive schedule table management, binary file I/O operations, fork/exec execution, Round Robin scheduling, and SIGINT/SIGALRM signal handling.',
         'proj-fakenews-title': 'Fake News Detection with ML and Transformers',
-        'proj-fakenews-description': 'Misinformation classification project comparing multiple approaches: TF-IDF + Random Forest, Word2Vec + MLP, BERT embeddings, and Transformer fine-tuning, achieving 96-97% accuracy with PyTorch and HuggingFace.',
+        'proj-fakenews-description': 'Detection of disinformative news comparing TF-IDF with Random Forest, Word2Vec with an MLP, BERT embeddings and a fine-tuned Transformer over roughly 40,000 labelled articles, reaching 96-97% accuracy and F1 with PyTorch and Hugging Face after identifying and mitigating source-leakage bias.',
         'proj-meereen-title': 'Meereen - Java Concurrency Simulation',
         'proj-meereen-description': 'Shared-resource synchronization problem simulation in Java with 300 alchemists and 3 dragons. Implements synchronized monitors, wait/notifyAll, multi-zone management, and dynamic capacity for deadlock prevention inspired by Game of Thrones.',
         'proj-trie-title': 'IP Route Lookup with Compressed Trie',
         'proj-trie-description': 'IP route lookup system using Patricia Trie (compressed trie) for longest prefix match with O(W) complexity. Implemented in C with performance metrics, memory management, and linear search comparison in routing tables.',
         'proj-sip-title': 'SIP Protocol Implementation',
-        'proj-sip-description': 'Development of VoIP communication application using SIP (Session Initiation Protocol) for multimedia session establishment and management in telecommunications networks.',
+        'proj-sip-description': 'Implementation of a VoIP communication application on top of SIP, covering the setup, modification and teardown of multimedia sessions through the protocol\'s signalling messages.',
         'proj-sdn-title': 'SDN Development Laboratory',
         'proj-sdn-description': 'Software-Defined Networking laboratory implementing ICMP rules, dispatchers (CONFIG and MAIN), event handlers, ICMP echo replies, and ARP replies for programmatic network infrastructure management.',
         'proj-mininet-title': 'Mininet and Ryu Laboratory',
@@ -224,31 +260,31 @@ const translations = {
         'proj-dijkstra-description': 'Recreation of Dijkstra\'s algorithm behavior for finding shortest paths in weighted graphs. Receives cost matrix from file, where unconnected nodes have cost 500 instead of infinity.',
         // --- NEW PROJECTS ---
         'proj-urbansound-title': 'Urban Sound Classification with CNN-LSTM (UrbanSound8K)',
-        'proj-urbansound-description': 'Classification of the 10 urban sound classes of the UrbanSound8K dataset (8,732 audio excerpts) from 128x128 log-mel spectrograms extracted with librosa. CNN-LSTM architecture in PyTorch with three convolutional blocks and a two-layer LSTM, online data augmentation (time shifting and Gaussian noise) and a comparison of three many-to-one variants: last time step, mean-pooling and bidirectional LSTM, reaching 68.64% test accuracy with mean-pooling.',
+        'proj-urbansound-description': 'Classification of the 10 urban sound classes of UrbanSound8K (8,732 audio excerpts) from 128x128 log-mel spectrograms extracted with librosa. CNN-LSTM architecture in PyTorch with online data augmentation and a comparison of three many-to-one variants, reaching 68.64% test accuracy with mean-pooling.',
         'proj-cifar-title': 'CIFAR-10 Image Classification with PyTorch',
-        'proj-cifar-description': 'Comparison of fully connected networks (MLP with tanh activations) against an AlexNet-style convolutional network for classifying the 10 CIFAR-10 classes in PyTorch. Covers a learning-rate study (1e-1, 1e-3 and 1e-5) through training and validation curves, the choice of the number of epochs from the minimum of the validation loss to avoid overfitting (73.62% test accuracy with the CNN against 46.66% for the dense network) and the visualisation of the filters and activation maps of the first convolutional layer.',
+        'proj-cifar-description': 'Comparison of fully connected networks and an AlexNet-style CNN for the 10 CIFAR-10 classes in PyTorch, with a learning-rate study and epoch selection from the validation curves: test accuracy from 46.66% to 73.62%, plus visualisation of the first-layer filters and activation maps.',
         'proj-mezclador-title': 'Passive Balanced Mixer with Schottky Diodes',
-        'proj-mezclador-description': 'Design and simulation in AWR Microwave Office of a passive balanced mixer with self-biased HSMS-28xx Schottky diodes in microstrip technology on FR4 (εr = 4.6; h = 0.5 mm), with RF at 2.3 GHz, local oscillator at 2.1 GHz and intermediate frequency at 200 MHz. Covers the design of a 180° (rat-race) hybrid starting from ideal TLIN lines and its conversion to real microstrip with TXLine, large-signal matching of the local oscillator through harmonic balance analysis, and a second-order LC low-pass filter at the IF output attenuating the RF and LO products by more than 30 dB.',
+        'proj-mezclador-description': 'Passive balanced mixer with self-biased Schottky diodes in microstrip on FR4, designed in AWR Microwave Office with RF at 2.3 GHz, local oscillator at 2.1 GHz and a 200 MHz intermediate frequency. Includes a 180° rat-race hybrid, large-signal local-oscillator matching through harmonic balance and an IF low-pass filter, verifying port matching, LO isolation and conversion loss.',
         'proj-monopulso-title': 'Monopulse Processor with Low-Noise Amplifier',
-        'proj-monopulso-description': 'Complete design in AWR Microwave Office of a 2.3 GHz monopulse processor in microstrip technology on FR4: Wilkinson divider, rat-race hybrid generating the sum and difference channels, an 86° phase-shifting line compensating the 0.7λ spacing between radiating elements for a 20° incidence angle, and a low-noise amplifier based on the ATF-36163 transistor, with 16.6 dB of gain and a 0.87 dB noise figure. Covers stability and noise circle analysis for the choice of bias point, the gate and drain bias networks, the conversion to real lines with MTEE, MBEND and MSTEP discontinuities and 0402 SMD components, and the final layout of the balanced amplifier.',
+        'proj-monopulso-description': '2.3 GHz monopulse processor in microstrip on FR4 designed in AWR Microwave Office: Wilkinson divider, rat-race hybrid for the sum and difference channels, an 86° phase-shifting line for a 0.7λ element spacing, and an ATF-36163 low-noise amplifier delivering 16.6 dB of gain with a 0.87 dB noise figure.',
         'proj-dipolo-title': 'Dipole Antenna Design in ANSYS HFSS',
-        'proj-dipolo-description': 'Design and electromagnetic characterisation of a half-wavelength dipole at 2.3 GHz in ANSYS HFSS, optimising its length through an Optimetrics parametric sweep down to 0.441λ to place the resonance at the target frequency, obtaining an S11 of −17.19 dB, an input impedance of 63.81 − j7.59 Ω and a 13.39% fractional bandwidth. Covers 3D directivity and 2D radiation patterns in elevation and azimuth (2.51 dB peak directivity and a 74° half-power beamwidth), radiation and total efficiency versus frequency, and the comparison of the surface current distribution of λ/4, λ/2 and λ dipoles against theory.',
+        'proj-dipolo-description': 'Half-wavelength dipole at 2.3 GHz designed and characterised in ANSYS HFSS, with its length optimised through a parametric sweep down to 0.441λ: −17.19 dB S11, 13.39% fractional bandwidth and 2.51 dB peak directivity, together with radiation pattern, efficiency and surface current analysis.',
         'proj-pf-title': 'Particle Filter vs Kalman Filter',
-        'proj-pf-description': 'Implementation and comparison of sequential Bayesian filtering for ship tracking using sonar observations. Features SIS with systematic resampling, optimal Kalman filter, nonlinear posterior functional estimation, and MSE experiments averaged over 50 Monte Carlo simulations.',
+        'proj-pf-description': 'Comparison of sequential Bayesian filtering for ship tracking from sonar observations: an SIS particle filter with systematic resampling against the optimal Kalman filter, including estimation of nonlinear posterior functionals and MSE evaluation over 50 Monte Carlo simulations.',
         'proj-conv-title': 'Convolutional Codes and Viterbi Decoder',
         'proj-conv-description': 'End-to-end simulation of a digital communications system with rate-1/2 convolutional coding, AWGN channel, and BPSK modulation. Includes a hard-decision Viterbi decoder, Kalman filter-based interference cancellation, and Monte Carlo BER evaluation.',
         'proj-eq-title': 'Channel Equalization: MIMO Equalisers',
-        'proj-eq-description': 'Comparative study of zero-forcing (ZF), MMSE and a Cholesky-based sequential detector, evaluated with BPSK and 4-PAM over diagonal, complex 3x3 and rectangular 2x3 channels. Covers the effect of successive-cancellation ordering on error propagation, and the recovery of a hidden message by combining a Kalman filter with a Viterbi decoder.',
+        'proj-eq-description': 'Comparative study of MIMO equalisers in Python: zero-forcing, MMSE and a Cholesky-based sequential detector, evaluated with BPSK and 4-PAM over complex 3x3 and rectangular 2x3 channels. Analyses how successive-cancellation ordering drives error propagation, and recovers a hidden message by combining a Kalman filter with a Viterbi decoder.',
         'proj-buscador-title': 'Sports Activity Searcher (JEE)',
-        'proj-buscador-description': 'Java EE web application built with Servlets, JSP and MySQL following the MVC pattern and deployed on Apache Tomcat. Multi-step registration with cookie-based pre-filling, server-side sessions with limited login attempts, activity search by price, availability or pavilion, and a separate manager area, hardened with PreparedStatement queries, HTML escaping and SHA-256 password hashing with a pepper.',
+        'proj-buscador-description': 'Java EE web application with Servlets, JSP and MySQL following the MVC pattern on Apache Tomcat, with multi-step registration, server-side sessions with limited login attempts, activity search and a separate manager area, hardened with PreparedStatement queries, HTML escaping and SHA-256 hashing with a pepper.',
         'proj-gestor-title': 'Sports Activity Manager (Java and JDBC)',
-        'proj-gestor-description': 'Text-based Java application for managing sports activities, clients and pavilions on top of a MySQL database through JDBC. Separate manager and client profiles with self-registration, activity enrolment, listing of free places and identification of activities above 80% occupancy, all on a layered control/view/model architecture with a reusable data-access layer.',
+        'proj-gestor-description': 'Text-based Java application managing sports activities, clients and pavilions on MySQL through JDBC, with separate manager and client profiles, enrolment, listing of free places and identification of activities above 80% occupancy, on a layered architecture with a reusable data-access layer.',
         'proj-apirest-title': 'REST Web Services in Python',
-        'proj-apirest-description': 'Interactive Google Colab notebook consuming public REST APIs (GitHub, openFDA and Harvard Art Museums) with the requests library. Covers GET requests, JSON parsing, query parameters, automatic pagination (skip/limit and page/size), API-key authentication and data filtering, with robust error handling on every call.',
+        'proj-apirest-description': 'Google Colab notebook consuming public REST APIs (GitHub, openFDA and Harvard Art Museums) with the requests library: GET requests, JSON parsing, query parameters, automatic pagination, API-key authentication and error handling on every call.',
         'proj-webportfolio-title': 'Personal Portfolio Website',
-        'proj-webportfolio-description': 'Bilingual responsive portfolio website built with vanilla HTML5, CSS3 and JavaScript, featuring a custom translation system with localStorage persistence of the language preference across sessions. Mobile-first design across three breakpoints (968px, 640px and 375px), hamburger menu with overlay navigation, smooth scroll with active section highlighting and 44x44px touch targets per WCAG guidelines.',
+        'proj-webportfolio-description': 'Bilingual responsive portfolio built with vanilla HTML5, CSS3 and JavaScript, featuring a custom translation system with localStorage persistence, a mobile-first design across three breakpoints, hamburger navigation with overlay and 44x44px touch targets per WCAG guidelines.',
         'proj-modulaciones-title': 'Digital Modulations and Channel Simulation',
-        'proj-modulaciones-description': 'MATLAB simulation framework for digital communication systems with QPSK, OQPSK, 8-PSK, 16-QAM and 64-QAM transmitters at 128 ksps and raised-cosine pulse shaping, analysed through I/Q waveforms, eye diagrams, spectra and constellations. Includes Monte Carlo BER estimation against theoretical AWGN curves, a two-ray mobile fading channel with Doppler spread and pilot-based equalisation, and an AM/AM non-linear amplifier with configurable saturation.',
+        'proj-modulaciones-description': 'MATLAB simulation framework for QPSK, OQPSK, 8-PSK, 16-QAM and 64-QAM transmitters at 128 ksps with raised-cosine pulse shaping, analysed through eye diagrams, spectra and constellations. Includes Monte Carlo BER estimation against theoretical AWGN curves, a two-ray channel with Doppler spread and pilot-based equalisation, and an AM/AM non-linear amplifier.',
         'proj-vodafone-title': 'Vodafone Challenge 2023',
         'proj-vodafone-description': 'Participation in the 2023 Vodafone Challenge as part of a Mobile Communications course, with sessions at Vodafone headquarters in Madrid on 5G, Massive MIMO, RAN and Open RAN. Led a group project on Low Layer Split options in downlink, presenting the results in front of senior Vodafone engineers.',
         'proj-vodafone-note': 'Academic project in collaboration with Vodafone',
@@ -323,11 +359,56 @@ function setupLanguageToggle() {
     }
 }
  
+// Filtrado de proyectos por categoría (cliente, sin recarga)
+// La categoría vive en el atributo data-category de cada tarjeta, que es la
+// única fuente de verdad: añadir un proyecto no requiere tocar esta función.
+function setupProjectFilters() {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card[data-category]');
+    const blocks = document.querySelectorAll('.projects-block');
+    const emptyMessage = document.querySelector('.filter-empty');
+
+    if (!buttons.length || !cards.length) return;
+
+    function applyFilter(filter) {
+        cards.forEach(card => {
+            const visible = filter === 'all' || card.dataset.category === filter;
+            card.classList.toggle('is-hidden', !visible);
+        });
+
+        // Oculta el encabezado de un bloque que se queda sin tarjetas visibles
+        blocks.forEach(block => {
+            const left = block.querySelectorAll('.project-card:not(.is-hidden)').length;
+            block.hidden = left === 0;
+        });
+
+        if (emptyMessage) {
+            const total = document.querySelectorAll('.project-card:not(.is-hidden)').length;
+            emptyMessage.hidden = total > 0;
+        }
+    }
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            buttons.forEach(other => {
+                other.classList.remove('active');
+                other.setAttribute('aria-pressed', 'false');
+            });
+            button.classList.add('active');
+            button.setAttribute('aria-pressed', 'true');
+            applyFilter(button.dataset.filter);
+        });
+    });
+
+    applyFilter('all');
+}
+
 // Inicializar
 function init() {
     changeLanguage(currentLanguage);
     setupLanguageToggle();
     makeEverythingVisible();
+    setupProjectFilters();
 }
  
 if (document.readyState === 'loading') {

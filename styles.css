@@ -1427,3 +1427,214 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ==========================================================================
+   Projects: category filters, Featured / All blocks, category badges
+   Additive only: every selector below is new, so the existing project rules
+   and their media queries keep working untouched.
+   ========================================================================== */
+
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    background: transparent;
+    color: var(--color-text-dim);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.filter-btn:hover {
+    color: var(--color-primary);
+    border-color: rgba(0, 217, 255, 0.5);
+}
+
+.filter-btn.active {
+    color: var(--color-primary);
+    background: rgba(0, 217, 255, 0.1);
+    border-color: var(--color-primary);
+}
+
+.filter-btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.projects-block + .projects-block {
+    margin-top: 4rem;
+}
+
+.projects-block[hidden] {
+    display: none;
+}
+
+.projects-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+}
+
+.projects-subtitle::before {
+    content: '';
+    width: 3px;
+    height: 1.1em;
+    background: var(--color-primary);
+    border-radius: 2px;
+}
+
+.project-category {
+    display: inline-block;
+    align-self: flex-start;   /* no estirar dentro del .project-content flex */
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-dim);
+    border: 1px solid var(--color-border);
+    border-left: 2px solid var(--color-accent);
+    border-radius: 4px;
+    padding: 0.25rem 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.project-card.is-hidden {
+    display: none;
+}
+
+/* Featured cards keep the full card treatment with a slightly stronger edge */
+.projects-grid--featured .project-card {
+    border-color: rgba(0, 217, 255, 0.25);
+}
+
+/* All Projects: same card, more compact presentation */
+.projects-grid--compact {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.8rem;
+}
+
+.projects-grid--compact .project-image {
+    height: 160px;
+}
+
+.projects-grid--compact .project-content {
+    padding: 1.5rem;
+}
+
+.projects-grid--compact .project-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
+}
+
+.projects-grid--compact .project-description {
+    font-size: 0.92rem;
+    margin-bottom: 1.2rem;
+}
+
+.projects-grid--compact .project-tags {
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.projects-grid--compact .tag {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.78rem;
+}
+
+.filter-empty {
+    color: var(--color-text-dim);
+    margin-top: 2rem;
+}
+
+.filter-empty[hidden] {
+    display: none;
+}
+
+@media (max-width: 968px) {
+    .project-filters {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .projects-grid--compact {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid--compact .project-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .filter-btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .projects-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .projects-block + .projects-block {
+        margin-top: 2.5rem;
+    }
+
+    .projects-grid--compact .project-card {
+        max-width: 100%;
+    }
+
+    .project-category {
+        font-size: 0.68rem;
+        margin-bottom: 0.75rem;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .filter-btn {
+        min-height: 44px;
+    }
+}
+
+/* Tarjetas a la misma altura dentro de una fila: la descripción absorbe el
+   espacio sobrante y el bloque de tags + enlace queda anclado abajo, de modo
+   que los botones de una misma fila se alinean entre sí. */
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .project-image {
+    flex: 0 0 auto;
+}
+
+.project-card .project-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.project-card .project-tags {
+    margin-top: auto;
+}
+
+/* Nota de los proyectos sin repositorio público: pie discreto, en paralelo al
+   botón de GitHub del resto de tarjetas. */
+.project-note {
+    color: var(--color-text-dim);
+    font-size: 0.85rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+}
